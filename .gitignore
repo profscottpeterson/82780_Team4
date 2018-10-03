@@ -1,0 +1,6 @@
+
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal
+.vs/TeamDevProject/v15/.suo
