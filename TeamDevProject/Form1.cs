@@ -26,5 +26,16 @@ namespace TeamDevProject
             }
             
         }
+
+        private void ordBtn_Click(object sender, EventArgs e)
+        {
+            ordBox.Items.Clear();
+
+            var orders = OrdersSQL.LoadOrders();
+            foreach (var ord in orders)
+            {
+                ordBox.Items.Add("CustID: " + ord.CustID + " OrderID: " + ord.OrderID + " Date: " + ord.Date);
+            }
+        }
     }
 }

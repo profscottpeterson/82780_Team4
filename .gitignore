@@ -4,3 +4,5 @@
 *.ide-shm
 *.ide-wal
 .vs/TeamDevProject/v15/.suo
+*.cache
+.vs/TeamDevProject/v14/.suo
