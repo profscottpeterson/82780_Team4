@@ -56,17 +56,80 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
+    <Compile Include="CustomersAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersAdd.Designer.cs">
+      <DependentUpon>CustomersAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersDelete.Designer.cs">
+      <DependentUpon>CustomersDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersMain.Designer.cs">
+      <DependentUpon>CustomersMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerSQL.cs" />
+    <Compile Include="CustomersSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersSearch.Designer.cs">
+      <DependentUpon>CustomersSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InventoryMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryMain.Designer.cs">
+      <DependentUpon>InventoryMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersMain.Designer.cs">
+      <DependentUpon>OrdersMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomersAdd.resx">
+      <DependentUpon>CustomersAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersDelete.resx">
+      <DependentUpon>CustomersDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersMain.resx">
+      <DependentUpon>CustomersMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersSearch.resx">
+      <DependentUpon>CustomersSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryMain.resx">
+      <DependentUpon>InventoryMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersMain.resx">
+      <DependentUpon>OrdersMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
