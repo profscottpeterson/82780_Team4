@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -56,7 +56,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
+    <Compile Include="CustomersAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersAdd.Designer.cs">
+      <DependentUpon>CustomersAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersDelete.Designer.cs">
+      <DependentUpon>CustomersDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersMain.Designer.cs">
+      <DependentUpon>CustomersMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerSQL.cs" />
+    <Compile Include="CustomersSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersSearch.Designer.cs">
+      <DependentUpon>CustomersSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +88,65 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory.cs" />
+    <Compile Include="InventoryMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryMain.Designer.cs">
+      <DependentUpon>InventoryMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="InventorySQL.cs" />
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Orders.cs" />
+    <Compile Include="OrdersMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersMain.Designer.cs">
+      <DependentUpon>OrdersMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersSQL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="TeamDevProject.db.sql" />
+    <EmbeddedResource Include="CustomersAdd.resx">
+      <DependentUpon>CustomersAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersDelete.resx">
+      <DependentUpon>CustomersDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersMain.resx">
+      <DependentUpon>CustomersMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersSearch.resx">
+      <DependentUpon>CustomersSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryMain.resx">
+      <DependentUpon>InventoryMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\TeamDevProject.CustomersAdd.resources" />
+    <EmbeddedResource Include="obj\Debug\TeamDevProject.CustomersDelete.resources" />
+    <EmbeddedResource Include="obj\Debug\TeamDevProject.CustomerSearch.resources" />
+    <EmbeddedResource Include="obj\Debug\TeamDevProject.CustomersMain.resources" />
+    <EmbeddedResource Include="obj\Debug\TeamDevProject.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\TeamDevProject.InventoryMain.resources" />
+    <EmbeddedResource Include="obj\Debug\TeamDevProject.MainMenu.resources" />
+    <EmbeddedResource Include="obj\Debug\TeamDevProject.OrdersMain.resources" />
+    <EmbeddedResource Include="obj\Debug\TeamDevProject.Properties.Resources.resources" />
+    <EmbeddedResource Include="OrdersMain.resx">
+      <DependentUpon>OrdersMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +157,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bin\Debug\System.Data.SQLite.dll.config" />
+    <None Include="bin\Debug\TeamDevProject.db" />
+    <None Include="bin\Debug\TeamDevProject.exe.config" />
+    <None Include="bin\Debug\TeamDevProject.vshost.exe.config" />
+    <None Include="bin\Debug\TeamDevProject.vshost.exe.manifest" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\TeamDevProject.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\TeamDevProject.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,12 +175,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="bin\Debug\Dapper.dll" />
+    <Content Include="bin\Debug\Dapper.xml" />
+    <Content Include="bin\Debug\System.Data.SQLite.dll" />
+    <Content Include="bin\Debug\System.Data.SQLite.xml" />
+    <Content Include="bin\Debug\TeamDevProject.exe" />
+    <Content Include="bin\Debug\TeamDevProject.pdb" />
+    <Content Include="bin\Debug\TeamDevProject.vshost.exe" />
+    <Content Include="bin\Debug\x64\SQLite.Interop.dll" />
+    <Content Include="bin\Debug\x86\SQLite.Interop.dll" />
+    <Content Include="obj\Debug\TeamDevProject.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TeamDevProject.exe" />
+    <Content Include="obj\Debug\TeamDevProject.pdb" />
     <Content Include="TeamDevProject.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" />
