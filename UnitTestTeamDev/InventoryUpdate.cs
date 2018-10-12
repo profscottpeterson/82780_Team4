@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,21 +8,19 @@ using System.Data;
 using System.Configuration;
 using System.Data.SQLite;
 using Dapper;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamDevProject;
 
 namespace UnitTestTeamDev
 {
     [TestClass]
-    public class UnitTest1
+    public class InventoryUpdate
     {
         [TestMethod]
-        public void TestMethod1()
+        public void InvUpdate()
         {
             using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Test"].ConnectionString))
             {
-                var output = cnn.Query<Orders>("SELECT * FROM Orders", new DynamicParameters());
-                Console.WriteLine(output.ToList()[0].Date);
+                cnn.Query<Orders>("UPDATE Inventory SET ItemName = 'Adidas Shoes' WHERE InvID = 3;");
             }
         }
     }
