@@ -81,12 +81,6 @@
     <Compile Include="CustomersSearch.Designer.cs">
       <DependentUpon>CustomersSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inventory.cs" />
     <Compile Include="InventoryAdd.cs">
       <SubType>Form</SubType>
@@ -162,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomersSearch.resx">
       <DependentUpon>CustomersSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryAdd.resx">
       <DependentUpon>InventoryAdd.cs</DependentUpon>
