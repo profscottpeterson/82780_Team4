@@ -33,6 +33,8 @@
             this.btnOrderSearch = new System.Windows.Forms.Button();
             this.lbxOrderMenu = new System.Windows.Forms.ListBox();
             this.lblOrdersTitle = new System.Windows.Forms.Label();
+            this.btnOrdersExit = new System.Windows.Forms.Button();
+            this.btnOrdersReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOrderDelete
@@ -44,6 +46,7 @@
             this.btnOrderDelete.TabIndex = 10;
             this.btnOrderDelete.Text = "Delete";
             this.btnOrderDelete.UseVisualStyleBackColor = true;
+            this.btnOrderDelete.Click += new System.EventHandler(this.btnOrderDelete_Click);
             // 
             // btnOrderAdd
             // 
@@ -54,6 +57,7 @@
             this.btnOrderAdd.TabIndex = 9;
             this.btnOrderAdd.Text = "Add";
             this.btnOrderAdd.UseVisualStyleBackColor = true;
+            this.btnOrderAdd.Click += new System.EventHandler(this.btnOrderAdd_Click);
             // 
             // btnOrderSearch
             // 
@@ -64,6 +68,7 @@
             this.btnOrderSearch.TabIndex = 8;
             this.btnOrderSearch.Text = "Search";
             this.btnOrderSearch.UseVisualStyleBackColor = true;
+            this.btnOrderSearch.Click += new System.EventHandler(this.btnOrderSearch_Click);
             // 
             // lbxOrderMenu
             // 
@@ -81,9 +86,29 @@
             this.lblOrdersTitle.Location = new System.Drawing.Point(15, 13);
             this.lblOrdersTitle.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.lblOrdersTitle.Name = "lblOrdersTitle";
-            this.lblOrdersTitle.Size = new System.Drawing.Size(141, 51);
+            this.lblOrdersTitle.Size = new System.Drawing.Size(137, 49);
             this.lblOrdersTitle.TabIndex = 6;
             this.lblOrdersTitle.Text = "Orders";
+            // 
+            // btnOrdersExit
+            // 
+            this.btnOrdersExit.Location = new System.Drawing.Point(150, 336);
+            this.btnOrdersExit.Name = "btnOrdersExit";
+            this.btnOrdersExit.Size = new System.Drawing.Size(84, 33);
+            this.btnOrdersExit.TabIndex = 18;
+            this.btnOrdersExit.Text = "Exit";
+            this.btnOrdersExit.UseVisualStyleBackColor = true;
+            this.btnOrdersExit.Click += new System.EventHandler(this.btnOrdersExit_Click);
+            // 
+            // btnOrdersReturn
+            // 
+            this.btnOrdersReturn.Location = new System.Drawing.Point(54, 336);
+            this.btnOrdersReturn.Name = "btnOrdersReturn";
+            this.btnOrdersReturn.Size = new System.Drawing.Size(84, 33);
+            this.btnOrdersReturn.TabIndex = 19;
+            this.btnOrdersReturn.Text = "Return";
+            this.btnOrdersReturn.UseVisualStyleBackColor = true;
+            this.btnOrdersReturn.Click += new System.EventHandler(this.btnOrdersReturn_Click);
             // 
             // OrdersMain
             // 
@@ -91,11 +116,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(614, 383);
+            this.Controls.Add(this.btnOrdersExit);
+            this.Controls.Add(this.btnOrdersReturn);
             this.Controls.Add(this.btnOrderDelete);
             this.Controls.Add(this.btnOrderAdd);
             this.Controls.Add(this.btnOrderSearch);
             this.Controls.Add(this.lbxOrderMenu);
             this.Controls.Add(this.lblOrdersTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "OrdersMain";
             this.Text = "OrdersMain";
             this.ResumeLayout(false);
@@ -110,5 +138,7 @@
         private System.Windows.Forms.Button btnOrderSearch;
         private System.Windows.Forms.ListBox lbxOrderMenu;
         private System.Windows.Forms.Label lblOrdersTitle;
+        private System.Windows.Forms.Button btnOrdersExit;
+        private System.Windows.Forms.Button btnOrdersReturn;
     }
 }

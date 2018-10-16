@@ -89,6 +89,7 @@
             this.Controls.Add(this.btnCustomer);
             this.Controls.Add(this.lblTitle);
             this.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.Name = "MainMenu";
             this.Text = "MainMenu";

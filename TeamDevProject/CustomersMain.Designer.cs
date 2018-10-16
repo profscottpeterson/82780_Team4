@@ -123,6 +123,7 @@
             this.Controls.Add(this.btnCustomerSearch);
             this.Controls.Add(this.lbxCustomerMenu);
             this.Controls.Add(this.lblCustomersTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CustomersMain";
             this.Text = "CustomersMain";
             this.ResumeLayout(false);

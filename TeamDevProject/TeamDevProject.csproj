@@ -88,11 +88,29 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory.cs" />
+    <Compile Include="InventoryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryAdd.Designer.cs">
+      <DependentUpon>InventoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryDelete.Designer.cs">
+      <DependentUpon>InventoryDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="InventoryMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InventoryMain.Designer.cs">
       <DependentUpon>InventoryMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySearch.Designer.cs">
+      <DependentUpon>InventorySearch.cs</DependentUpon>
     </Compile>
     <Compile Include="InventorySQL.cs" />
     <Compile Include="MainMenu.cs">
@@ -105,11 +123,29 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Orders.cs" />
+    <Compile Include="OrdersAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersAdd.Designer.cs">
+      <DependentUpon>OrdersAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersDelete.Designer.cs">
+      <DependentUpon>OrdersDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrdersMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OrdersMain.Designer.cs">
       <DependentUpon>OrdersMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersSearch.Designer.cs">
+      <DependentUpon>OrdersSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="OrdersSQL.cs" />
     <Compile Include="Program.cs" />
@@ -130,8 +166,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InventoryAdd.resx">
+      <DependentUpon>InventoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryDelete.resx">
+      <DependentUpon>InventoryDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InventoryMain.resx">
       <DependentUpon>InventoryMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySearch.resx">
+      <DependentUpon>InventorySearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -145,8 +190,17 @@
     <EmbeddedResource Include="obj\Debug\TeamDevProject.MainMenu.resources" />
     <EmbeddedResource Include="obj\Debug\TeamDevProject.OrdersMain.resources" />
     <EmbeddedResource Include="obj\Debug\TeamDevProject.Properties.Resources.resources" />
+    <EmbeddedResource Include="OrdersAdd.resx">
+      <DependentUpon>OrdersAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersDelete.resx">
+      <DependentUpon>OrdersDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrdersMain.resx">
       <DependentUpon>OrdersMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersSearch.resx">
+      <DependentUpon>OrdersSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
