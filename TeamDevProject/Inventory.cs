@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamDevProject
 {
-    class Inventory
+    public class Inventory
     {
         public int InvID;
         public string ItemName;
