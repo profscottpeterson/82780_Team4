@@ -71,7 +71,7 @@
     <Compile Include="InventoryCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OrderSelect.cs" />
-    :<Compile Include="OrderCreate.cs" />
+    <Compile Include="OrderCreate.cs" />
     <Compile Include="OrderUpdate.cs" />
     <Compile Include="OrderDelete.cs" />
     <Compile Include="InventoryDelete.cs" />
