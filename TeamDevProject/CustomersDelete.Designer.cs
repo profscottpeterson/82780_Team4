@@ -32,13 +32,13 @@
             this.btnReturnCustomerDelete = new System.Windows.Forms.Button();
             this.btnResetCustomerDelete = new System.Windows.Forms.Button();
             this.btnCustomerDeleteGo = new System.Windows.Forms.Button();
-            this.cbxAddressNullCustomerDelete = new System.Windows.Forms.CheckBox();
+            this.cbxEMailNullCustomerDelete = new System.Windows.Forms.CheckBox();
             this.cbxLNameNullCustomerDelete = new System.Windows.Forms.CheckBox();
             this.cbxFNameNullCustomerDelete = new System.Windows.Forms.CheckBox();
-            this.txtAddressCustomerDelete = new System.Windows.Forms.TextBox();
+            this.txtEMailCustomerDelete = new System.Windows.Forms.TextBox();
             this.txtLNameCustomerDelete = new System.Windows.Forms.TextBox();
             this.txtFNameCustomerDelete = new System.Windows.Forms.TextBox();
-            this.cbxAddressOnCustomerDelete = new System.Windows.Forms.CheckBox();
+            this.cbxEMailOnCustomerDelete = new System.Windows.Forms.CheckBox();
             this.cbxLNameOnCustomerDelete = new System.Windows.Forms.CheckBox();
             this.cbxFNameOnCustomerDelete = new System.Windows.Forms.CheckBox();
             this.lblCustomerDeleteTitle = new System.Windows.Forms.Label();
@@ -86,16 +86,16 @@
             this.btnCustomerDeleteGo.Text = "Delete";
             this.btnCustomerDeleteGo.UseVisualStyleBackColor = true;
             // 
-            // cbxAddressNullCustomerDelete
+            // cbxEMailNullCustomerDelete
             // 
-            this.cbxAddressNullCustomerDelete.Enabled = false;
-            this.cbxAddressNullCustomerDelete.Location = new System.Drawing.Point(263, 136);
-            this.cbxAddressNullCustomerDelete.Name = "cbxAddressNullCustomerDelete";
-            this.cbxAddressNullCustomerDelete.Size = new System.Drawing.Size(98, 21);
-            this.cbxAddressNullCustomerDelete.TabIndex = 25;
-            this.cbxAddressNullCustomerDelete.Text = "Null";
-            this.cbxAddressNullCustomerDelete.UseVisualStyleBackColor = true;
-            this.cbxAddressNullCustomerDelete.CheckedChanged += new System.EventHandler(this.cbxAddressNullCustomerDelete_CheckedChanged);
+            this.cbxEMailNullCustomerDelete.Enabled = false;
+            this.cbxEMailNullCustomerDelete.Location = new System.Drawing.Point(263, 136);
+            this.cbxEMailNullCustomerDelete.Name = "cbxEMailNullCustomerDelete";
+            this.cbxEMailNullCustomerDelete.Size = new System.Drawing.Size(98, 21);
+            this.cbxEMailNullCustomerDelete.TabIndex = 25;
+            this.cbxEMailNullCustomerDelete.Text = "Null";
+            this.cbxEMailNullCustomerDelete.UseVisualStyleBackColor = true;
+            this.cbxEMailNullCustomerDelete.CheckedChanged += new System.EventHandler(this.cbxEMailNullCustomerDelete_CheckedChanged);
             // 
             // cbxLNameNullCustomerDelete
             // 
@@ -119,13 +119,13 @@
             this.cbxFNameNullCustomerDelete.UseVisualStyleBackColor = true;
             this.cbxFNameNullCustomerDelete.CheckedChanged += new System.EventHandler(this.cbxFNameNullCustomerDelete_CheckedChanged);
             // 
-            // txtAddressCustomerDelete
+            // txtEMailCustomerDelete
             // 
-            this.txtAddressCustomerDelete.Enabled = false;
-            this.txtAddressCustomerDelete.Location = new System.Drawing.Point(122, 136);
-            this.txtAddressCustomerDelete.Name = "txtAddressCustomerDelete";
-            this.txtAddressCustomerDelete.Size = new System.Drawing.Size(135, 22);
-            this.txtAddressCustomerDelete.TabIndex = 22;
+            this.txtEMailCustomerDelete.Enabled = false;
+            this.txtEMailCustomerDelete.Location = new System.Drawing.Point(122, 136);
+            this.txtEMailCustomerDelete.Name = "txtEMailCustomerDelete";
+            this.txtEMailCustomerDelete.Size = new System.Drawing.Size(135, 22);
+            this.txtEMailCustomerDelete.TabIndex = 22;
             // 
             // txtLNameCustomerDelete
             // 
@@ -143,19 +143,19 @@
             this.txtFNameCustomerDelete.Size = new System.Drawing.Size(135, 22);
             this.txtFNameCustomerDelete.TabIndex = 24;
             // 
-            // cbxAddressOnCustomerDelete
+            // cbxEMailOnCustomerDelete
             // 
-            this.cbxAddressOnCustomerDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxAddressOnCustomerDelete.AutoSize = true;
-            this.cbxAddressOnCustomerDelete.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbxAddressOnCustomerDelete.Location = new System.Drawing.Point(34, 137);
-            this.cbxAddressOnCustomerDelete.Name = "cbxAddressOnCustomerDelete";
-            this.cbxAddressOnCustomerDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbxAddressOnCustomerDelete.Size = new System.Drawing.Size(82, 21);
-            this.cbxAddressOnCustomerDelete.TabIndex = 20;
-            this.cbxAddressOnCustomerDelete.Text = "Address";
-            this.cbxAddressOnCustomerDelete.UseVisualStyleBackColor = true;
-            this.cbxAddressOnCustomerDelete.CheckedChanged += new System.EventHandler(this.cbxAddressOnCustomerDelete_CheckedChanged);
+            this.cbxEMailOnCustomerDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxEMailOnCustomerDelete.AutoSize = true;
+            this.cbxEMailOnCustomerDelete.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbxEMailOnCustomerDelete.Location = new System.Drawing.Point(52, 137);
+            this.cbxEMailOnCustomerDelete.Name = "cbxEMailOnCustomerDelete";
+            this.cbxEMailOnCustomerDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbxEMailOnCustomerDelete.Size = new System.Drawing.Size(64, 21);
+            this.cbxEMailOnCustomerDelete.TabIndex = 20;
+            this.cbxEMailOnCustomerDelete.Text = "EMail";
+            this.cbxEMailOnCustomerDelete.UseVisualStyleBackColor = true;
+            this.cbxEMailOnCustomerDelete.CheckedChanged += new System.EventHandler(this.cbxEMailOnCustomerDelete_CheckedChanged);
             // 
             // cbxLNameOnCustomerDelete
             // 
@@ -239,18 +239,19 @@
             this.Controls.Add(this.btnResetCustomerDelete);
             this.Controls.Add(this.btnCustomerDeleteGo);
             this.Controls.Add(this.cbxIDNullCustomerDelete);
-            this.Controls.Add(this.cbxAddressNullCustomerDelete);
+            this.Controls.Add(this.cbxEMailNullCustomerDelete);
             this.Controls.Add(this.cbxLNameNullCustomerDelete);
             this.Controls.Add(this.cbxFNameNullCustomerDelete);
             this.Controls.Add(this.txtIDCustomerDelete);
-            this.Controls.Add(this.txtAddressCustomerDelete);
+            this.Controls.Add(this.txtEMailCustomerDelete);
             this.Controls.Add(this.txtLNameCustomerDelete);
             this.Controls.Add(this.txtFNameCustomerDelete);
             this.Controls.Add(this.cbxIDOnCustomerDelete);
-            this.Controls.Add(this.cbxAddressOnCustomerDelete);
+            this.Controls.Add(this.cbxEMailOnCustomerDelete);
             this.Controls.Add(this.cbxLNameOnCustomerDelete);
             this.Controls.Add(this.cbxFNameOnCustomerDelete);
             this.Controls.Add(this.lblCustomerDeleteTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CustomersDelete";
             this.Text = "CustomersDelete";
             this.ResumeLayout(false);
@@ -264,13 +265,13 @@
         private System.Windows.Forms.Button btnReturnCustomerDelete;
         private System.Windows.Forms.Button btnResetCustomerDelete;
         private System.Windows.Forms.Button btnCustomerDeleteGo;
-        private System.Windows.Forms.CheckBox cbxAddressNullCustomerDelete;
+        private System.Windows.Forms.CheckBox cbxEMailNullCustomerDelete;
         private System.Windows.Forms.CheckBox cbxLNameNullCustomerDelete;
         private System.Windows.Forms.CheckBox cbxFNameNullCustomerDelete;
-        private System.Windows.Forms.TextBox txtAddressCustomerDelete;
+        private System.Windows.Forms.TextBox txtEMailCustomerDelete;
         private System.Windows.Forms.TextBox txtLNameCustomerDelete;
         private System.Windows.Forms.TextBox txtFNameCustomerDelete;
-        private System.Windows.Forms.CheckBox cbxAddressOnCustomerDelete;
+        private System.Windows.Forms.CheckBox cbxEMailOnCustomerDelete;
         private System.Windows.Forms.CheckBox cbxLNameOnCustomerDelete;
         private System.Windows.Forms.CheckBox cbxFNameOnCustomerDelete;
         private System.Windows.Forms.Label lblCustomerDeleteTitle;

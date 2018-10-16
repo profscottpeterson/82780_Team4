@@ -21,19 +21,19 @@ namespace TeamDevProject
         {
             cbxFNameNullCustomerAdd.Checked = false;
             cbxLNameNullCustomerAdd.Checked = false;
-            cbxAddressNullCustomerAdd.Checked = false;
+            cbxEMailNullCustomerAdd.Checked = false;
             cbxFNameNullCustomerAdd.Enabled = false;
             cbxLNameNullCustomerAdd.Enabled = false;
-            cbxAddressNullCustomerAdd.Enabled = false;
+            cbxEMailNullCustomerAdd.Enabled = false;
             txtFNameCustomerAdd.Text = "";
             txtLNameCustomerAdd.Text = "";
-            txtAddressCustomerAdd.Text = "";
+            txtEMailCustomerAdd.Text = "";
             txtFNameCustomerAdd.Enabled = false;
             txtLNameCustomerAdd.Enabled = false;
-            txtAddressCustomerAdd.Enabled = false;
+            txtEMailCustomerAdd.Enabled = false;
             cbxFNameOnCustomerAdd.Checked = false;
             cbxLNameOnCustomerAdd.Checked = false;
-            cbxAddressOnCustomerAdd.Checked = false;
+            cbxEMailOnCustomerAdd.Checked = false;
         }
 
         private void btnReturnCustomerAdd_Click(object sender, EventArgs e)
@@ -78,19 +78,19 @@ namespace TeamDevProject
             }
         }
 
-        private void cbxAddressOnCustomerAdd_CheckedChanged(object sender, EventArgs e)
+        private void cbxEMailOnCustomerAdd_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxAddressOnCustomerAdd.Checked)
+            if (cbxEMailOnCustomerAdd.Checked)
             {
-                txtAddressCustomerAdd.Enabled = true;
-                cbxAddressNullCustomerAdd.Enabled = true;
+                txtEMailCustomerAdd.Enabled = true;
+                cbxEMailNullCustomerAdd.Enabled = true;
             }
             else
             {
-                cbxAddressNullCustomerAdd.Checked = false;
-                txtAddressCustomerAdd.Enabled = false;
-                cbxAddressNullCustomerAdd.Enabled = false;
-                txtAddressCustomerAdd.Text = "";
+                cbxEMailNullCustomerAdd.Checked = false;
+                txtEMailCustomerAdd.Enabled = false;
+                cbxEMailNullCustomerAdd.Enabled = false;
+                txtEMailCustomerAdd.Text = "";
             }
         }
 
@@ -127,17 +127,17 @@ namespace TeamDevProject
             }
         }
 
-        private void cbxAddressNullCustomerAdd_CheckedChanged(object sender, EventArgs e)
+        private void cbxEMailNullCustomerAdd_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxAddressNullCustomerAdd.Checked)
+            if (cbxEMailNullCustomerAdd.Checked)
             {
-                txtAddressCustomerAdd.Text = "<NULL>";
-                txtAddressCustomerAdd.Enabled = false;
+                txtEMailCustomerAdd.Text = "<NULL>";
+                txtEMailCustomerAdd.Enabled = false;
             }
             else
             {
-                txtAddressCustomerAdd.Text = "";
-                txtAddressCustomerAdd.Enabled = true;
+                txtEMailCustomerAdd.Text = "";
+                txtEMailCustomerAdd.Enabled = true;
             }
         }
     }

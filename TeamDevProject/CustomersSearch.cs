@@ -48,19 +48,19 @@ namespace TeamDevProject
             }
         }
 
-        private void cbxAddressOnCustomerSearch_CheckedChanged(object sender, EventArgs e)
+        private void cbxEMailOnCustomerSearch_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxAddressOnCustomerSearch.Checked)
+            if (cbxEMailOnCustomerSearch.Checked)
             {
-                txtAddressCustomerSearch.Enabled = true;
-                cbxAddressNullCustomerSearch.Enabled = true;
+                txtEMailCustomerSearch.Enabled = true;
+                cbxEMailNullCustomerSearch.Enabled = true;
             }
             else
             {
-                cbxAddressNullCustomerSearch.Checked = false;
-                txtAddressCustomerSearch.Enabled = false;
-                cbxAddressNullCustomerSearch.Enabled = false;
-                txtAddressCustomerSearch.Text = "";
+                cbxEMailNullCustomerSearch.Checked = false;
+                txtEMailCustomerSearch.Enabled = false;
+                cbxEMailNullCustomerSearch.Enabled = false;
+                txtEMailCustomerSearch.Text = "";
             }
         }
 
@@ -108,17 +108,17 @@ namespace TeamDevProject
             }
         }
 
-        private void cbxAddressNullCustomerSearch_CheckedChanged(object sender, EventArgs e)
+        private void cbxEMailNullCustomerSearch_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxAddressNullCustomerSearch.Checked)
+            if (cbxEMailNullCustomerSearch.Checked)
             {
-                txtAddressCustomerSearch.Text = "<NULL>";
-                txtAddressCustomerSearch.Enabled = false;
+                txtEMailCustomerSearch.Text = "<NULL>";
+                txtEMailCustomerSearch.Enabled = false;
             }
             else
             {
-                txtAddressCustomerSearch.Text = "";
-                txtAddressCustomerSearch.Enabled = true;
+                txtEMailCustomerSearch.Text = "";
+                txtEMailCustomerSearch.Enabled = true;
             }
         }
 
@@ -140,23 +140,23 @@ namespace TeamDevProject
         {
             cbxFNameNullCustomerSearch.Checked = false;
             cbxLNameNullCustomerSearch.Checked = false;
-            cbxAddressNullCustomerSearch.Checked = false;
+            cbxEMailNullCustomerSearch.Checked = false;
             cbxIDNullCustomerSearch.Checked = false;
             cbxFNameNullCustomerSearch.Enabled = false;
             cbxLNameNullCustomerSearch.Enabled = false;
-            cbxAddressNullCustomerSearch.Enabled = false;
+            cbxEMailNullCustomerSearch.Enabled = false;
             cbxIDNullCustomerSearch.Enabled = false;
             txtFNameCustomerSearch.Text = "";
             txtLNameCustomerSearch.Text = "";
-            txtAddressCustomerSearch.Text = "";
+            txtEMailCustomerSearch.Text = "";
             txtIDCustomerSearch.Text = "";
             txtFNameCustomerSearch.Enabled = false;
             txtLNameCustomerSearch.Enabled = false;
-            txtAddressCustomerSearch.Enabled = false;
+            txtEMailCustomerSearch.Enabled = false;
             txtIDCustomerSearch.Enabled = false;
             cbxFNameOnCustomerSearch.Checked = false;
             cbxLNameOnCustomerSearch.Checked = false;
-            cbxAddressOnCustomerSearch.Checked = false;
+            cbxEMailOnCustomerSearch.Checked = false;
             cbxIDOnCustomerSearch.Checked = false;
         }
 

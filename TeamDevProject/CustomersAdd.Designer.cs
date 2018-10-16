@@ -30,18 +30,18 @@
         {
             this.lblCustomerAddTitle = new System.Windows.Forms.Label();
             this.cbxFNameOnCustomerAdd = new System.Windows.Forms.CheckBox();
-            this.cbxAddressOnCustomerAdd = new System.Windows.Forms.CheckBox();
             this.cbxLNameOnCustomerAdd = new System.Windows.Forms.CheckBox();
-            this.txtAddressCustomerAdd = new System.Windows.Forms.TextBox();
             this.txtLNameCustomerAdd = new System.Windows.Forms.TextBox();
             this.txtFNameCustomerAdd = new System.Windows.Forms.TextBox();
-            this.cbxAddressNullCustomerAdd = new System.Windows.Forms.CheckBox();
             this.cbxLNameNullCustomerAdd = new System.Windows.Forms.CheckBox();
             this.cbxFNameNullCustomerAdd = new System.Windows.Forms.CheckBox();
             this.btnExitCustomerAdd = new System.Windows.Forms.Button();
             this.btnReturnCustomerAdd = new System.Windows.Forms.Button();
             this.btnResetCustomerAdd = new System.Windows.Forms.Button();
             this.btnCustomerAddGo = new System.Windows.Forms.Button();
+            this.cbxEMailOnCustomerAdd = new System.Windows.Forms.CheckBox();
+            this.txtEMailCustomerAdd = new System.Windows.Forms.TextBox();
+            this.cbxEMailNullCustomerAdd = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblCustomerAddTitle
@@ -68,20 +68,6 @@
             this.cbxFNameOnCustomerAdd.UseVisualStyleBackColor = true;
             this.cbxFNameOnCustomerAdd.CheckedChanged += new System.EventHandler(this.cbxFNameOnCustomerAdd_CheckedChanged);
             // 
-            // cbxAddressOnCustomerAdd
-            // 
-            this.cbxAddressOnCustomerAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxAddressOnCustomerAdd.AutoSize = true;
-            this.cbxAddressOnCustomerAdd.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbxAddressOnCustomerAdd.Location = new System.Drawing.Point(34, 137);
-            this.cbxAddressOnCustomerAdd.Name = "cbxAddressOnCustomerAdd";
-            this.cbxAddressOnCustomerAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbxAddressOnCustomerAdd.Size = new System.Drawing.Size(82, 21);
-            this.cbxAddressOnCustomerAdd.TabIndex = 4;
-            this.cbxAddressOnCustomerAdd.Text = "Address";
-            this.cbxAddressOnCustomerAdd.UseVisualStyleBackColor = true;
-            this.cbxAddressOnCustomerAdd.CheckedChanged += new System.EventHandler(this.cbxAddressOnCustomerAdd_CheckedChanged);
-            // 
             // cbxLNameOnCustomerAdd
             // 
             this.cbxLNameOnCustomerAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -95,14 +81,6 @@
             this.cbxLNameOnCustomerAdd.Text = "Last Name";
             this.cbxLNameOnCustomerAdd.UseVisualStyleBackColor = true;
             this.cbxLNameOnCustomerAdd.CheckedChanged += new System.EventHandler(this.cbxLNameOnCustomerAdd_CheckedChanged);
-            // 
-            // txtAddressCustomerAdd
-            // 
-            this.txtAddressCustomerAdd.Enabled = false;
-            this.txtAddressCustomerAdd.Location = new System.Drawing.Point(122, 136);
-            this.txtAddressCustomerAdd.Name = "txtAddressCustomerAdd";
-            this.txtAddressCustomerAdd.Size = new System.Drawing.Size(135, 22);
-            this.txtAddressCustomerAdd.TabIndex = 7;
             // 
             // txtLNameCustomerAdd
             // 
@@ -119,17 +97,6 @@
             this.txtFNameCustomerAdd.Name = "txtFNameCustomerAdd";
             this.txtFNameCustomerAdd.Size = new System.Drawing.Size(135, 22);
             this.txtFNameCustomerAdd.TabIndex = 9;
-            // 
-            // cbxAddressNullCustomerAdd
-            // 
-            this.cbxAddressNullCustomerAdd.Enabled = false;
-            this.cbxAddressNullCustomerAdd.Location = new System.Drawing.Point(263, 136);
-            this.cbxAddressNullCustomerAdd.Name = "cbxAddressNullCustomerAdd";
-            this.cbxAddressNullCustomerAdd.Size = new System.Drawing.Size(98, 21);
-            this.cbxAddressNullCustomerAdd.TabIndex = 11;
-            this.cbxAddressNullCustomerAdd.Text = "Null";
-            this.cbxAddressNullCustomerAdd.UseVisualStyleBackColor = true;
-            this.cbxAddressNullCustomerAdd.CheckedChanged += new System.EventHandler(this.cbxAddressNullCustomerAdd_CheckedChanged);
             // 
             // cbxLNameNullCustomerAdd
             // 
@@ -192,6 +159,39 @@
             this.btnCustomerAddGo.Text = "Add";
             this.btnCustomerAddGo.UseVisualStyleBackColor = true;
             // 
+            // cbxEMailOnCustomerAdd
+            // 
+            this.cbxEMailOnCustomerAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxEMailOnCustomerAdd.AutoSize = true;
+            this.cbxEMailOnCustomerAdd.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbxEMailOnCustomerAdd.Location = new System.Drawing.Point(52, 137);
+            this.cbxEMailOnCustomerAdd.Name = "cbxEMailOnCustomerAdd";
+            this.cbxEMailOnCustomerAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbxEMailOnCustomerAdd.Size = new System.Drawing.Size(64, 21);
+            this.cbxEMailOnCustomerAdd.TabIndex = 4;
+            this.cbxEMailOnCustomerAdd.Text = "EMail";
+            this.cbxEMailOnCustomerAdd.UseVisualStyleBackColor = true;
+            this.cbxEMailOnCustomerAdd.CheckedChanged += new System.EventHandler(this.cbxEMailOnCustomerAdd_CheckedChanged);
+            // 
+            // txtEMailCustomerAdd
+            // 
+            this.txtEMailCustomerAdd.Enabled = false;
+            this.txtEMailCustomerAdd.Location = new System.Drawing.Point(122, 136);
+            this.txtEMailCustomerAdd.Name = "txtEMailCustomerAdd";
+            this.txtEMailCustomerAdd.Size = new System.Drawing.Size(135, 22);
+            this.txtEMailCustomerAdd.TabIndex = 7;
+            // 
+            // cbxEMailNullCustomerAdd
+            // 
+            this.cbxEMailNullCustomerAdd.Enabled = false;
+            this.cbxEMailNullCustomerAdd.Location = new System.Drawing.Point(263, 136);
+            this.cbxEMailNullCustomerAdd.Name = "cbxEMailNullCustomerAdd";
+            this.cbxEMailNullCustomerAdd.Size = new System.Drawing.Size(98, 21);
+            this.cbxEMailNullCustomerAdd.TabIndex = 11;
+            this.cbxEMailNullCustomerAdd.Text = "Null";
+            this.cbxEMailNullCustomerAdd.UseVisualStyleBackColor = true;
+            this.cbxEMailNullCustomerAdd.CheckedChanged += new System.EventHandler(this.cbxEMailNullCustomerAdd_CheckedChanged);
+            // 
             // CustomersAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,16 +202,17 @@
             this.Controls.Add(this.btnReturnCustomerAdd);
             this.Controls.Add(this.btnResetCustomerAdd);
             this.Controls.Add(this.btnCustomerAddGo);
-            this.Controls.Add(this.cbxAddressNullCustomerAdd);
+            this.Controls.Add(this.cbxEMailNullCustomerAdd);
             this.Controls.Add(this.cbxLNameNullCustomerAdd);
             this.Controls.Add(this.cbxFNameNullCustomerAdd);
-            this.Controls.Add(this.txtAddressCustomerAdd);
+            this.Controls.Add(this.txtEMailCustomerAdd);
             this.Controls.Add(this.txtLNameCustomerAdd);
             this.Controls.Add(this.txtFNameCustomerAdd);
-            this.Controls.Add(this.cbxAddressOnCustomerAdd);
+            this.Controls.Add(this.cbxEMailOnCustomerAdd);
             this.Controls.Add(this.cbxLNameOnCustomerAdd);
             this.Controls.Add(this.cbxFNameOnCustomerAdd);
             this.Controls.Add(this.lblCustomerAddTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CustomersAdd";
             this.Text = "CustomersAdd";
             this.ResumeLayout(false);
@@ -223,17 +224,17 @@
 
         private System.Windows.Forms.Label lblCustomerAddTitle;
         private System.Windows.Forms.CheckBox cbxFNameOnCustomerAdd;
-        private System.Windows.Forms.CheckBox cbxAddressOnCustomerAdd;
         private System.Windows.Forms.CheckBox cbxLNameOnCustomerAdd;
-        private System.Windows.Forms.TextBox txtAddressCustomerAdd;
         private System.Windows.Forms.TextBox txtLNameCustomerAdd;
         private System.Windows.Forms.TextBox txtFNameCustomerAdd;
-        private System.Windows.Forms.CheckBox cbxAddressNullCustomerAdd;
         private System.Windows.Forms.CheckBox cbxLNameNullCustomerAdd;
         private System.Windows.Forms.CheckBox cbxFNameNullCustomerAdd;
         private System.Windows.Forms.Button btnExitCustomerAdd;
         private System.Windows.Forms.Button btnReturnCustomerAdd;
         private System.Windows.Forms.Button btnResetCustomerAdd;
         private System.Windows.Forms.Button btnCustomerAddGo;
+        private System.Windows.Forms.CheckBox cbxEMailOnCustomerAdd;
+        private System.Windows.Forms.TextBox txtEMailCustomerAdd;
+        private System.Windows.Forms.CheckBox cbxEMailNullCustomerAdd;
     }
 }

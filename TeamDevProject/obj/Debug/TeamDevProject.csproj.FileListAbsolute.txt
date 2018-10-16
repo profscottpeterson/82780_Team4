@@ -21,8 +21,6 @@ C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProj
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\TeamDevProject.db
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\TeamDevProject.exe
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\TeamDevProject.pdb
-C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\Dapper.dll
-C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\System.Data.SQLite.dll
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\Dapper.xml
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\System.Data.SQLite.xml
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.csprojResolveAssemblyReference.cache
@@ -55,8 +53,6 @@ C:\Users\23939755\Desktop\82780_Team4-master\TeamDevProject\obj\Debug\TeamDevPro
 C:\Users\23939755\Desktop\82780_Team4-master\TeamDevProject\obj\Debug\TeamDevProject.OrdersMain.resources
 C:\Users\23939755\Desktop\82780_Team4-master\TeamDevProject\obj\Debug\TeamDevProject.Properties.Resources.resources
 C:\Users\23939755\Desktop\82780_Team4-master\TeamDevProject\obj\Debug\TeamDevProject.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-=======
 H:\82780_Team4-master\TeamDevProject\bin\Debug\TeamDevProject.db
 H:\82780_Team4-master\TeamDevProject\bin\Debug\TeamDevProject.exe.config
 H:\82780_Team4-master\TeamDevProject\bin\Debug\TeamDevProject.exe
@@ -95,4 +91,10 @@ C:\Users\24125837\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevP
 C:\Users\24125837\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.OrdersMain.resources
 C:\Users\24125837\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.Properties.Resources.resources
 C:\Users\24125837\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.csproj.GenerateResource.Cache
->>>>>>> Eric's-Branch
+C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.InventorySearch.resources
+C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.InventoryAdd.resources
+C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.InventoryDelete.resources
+C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.OrdersAdd.resources
+C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.OrdersSearch.resources
+C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.OrdersDelete.resources
+

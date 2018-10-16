@@ -21,23 +21,23 @@ namespace TeamDevProject
         {
             cbxFNameNullCustomerDelete.Checked = false;
             cbxLNameNullCustomerDelete.Checked = false;
-            cbxAddressNullCustomerDelete.Checked = false;
+            cbxEMailNullCustomerDelete.Checked = false;
             cbxIDNullCustomerDelete.Checked = false;
             cbxFNameNullCustomerDelete.Enabled = false;
             cbxLNameNullCustomerDelete.Enabled = false;
-            cbxAddressNullCustomerDelete.Enabled = false;
+            cbxEMailNullCustomerDelete.Enabled = false;
             cbxIDNullCustomerDelete.Enabled = false;
             txtFNameCustomerDelete.Text = "";
             txtLNameCustomerDelete.Text = "";
-            txtAddressCustomerDelete.Text = "";
+            txtEMailCustomerDelete.Text = "";
             txtIDCustomerDelete.Text = "";
             txtFNameCustomerDelete.Enabled = false;
             txtLNameCustomerDelete.Enabled = false;
-            txtAddressCustomerDelete.Enabled = false;
+            txtEMailCustomerDelete.Enabled = false;
             txtIDCustomerDelete.Enabled = false;
             cbxFNameOnCustomerDelete.Checked = false;
             cbxLNameOnCustomerDelete.Checked = false;
-            cbxAddressOnCustomerDelete.Checked = false;
+            cbxEMailOnCustomerDelete.Checked = false;
             cbxIDOnCustomerDelete.Checked = false;
         }
 
@@ -83,19 +83,19 @@ namespace TeamDevProject
             }
         }
 
-        private void cbxAddressOnCustomerDelete_CheckedChanged(object sender, EventArgs e)
+        private void cbxEMailOnCustomerDelete_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxAddressOnCustomerDelete.Checked)
+            if (cbxEMailOnCustomerDelete.Checked)
             {
-                txtAddressCustomerDelete.Enabled = true;
-                cbxAddressNullCustomerDelete.Enabled = true;
+                txtEMailCustomerDelete.Enabled = true;
+                cbxEMailNullCustomerDelete.Enabled = true;
             }
             else
             {
-                cbxAddressNullCustomerDelete.Checked = false;
-                txtAddressCustomerDelete.Enabled = false;
-                cbxAddressNullCustomerDelete.Enabled = false;
-                txtAddressCustomerDelete.Text = "";
+                cbxEMailNullCustomerDelete.Checked = false;
+                txtEMailCustomerDelete.Enabled = false;
+                cbxEMailNullCustomerDelete.Enabled = false;
+                txtEMailCustomerDelete.Text = "";
             }
         }
 
@@ -143,20 +143,6 @@ namespace TeamDevProject
             }
         }
 
-        private void cbxAddressNullCustomerDelete_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxAddressNullCustomerDelete.Checked)
-            {
-                txtAddressCustomerDelete.Text = "<NULL>";
-                txtAddressCustomerDelete.Enabled = false;
-            }
-            else
-            {
-                txtAddressCustomerDelete.Text = "";
-                txtAddressCustomerDelete.Enabled = true;
-            }
-        }
-
         private void cbxIDNullCustomerDelete_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxIDNullCustomerDelete.Checked)
@@ -168,6 +154,20 @@ namespace TeamDevProject
             {
                 txtIDCustomerDelete.Text = "";
                 txtIDCustomerDelete.Enabled = true;
+            }
+        }
+
+        private void cbxEMailNullCustomerDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxEMailNullCustomerDelete.Checked)
+            {
+                txtEMailCustomerDelete.Text = "<NULL>";
+                txtEMailCustomerDelete.Enabled = false;
+            }
+            else
+            {
+                txtEMailCustomerDelete.Text = "";
+                txtEMailCustomerDelete.Enabled = true;
             }
         }
     }

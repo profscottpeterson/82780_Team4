@@ -34,13 +34,13 @@
             this.cbxLNameOnCustomerSearch = new System.Windows.Forms.CheckBox();
             this.txtFNameCustomerSearch = new System.Windows.Forms.TextBox();
             this.txtLNameCustomerSearch = new System.Windows.Forms.TextBox();
-            this.cbxAddressOnCustomerSearch = new System.Windows.Forms.CheckBox();
-            this.txtAddressCustomerSearch = new System.Windows.Forms.TextBox();
+            this.cbxEMailOnCustomerSearch = new System.Windows.Forms.CheckBox();
+            this.txtEMailCustomerSearch = new System.Windows.Forms.TextBox();
             this.cbxIDOnCustomerSearch = new System.Windows.Forms.CheckBox();
             this.txtIDCustomerSearch = new System.Windows.Forms.TextBox();
             this.cbxFNameNullCustomerSearch = new System.Windows.Forms.CheckBox();
             this.cbxLNameNullCustomerSearch = new System.Windows.Forms.CheckBox();
-            this.cbxAddressNullCustomerSearch = new System.Windows.Forms.CheckBox();
+            this.cbxEMailNullCustomerSearch = new System.Windows.Forms.CheckBox();
             this.cbxIDNullCustomerSearch = new System.Windows.Forms.CheckBox();
             this.btnCustomerSearchGo = new System.Windows.Forms.Button();
             this.btnResetCustomerSearch = new System.Windows.Forms.Button();
@@ -111,27 +111,27 @@
             this.txtLNameCustomerSearch.Size = new System.Drawing.Size(135, 22);
             this.txtLNameCustomerSearch.TabIndex = 3;
             // 
-            // cbxAddressOnCustomerSearch
+            // cbxEMailOnCustomerSearch
             // 
-            this.cbxAddressOnCustomerSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxAddressOnCustomerSearch.AutoSize = true;
-            this.cbxAddressOnCustomerSearch.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbxAddressOnCustomerSearch.Location = new System.Drawing.Point(28, 135);
-            this.cbxAddressOnCustomerSearch.Name = "cbxAddressOnCustomerSearch";
-            this.cbxAddressOnCustomerSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbxAddressOnCustomerSearch.Size = new System.Drawing.Size(82, 21);
-            this.cbxAddressOnCustomerSearch.TabIndex = 1;
-            this.cbxAddressOnCustomerSearch.Text = "Address";
-            this.cbxAddressOnCustomerSearch.UseVisualStyleBackColor = true;
-            this.cbxAddressOnCustomerSearch.CheckedChanged += new System.EventHandler(this.cbxAddressOnCustomerSearch_CheckedChanged);
+            this.cbxEMailOnCustomerSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxEMailOnCustomerSearch.AutoSize = true;
+            this.cbxEMailOnCustomerSearch.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbxEMailOnCustomerSearch.Location = new System.Drawing.Point(46, 135);
+            this.cbxEMailOnCustomerSearch.Name = "cbxEMailOnCustomerSearch";
+            this.cbxEMailOnCustomerSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbxEMailOnCustomerSearch.Size = new System.Drawing.Size(64, 21);
+            this.cbxEMailOnCustomerSearch.TabIndex = 1;
+            this.cbxEMailOnCustomerSearch.Text = "EMail";
+            this.cbxEMailOnCustomerSearch.UseVisualStyleBackColor = true;
+            this.cbxEMailOnCustomerSearch.CheckedChanged += new System.EventHandler(this.cbxEMailOnCustomerSearch_CheckedChanged);
             // 
-            // txtAddressCustomerSearch
+            // txtEMailCustomerSearch
             // 
-            this.txtAddressCustomerSearch.Enabled = false;
-            this.txtAddressCustomerSearch.Location = new System.Drawing.Point(116, 134);
-            this.txtAddressCustomerSearch.Name = "txtAddressCustomerSearch";
-            this.txtAddressCustomerSearch.Size = new System.Drawing.Size(135, 22);
-            this.txtAddressCustomerSearch.TabIndex = 3;
+            this.txtEMailCustomerSearch.Enabled = false;
+            this.txtEMailCustomerSearch.Location = new System.Drawing.Point(116, 134);
+            this.txtEMailCustomerSearch.Name = "txtEMailCustomerSearch";
+            this.txtEMailCustomerSearch.Size = new System.Drawing.Size(135, 22);
+            this.txtEMailCustomerSearch.TabIndex = 3;
             // 
             // cbxIDOnCustomerSearch
             // 
@@ -176,16 +176,16 @@
             this.cbxLNameNullCustomerSearch.UseVisualStyleBackColor = true;
             this.cbxLNameNullCustomerSearch.CheckedChanged += new System.EventHandler(this.cbxLNameNullCustomerSearch_CheckedChanged);
             // 
-            // cbxAddressNullCustomerSearch
+            // cbxEMailNullCustomerSearch
             // 
-            this.cbxAddressNullCustomerSearch.Enabled = false;
-            this.cbxAddressNullCustomerSearch.Location = new System.Drawing.Point(258, 135);
-            this.cbxAddressNullCustomerSearch.Name = "cbxAddressNullCustomerSearch";
-            this.cbxAddressNullCustomerSearch.Size = new System.Drawing.Size(98, 21);
-            this.cbxAddressNullCustomerSearch.TabIndex = 0;
-            this.cbxAddressNullCustomerSearch.Text = "Null";
-            this.cbxAddressNullCustomerSearch.UseVisualStyleBackColor = true;
-            this.cbxAddressNullCustomerSearch.CheckedChanged += new System.EventHandler(this.cbxAddressNullCustomerSearch_CheckedChanged);
+            this.cbxEMailNullCustomerSearch.Enabled = false;
+            this.cbxEMailNullCustomerSearch.Location = new System.Drawing.Point(258, 135);
+            this.cbxEMailNullCustomerSearch.Name = "cbxEMailNullCustomerSearch";
+            this.cbxEMailNullCustomerSearch.Size = new System.Drawing.Size(98, 21);
+            this.cbxEMailNullCustomerSearch.TabIndex = 0;
+            this.cbxEMailNullCustomerSearch.Text = "Null";
+            this.cbxEMailNullCustomerSearch.UseVisualStyleBackColor = true;
+            this.cbxEMailNullCustomerSearch.CheckedChanged += new System.EventHandler(this.cbxEMailNullCustomerSearch_CheckedChanged);
             // 
             // cbxIDNullCustomerSearch
             // 
@@ -248,19 +248,20 @@
             this.Controls.Add(this.btnResetCustomerSearch);
             this.Controls.Add(this.btnCustomerSearchGo);
             this.Controls.Add(this.cbxIDNullCustomerSearch);
-            this.Controls.Add(this.cbxAddressNullCustomerSearch);
+            this.Controls.Add(this.cbxEMailNullCustomerSearch);
             this.Controls.Add(this.cbxLNameNullCustomerSearch);
             this.Controls.Add(this.cbxFNameNullCustomerSearch);
             this.Controls.Add(this.txtIDCustomerSearch);
-            this.Controls.Add(this.txtAddressCustomerSearch);
+            this.Controls.Add(this.txtEMailCustomerSearch);
             this.Controls.Add(this.txtLNameCustomerSearch);
             this.Controls.Add(this.txtFNameCustomerSearch);
             this.Controls.Add(this.lblCustomerSearchTitle);
             this.Controls.Add(this.cbxIDOnCustomerSearch);
-            this.Controls.Add(this.cbxAddressOnCustomerSearch);
+            this.Controls.Add(this.cbxEMailOnCustomerSearch);
             this.Controls.Add(this.cbxLNameOnCustomerSearch);
             this.Controls.Add(this.cbxFNameOnCustomerSearch);
             this.Controls.Add(this.lbxCustomerSearch);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CustomerSearch";
             this.Text = "CustomersSearch";
             this.ResumeLayout(false);
@@ -276,13 +277,13 @@
         private System.Windows.Forms.CheckBox cbxLNameOnCustomerSearch;
         private System.Windows.Forms.TextBox txtFNameCustomerSearch;
         private System.Windows.Forms.TextBox txtLNameCustomerSearch;
-        private System.Windows.Forms.CheckBox cbxAddressOnCustomerSearch;
-        private System.Windows.Forms.TextBox txtAddressCustomerSearch;
+        private System.Windows.Forms.CheckBox cbxEMailOnCustomerSearch;
+        private System.Windows.Forms.TextBox txtEMailCustomerSearch;
         private System.Windows.Forms.CheckBox cbxIDOnCustomerSearch;
         private System.Windows.Forms.TextBox txtIDCustomerSearch;
         private System.Windows.Forms.CheckBox cbxFNameNullCustomerSearch;
         private System.Windows.Forms.CheckBox cbxLNameNullCustomerSearch;
-        private System.Windows.Forms.CheckBox cbxAddressNullCustomerSearch;
+        private System.Windows.Forms.CheckBox cbxEMailNullCustomerSearch;
         private System.Windows.Forms.CheckBox cbxIDNullCustomerSearch;
         private System.Windows.Forms.Button btnCustomerSearchGo;
         private System.Windows.Forms.Button btnResetCustomerSearch;
