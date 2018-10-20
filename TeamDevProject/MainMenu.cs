@@ -39,5 +39,10 @@ namespace TeamDevProject
             CustomersMain cust = new CustomersMain();
             cust.ShowDialog();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
