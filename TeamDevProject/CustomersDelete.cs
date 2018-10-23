@@ -170,5 +170,113 @@ namespace TeamDevProject
                 txtEMailCustomerDelete.Enabled = true;
             }
         }
+
+        private void btnCustomerDeleteGo_Click(object sender, EventArgs e)
+        {
+            Boolean fNameCheck = false;
+            Boolean lNameCheck = false;
+            Boolean emailCheck = false;
+            Boolean idCheck = false;
+            string fName = "";
+            string lName = "";
+            string email = "";
+            string id = "";
+            string query = "delete from Customer where ";
+            Validation val = new Validation();
+
+            if (cbxFNameOnCustomerDelete.Checked == true)
+            {
+                fName = val.stringValidate(txtFNameCustomerDelete.Text);
+                fNameCheck = true;
+            }
+
+            if (cbxLNameOnCustomerDelete.Checked == true)
+            {
+                lName = val.stringValidate(txtLNameCustomerDelete.Text);
+                lNameCheck = true;
+            }
+
+            if (cbxEMailOnCustomerDelete.Checked == true)
+            {
+                email = val.emailValidate(txtEMailCustomerDelete.Text);
+                emailCheck = true;
+            }
+
+            if (cbxIDOnCustomerDelete.Checked == true)
+            {
+                id = val.numValidate(txtIDCustomerDelete.Text);
+                idCheck = true;
+            }
+
+            if (fName != "[Error]" && lName != "[Error]" && email != "[Error]" && id != "[Error]")
+            {
+                if (fNameCheck == true)
+                {
+                    query += "FirstName = ";
+
+                    if (fName == "NULL")
+                    {
+                        query += fName;
+                    }
+                    else
+                    {
+                        query += "'" + fName + "'";
+                    }
+                }
+
+                if (lNameCheck == true)
+                {
+                    if (fNameCheck == true)
+                    {
+                        query += " AND ";
+                    }
+
+                    query += "LastName = ";
+
+                    if (lName == "NULL")
+                    {
+                        query += lName;
+                    }
+                    else
+                    {
+                        query += "'" + lName + "'";
+                    }
+                }
+
+                if (emailCheck == true)
+                {
+                    if (lNameCheck == true || fNameCheck == true)
+                    {
+                        query += " AND ";
+                    }
+
+                    query += "Email = ";
+                    if (email == "NULL")
+                    {
+                        query += email;
+                    }
+                    else
+                    {
+                        query += "'" + email + "'";
+                    }
+                }
+
+                if (idCheck == true)
+                {
+                    if (fNameCheck == true || lNameCheck == true || emailCheck == true)
+                    {
+                        query += " AND ";
+                    }
+
+                    query += "CustID = " + id;
+                }
+
+                MessageBox.Show(query);
+            }
+            else
+            {
+                MessageBox.Show("There was an error with your inputs, please double check all inputs.");
+            }
+        }
     }
 }

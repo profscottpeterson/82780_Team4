@@ -83,6 +83,7 @@
             this.btnOrdersSearchGo.TabIndex = 34;
             this.btnOrdersSearchGo.Text = "Search";
             this.btnOrdersSearchGo.UseVisualStyleBackColor = true;
+            this.btnOrdersSearchGo.Click += new System.EventHandler(this.btnOrdersSearchGo_Click);
             // 
             // cbxIDNullOrdersSearch
             // 

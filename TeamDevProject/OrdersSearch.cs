@@ -134,5 +134,12 @@ namespace TeamDevProject
         {
             Application.Exit();
         }
+
+        private void btnOrdersSearchGo_Click(object sender, EventArgs e)
+        {
+            Validation val = new Validation();
+            string dateCheck = val.dateValidate(txtDateOrdersSearch.Text);
+            MessageBox.Show(dateCheck);
+        }
     }
 }

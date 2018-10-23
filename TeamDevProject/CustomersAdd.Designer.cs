@@ -158,6 +158,7 @@
             this.btnCustomerAddGo.TabIndex = 17;
             this.btnCustomerAddGo.Text = "Add";
             this.btnCustomerAddGo.UseVisualStyleBackColor = true;
+            this.btnCustomerAddGo.Click += new System.EventHandler(this.btnCustomerAddGo_Click);
             // 
             // cbxEMailOnCustomerAdd
             // 

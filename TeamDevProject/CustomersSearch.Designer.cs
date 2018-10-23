@@ -206,6 +206,7 @@
             this.btnCustomerSearchGo.TabIndex = 4;
             this.btnCustomerSearchGo.Text = "Search";
             this.btnCustomerSearchGo.UseVisualStyleBackColor = true;
+            this.btnCustomerSearchGo.Click += new System.EventHandler(this.btnCustomerSearchGo_Click);
             // 
             // btnResetCustomerSearch
             // 

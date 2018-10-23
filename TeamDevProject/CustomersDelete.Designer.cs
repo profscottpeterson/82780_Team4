@@ -85,6 +85,7 @@
             this.btnCustomerDeleteGo.TabIndex = 31;
             this.btnCustomerDeleteGo.Text = "Delete";
             this.btnCustomerDeleteGo.UseVisualStyleBackColor = true;
+            this.btnCustomerDeleteGo.Click += new System.EventHandler(this.btnCustomerDeleteGo_Click);
             // 
             // cbxEMailNullCustomerDelete
             // 

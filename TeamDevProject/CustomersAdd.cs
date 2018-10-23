@@ -140,5 +140,118 @@ namespace TeamDevProject
                 txtEMailCustomerAdd.Enabled = true;
             }
         }
+
+        private void btnCustomerAddGo_Click(object sender, EventArgs e)
+        {
+            Boolean fNameCheck = false;
+            Boolean lNameCheck = false;
+            Boolean emailCheck = false;
+            string fName = "";
+            string lName = "";
+            string email = "";
+            string query = "insert into Customer (";
+            Validation val = new Validation();
+
+            if (cbxFNameOnCustomerAdd.Checked == true)
+            {
+                fName = val.stringValidate(txtFNameCustomerAdd.Text);
+                fNameCheck = true;
+            }
+
+            if (cbxLNameOnCustomerAdd.Checked == true)
+            {
+                lName = val.stringValidate(txtLNameCustomerAdd.Text);
+                lNameCheck = true;
+            }
+
+            if (cbxEMailOnCustomerAdd.Checked == true)
+            {
+                email = val.emailValidate(txtEMailCustomerAdd.Text);
+                emailCheck = true;
+            }
+
+            if (fName != "[Error]" && lName != "[Error]" && email != "[Error]")
+            {
+                if (fNameCheck == true)
+                {
+                    query += "FirstName";
+                }
+
+                if (lNameCheck == true)
+                {
+                    if (fNameCheck == true)
+                    {
+                        query += ", ";
+                    }
+
+                    query += "LastName";
+                }
+
+                if (emailCheck == true)
+                {
+                    if (lNameCheck == true || fNameCheck == true)
+                    {
+                        query += ", ";
+                    }
+
+                    query += "Email";
+                }
+
+                query += ") Values (";
+
+                if (fNameCheck == true)
+                {
+                    if (fName == "NULL")
+                    {
+                        query += fName;
+                    }
+                    else
+                    {
+                        query += "'" + fName + "'";
+                    }
+                }
+
+                if (lNameCheck == true)
+                {
+                    if (fNameCheck == true)
+                    {
+                        query += ", ";
+                    }
+
+                    if (lName == "NULL")
+                    {
+                        query += lName;
+                    }
+                    else
+                    {
+                        query += "'" + lName + "'";
+                    }
+                }
+
+                if (emailCheck == true)
+                {
+                    if (fNameCheck == true || lNameCheck == true)
+                    {
+                        query += ", ";
+                    }
+
+                    if (email == "NULL")
+                    {
+                        query += email;
+                    }
+                    else
+                    {
+                        query += "'" + email + "'";
+                    }
+                }
+
+                query += ");";
+                MessageBox.Show(query);
+            }
+            else
+            {
+                MessageBox.Show("There was an error with your inputs, please double check all inputs.");
+            }
+        }
     }
 }
