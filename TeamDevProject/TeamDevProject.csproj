@@ -55,7 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="CustomersAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,14 +74,14 @@
     <Compile Include="CustomersMain.Designer.cs">
       <DependentUpon>CustomersMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerSQL.cs" />
+    <Compile Include="Controllers\CustomerSQL.cs" />
     <Compile Include="CustomersSearch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomersSearch.Designer.cs">
       <DependentUpon>CustomersSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory.cs" />
+    <Compile Include="Models\Inventory.cs" />
     <Compile Include="InventoryAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,7 +106,7 @@
     <Compile Include="InventorySearch.Designer.cs">
       <DependentUpon>InventorySearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventorySQL.cs" />
+    <Compile Include="Controllers\InventorySQL.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,7 +116,7 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="Orders.cs" />
+    <Compile Include="Models\Orders.cs" />
     <Compile Include="OrdersAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,7 +141,7 @@
     <Compile Include="OrdersSearch.Designer.cs">
       <DependentUpon>OrdersSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrdersSQL.cs" />
+    <Compile Include="Controllers\OrdersSQL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validation.cs" />
