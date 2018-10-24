@@ -144,7 +144,6 @@ C:\Users\Trifon\OneDrive\Desktop\82780_Team4\TeamDevProject\bin\Debug\TeamDevPro
 C:\Users\Trifon\OneDrive\Desktop\82780_Team4\TeamDevProject\bin\Debug\TeamDevProject.exe.config
 C:\Users\Trifon\OneDrive\Desktop\82780_Team4\TeamDevProject\bin\Debug\TeamDevProject.exe
 C:\Users\Trifon\OneDrive\Desktop\82780_Team4\TeamDevProject\bin\Debug\TeamDevProject.pdb
-C:\Users\Trifon\OneDrive\Desktop\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.csprojAssemblyReference.cache
 C:\Users\Trifon\OneDrive\Desktop\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.CustomersAdd.resources
 C:\Users\Trifon\OneDrive\Desktop\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.CustomersDelete.resources
 C:\Users\Trifon\OneDrive\Desktop\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.CustomersMain.resources

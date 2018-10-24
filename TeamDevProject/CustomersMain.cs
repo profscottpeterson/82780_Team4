@@ -12,6 +12,7 @@ namespace TeamDevProject
 {
     public partial class CustomersMain : Form
     {
+        public DataView customerView;
         public CustomersMain()
         {
             InitializeComponent();
@@ -43,6 +44,33 @@ namespace TeamDevProject
         private void btnCustomerExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void CustomersMain_Load(object sender, EventArgs e)
+        {
+            List<Customer> allCustomers = new List<Customer>();
+            allCustomers = CustomerSQL.LoadCustomers();
+
+            DataTable customersTable = new DataTable();
+            customersTable.Columns.Add("ID");
+            customersTable.Columns.Add("FirstName");
+            customersTable.Columns.Add("LastName");
+            customersTable.Columns.Add("Email");
+            foreach (var customer in allCustomers)
+            {
+                customersTable.Rows.Add(customer.CustID, customer.FirstName, customer.LastName, customer.Email);
+            }
+            customerView = new DataView(customersTable);
+            dataGridCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridCustomer.DataSource = customerView;
+            dataGridCustomer.ReadOnly = true;
+            dataGridCustomer.AllowUserToAddRows = false;
+        }
+
+        private void txtBoxSearchCustomer_TextChanged(object sender, EventArgs e)
+        {
+            customerView.RowFilter = string.Format("FirstName like '%{0}%'", txtBoxSearchCustomer.Text);
+            dataGridCustomer.DataSource = customerView;
         }
     }
 }
