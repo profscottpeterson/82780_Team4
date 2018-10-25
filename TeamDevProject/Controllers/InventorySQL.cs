@@ -21,20 +21,65 @@ namespace TeamDevProject
             }
         }
 
-        public static void SaveInventory(Inventory inventory)
+        public static List<Inventory> SelectInventory(Inventory inventory)
         {
+            
             using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Default"].ConnectionString))
             {
-                cnn.Execute("Insert into Inventory values (@ItemName, @Price)", inventory);
+                if (inventory.ItemName != "" && inventory.Price != 0 && inventory.InvID == 0)
+                {
+                   var output = cnn.Query<Inventory>("Select InvID, ItemName, Price from Inventory where ItemName = '" + inventory.ItemName + "AND where Price = '" + inventory.Price);
+                   return output.ToList();
+                }
+                else if (inventory.ItemName == "" && inventory.Price != 0 && inventory.InvID == 0)
+                {
+                   var output = cnn.Query<Inventory>("Select InvID, ItemName, Price from Inventory where Price = " + inventory.Price);
+                    return output.ToList();
+                }
+                else if (inventory.ItemName != "" && inventory.Price == 0 && inventory.InvID == 0)
+                {
+                    var output = cnn.Query<Inventory>("Select InvID, ItemName, Price from Inventory where ItemName = " + inventory.ItemName);
+                    return output.ToList();
+                }
+                else
+                {
+                    var output = cnn.Query<Inventory>("Select InvID, ItemName, Price from Inventory where InvID = " + inventory.InvID);
+                    return output.ToList();
+                }
+            }
+        }
+
+        public static void SaveInventory(Inventory inventory)
+        {
+
+            using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Default"].ConnectionString))
+            {
+                cnn.Execute("Insert into Inventory (ItemName, Price) values ('" + inventory.ItemName + "','" + inventory.Price + "')");
             }
         }
 
 
-        public static void DeleteInventory(int id)
+        public static void DeleteInventory(Inventory inventory)
         {
             using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Default"].ConnectionString))
             {
-                cnn.Execute("Delete Inventory where InvID = " + id);
+                if (inventory.ItemName != "" && inventory.Price != 0 && inventory.InvID == 0)
+                {
+                    cnn.Execute("Delete from Inventory where ItemName = '" + inventory.ItemName + "AND where Price = '" + inventory.Price);
+                }
+                else if (inventory.ItemName == "" && inventory.Price != 0 && inventory.InvID == 0)
+                {
+                    cnn.Execute("Delete from Inventory where Price = " + inventory.Price);
+                }
+                else if (inventory.ItemName != "" && inventory.Price == 0 && inventory.InvID == 0)
+                {
+                    cnn.Execute("Delete from Inventory where ItemName = " + inventory.ItemName);
+                }
+                else
+                {
+                    cnn.Execute("Delete from Inventory where InvID = " + inventory.InvID);
+                }
+                    
             }
         }
     }

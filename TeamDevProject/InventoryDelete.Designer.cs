@@ -46,9 +46,10 @@
             // 
             // btnExitInventoryDelete
             // 
-            this.btnExitInventoryDelete.Location = new System.Drawing.Point(416, 173);
+            this.btnExitInventoryDelete.Location = new System.Drawing.Point(312, 141);
+            this.btnExitInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExitInventoryDelete.Name = "btnExitInventoryDelete";
-            this.btnExitInventoryDelete.Size = new System.Drawing.Size(154, 39);
+            this.btnExitInventoryDelete.Size = new System.Drawing.Size(116, 32);
             this.btnExitInventoryDelete.TabIndex = 45;
             this.btnExitInventoryDelete.Text = "Exit";
             this.btnExitInventoryDelete.UseVisualStyleBackColor = true;
@@ -56,9 +57,10 @@
             // 
             // btnReturnInventoryDelete
             // 
-            this.btnReturnInventoryDelete.Location = new System.Drawing.Point(416, 128);
+            this.btnReturnInventoryDelete.Location = new System.Drawing.Point(312, 104);
+            this.btnReturnInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReturnInventoryDelete.Name = "btnReturnInventoryDelete";
-            this.btnReturnInventoryDelete.Size = new System.Drawing.Size(154, 39);
+            this.btnReturnInventoryDelete.Size = new System.Drawing.Size(116, 32);
             this.btnReturnInventoryDelete.TabIndex = 46;
             this.btnReturnInventoryDelete.Text = "Return";
             this.btnReturnInventoryDelete.UseVisualStyleBackColor = true;
@@ -66,9 +68,10 @@
             // 
             // btnResetInventoryDelete
             // 
-            this.btnResetInventoryDelete.Location = new System.Drawing.Point(416, 83);
+            this.btnResetInventoryDelete.Location = new System.Drawing.Point(312, 67);
+            this.btnResetInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnResetInventoryDelete.Name = "btnResetInventoryDelete";
-            this.btnResetInventoryDelete.Size = new System.Drawing.Size(154, 39);
+            this.btnResetInventoryDelete.Size = new System.Drawing.Size(116, 32);
             this.btnResetInventoryDelete.TabIndex = 47;
             this.btnResetInventoryDelete.Text = "Reset";
             this.btnResetInventoryDelete.UseVisualStyleBackColor = true;
@@ -76,19 +79,22 @@
             // 
             // btnInventoryDeleteGo
             // 
-            this.btnInventoryDeleteGo.Location = new System.Drawing.Point(416, 15);
+            this.btnInventoryDeleteGo.Location = new System.Drawing.Point(312, 12);
+            this.btnInventoryDeleteGo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInventoryDeleteGo.Name = "btnInventoryDeleteGo";
-            this.btnInventoryDeleteGo.Size = new System.Drawing.Size(154, 62);
+            this.btnInventoryDeleteGo.Size = new System.Drawing.Size(116, 50);
             this.btnInventoryDeleteGo.TabIndex = 48;
             this.btnInventoryDeleteGo.Text = "Delete";
             this.btnInventoryDeleteGo.UseVisualStyleBackColor = true;
+            this.btnInventoryDeleteGo.Click += new System.EventHandler(this.btnInventoryDeleteGo_Click);
             // 
             // cbxIDNullInventoryDelete
             // 
             this.cbxIDNullInventoryDelete.Enabled = false;
-            this.cbxIDNullInventoryDelete.Location = new System.Drawing.Point(263, 138);
+            this.cbxIDNullInventoryDelete.Location = new System.Drawing.Point(197, 112);
+            this.cbxIDNullInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxIDNullInventoryDelete.Name = "cbxIDNullInventoryDelete";
-            this.cbxIDNullInventoryDelete.Size = new System.Drawing.Size(98, 21);
+            this.cbxIDNullInventoryDelete.Size = new System.Drawing.Size(74, 17);
             this.cbxIDNullInventoryDelete.TabIndex = 42;
             this.cbxIDNullInventoryDelete.Text = "Null";
             this.cbxIDNullInventoryDelete.UseVisualStyleBackColor = true;
@@ -97,9 +103,10 @@
             // cbxPriceNullInventoryDelete
             // 
             this.cbxPriceNullInventoryDelete.Enabled = false;
-            this.cbxPriceNullInventoryDelete.Location = new System.Drawing.Point(263, 95);
+            this.cbxPriceNullInventoryDelete.Location = new System.Drawing.Point(197, 77);
+            this.cbxPriceNullInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxPriceNullInventoryDelete.Name = "cbxPriceNullInventoryDelete";
-            this.cbxPriceNullInventoryDelete.Size = new System.Drawing.Size(98, 21);
+            this.cbxPriceNullInventoryDelete.Size = new System.Drawing.Size(74, 17);
             this.cbxPriceNullInventoryDelete.TabIndex = 43;
             this.cbxPriceNullInventoryDelete.Text = "Null";
             this.cbxPriceNullInventoryDelete.UseVisualStyleBackColor = true;
@@ -108,9 +115,10 @@
             // cbxNameNullInventoryDelete
             // 
             this.cbxNameNullInventoryDelete.Enabled = false;
-            this.cbxNameNullInventoryDelete.Location = new System.Drawing.Point(263, 56);
+            this.cbxNameNullInventoryDelete.Location = new System.Drawing.Point(197, 46);
+            this.cbxNameNullInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxNameNullInventoryDelete.Name = "cbxNameNullInventoryDelete";
-            this.cbxNameNullInventoryDelete.Size = new System.Drawing.Size(98, 21);
+            this.cbxNameNullInventoryDelete.Size = new System.Drawing.Size(74, 17);
             this.cbxNameNullInventoryDelete.TabIndex = 44;
             this.cbxNameNullInventoryDelete.Text = "Null";
             this.cbxNameNullInventoryDelete.UseVisualStyleBackColor = true;
@@ -119,25 +127,28 @@
             // txtIDInventoryDelete
             // 
             this.txtIDInventoryDelete.Enabled = false;
-            this.txtIDInventoryDelete.Location = new System.Drawing.Point(122, 138);
+            this.txtIDInventoryDelete.Location = new System.Drawing.Point(92, 112);
+            this.txtIDInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtIDInventoryDelete.Name = "txtIDInventoryDelete";
-            this.txtIDInventoryDelete.Size = new System.Drawing.Size(135, 22);
+            this.txtIDInventoryDelete.Size = new System.Drawing.Size(102, 20);
             this.txtIDInventoryDelete.TabIndex = 38;
             // 
             // txtPriceInventoryDelete
             // 
             this.txtPriceInventoryDelete.Enabled = false;
-            this.txtPriceInventoryDelete.Location = new System.Drawing.Point(122, 95);
+            this.txtPriceInventoryDelete.Location = new System.Drawing.Point(92, 77);
+            this.txtPriceInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPriceInventoryDelete.Name = "txtPriceInventoryDelete";
-            this.txtPriceInventoryDelete.Size = new System.Drawing.Size(135, 22);
+            this.txtPriceInventoryDelete.Size = new System.Drawing.Size(102, 20);
             this.txtPriceInventoryDelete.TabIndex = 39;
             // 
             // txtNameInventoryDelete
             // 
             this.txtNameInventoryDelete.Enabled = false;
-            this.txtNameInventoryDelete.Location = new System.Drawing.Point(122, 56);
+            this.txtNameInventoryDelete.Location = new System.Drawing.Point(92, 46);
+            this.txtNameInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNameInventoryDelete.Name = "txtNameInventoryDelete";
-            this.txtNameInventoryDelete.Size = new System.Drawing.Size(135, 22);
+            this.txtNameInventoryDelete.Size = new System.Drawing.Size(102, 20);
             this.txtNameInventoryDelete.TabIndex = 40;
             // 
             // cbxIDOnInventoryDelete
@@ -145,10 +156,11 @@
             this.cbxIDOnInventoryDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxIDOnInventoryDelete.AutoSize = true;
             this.cbxIDOnInventoryDelete.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbxIDOnInventoryDelete.Location = new System.Drawing.Point(73, 138);
+            this.cbxIDOnInventoryDelete.Location = new System.Drawing.Point(50, 112);
+            this.cbxIDOnInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxIDOnInventoryDelete.Name = "cbxIDOnInventoryDelete";
             this.cbxIDOnInventoryDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbxIDOnInventoryDelete.Size = new System.Drawing.Size(43, 21);
+            this.cbxIDOnInventoryDelete.Size = new System.Drawing.Size(37, 17);
             this.cbxIDOnInventoryDelete.TabIndex = 35;
             this.cbxIDOnInventoryDelete.Text = "ID";
             this.cbxIDOnInventoryDelete.UseVisualStyleBackColor = true;
@@ -159,10 +171,11 @@
             this.cbxPriceOnInventoryDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxPriceOnInventoryDelete.AutoSize = true;
             this.cbxPriceOnInventoryDelete.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbxPriceOnInventoryDelete.Location = new System.Drawing.Point(54, 95);
+            this.cbxPriceOnInventoryDelete.Location = new System.Drawing.Point(36, 77);
+            this.cbxPriceOnInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxPriceOnInventoryDelete.Name = "cbxPriceOnInventoryDelete";
             this.cbxPriceOnInventoryDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbxPriceOnInventoryDelete.Size = new System.Drawing.Size(62, 21);
+            this.cbxPriceOnInventoryDelete.Size = new System.Drawing.Size(50, 17);
             this.cbxPriceOnInventoryDelete.TabIndex = 36;
             this.cbxPriceOnInventoryDelete.Text = "Price";
             this.cbxPriceOnInventoryDelete.UseVisualStyleBackColor = true;
@@ -173,10 +186,11 @@
             this.cbxNameOnInventoryDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxNameOnInventoryDelete.AutoSize = true;
             this.cbxNameOnInventoryDelete.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbxNameOnInventoryDelete.Location = new System.Drawing.Point(19, 57);
+            this.cbxNameOnInventoryDelete.Location = new System.Drawing.Point(10, 46);
+            this.cbxNameOnInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxNameOnInventoryDelete.Name = "cbxNameOnInventoryDelete";
             this.cbxNameOnInventoryDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbxNameOnInventoryDelete.Size = new System.Drawing.Size(97, 21);
+            this.cbxNameOnInventoryDelete.Size = new System.Drawing.Size(77, 17);
             this.cbxNameOnInventoryDelete.TabIndex = 33;
             this.cbxNameOnInventoryDelete.Text = "Item Name";
             this.cbxNameOnInventoryDelete.UseVisualStyleBackColor = true;
@@ -186,18 +200,19 @@
             // 
             this.lblInventoryDeleteTitle.AutoSize = true;
             this.lblInventoryDeleteTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventoryDeleteTitle.Location = new System.Drawing.Point(12, 9);
+            this.lblInventoryDeleteTitle.Location = new System.Drawing.Point(9, 7);
+            this.lblInventoryDeleteTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInventoryDeleteTitle.Name = "lblInventoryDeleteTitle";
-            this.lblInventoryDeleteTitle.Size = new System.Drawing.Size(182, 32);
+            this.lblInventoryDeleteTitle.Size = new System.Drawing.Size(139, 26);
             this.lblInventoryDeleteTitle.TabIndex = 32;
             this.lblInventoryDeleteTitle.Text = "Delete Fields";
             // 
             // InventoryDelete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(624, 228);
+            this.ClientSize = new System.Drawing.Size(468, 185);
             this.Controls.Add(this.btnExitInventoryDelete);
             this.Controls.Add(this.btnReturnInventoryDelete);
             this.Controls.Add(this.btnResetInventoryDelete);
@@ -213,6 +228,7 @@
             this.Controls.Add(this.cbxNameOnInventoryDelete);
             this.Controls.Add(this.lblInventoryDeleteTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InventoryDelete";
             this.Text = "InventoryDelete";
             this.ResumeLayout(false);

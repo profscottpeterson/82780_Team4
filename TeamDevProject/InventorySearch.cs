@@ -137,7 +137,35 @@ namespace TeamDevProject
 
         private void btnInventorySearchGo_Click(object sender, EventArgs e)
         {
+            string cost = "";
+            Inventory temp = new Inventory();
 
+            if (txtIDInventorySearch.Text != "")
+            {
+                temp.InvID = Convert.ToInt32(txtIDInventorySearch.Text);
+            }
+
+            if (txtNameInventorySearch.Text != "")
+            {
+                temp.ItemName = txtNameInventorySearch.Text;
+            }
+            else
+            {
+                temp.ItemName = null;
+            }
+
+            if (txtPriceInventorySearch.Text != "")
+            {
+                cost = txtPriceInventorySearch.Text;
+                temp.Price = Convert.ToDouble(cost);
+            }
+
+            List<Inventory> records = new List<Inventory>();
+            records = InventorySQL.SelectInventory(temp);
+            foreach (Inventory x in records)
+            {
+                lbxInventorySearch.Items.Add(x.InvID + " " + x.ItemName + " " + x.Price);
+            }
         }
     }
 }

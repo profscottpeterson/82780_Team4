@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
+using System.Data.SQLite;
+using Dapper;
+
 
 namespace TeamDevProject
 {
@@ -105,5 +109,15 @@ namespace TeamDevProject
                 txtNameInventoryAdd.Text = "";
             }
         }
+
+        private void btnInventoryAddGo_Click(object sender, EventArgs e)
+        {
+            Inventory temp = new Inventory();
+            temp.ItemName = txtNameInventoryAdd.Text;
+            string cost = "";
+            cost = txtPriceInventoryAdd.Text;
+            temp.Price = Convert.ToDouble(cost);
+            InventorySQL.SaveInventory(temp);
+        }   
     }
 }

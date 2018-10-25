@@ -135,5 +135,32 @@ namespace TeamDevProject
                 txtIDInventoryDelete.Enabled = true;
             }
         }
+
+        private void btnInventoryDeleteGo_Click(object sender, EventArgs e)
+        {
+            string cost = "";
+            Inventory temp = new Inventory();
+
+            if (txtIDInventoryDelete.Text != "")
+            {
+                temp.InvID = Convert.ToInt32(txtIDInventoryDelete.Text);
+            }
+
+            if (txtNameInventoryDelete.Text != "")
+            {
+                temp.ItemName = txtNameInventoryDelete.Text;
+            }
+            else
+            {
+                temp.ItemName = null;
+            }
+
+            if (txtPriceInventoryDelete.Text != "")
+            {
+                cost = txtPriceInventoryDelete.Text;
+                temp.Price = Convert.ToDouble(cost);
+            }
+            InventorySQL.DeleteInventory(temp);
+        }
     }
 }
