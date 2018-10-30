@@ -138,9 +138,13 @@ namespace TeamDevProject
 
         private void btnInventoryDeleteGo_Click(object sender, EventArgs e)
         {
+            // Create a cost variable to convert to a double
             string cost = "";
+
+            // Create a temporary inventory object.
             Inventory temp = new Inventory();
 
+            // Assign temp's values based on input.
             if (txtIDInventoryDelete.Text != "")
             {
                 temp.InvID = Convert.ToInt32(txtIDInventoryDelete.Text);
@@ -160,6 +164,8 @@ namespace TeamDevProject
                 cost = txtPriceInventoryDelete.Text;
                 temp.Price = Convert.ToDouble(cost);
             }
+
+            // Use the DeleteInventory method and pass temp as an argument.
             InventorySQL.DeleteInventory(temp);
         }
     }
