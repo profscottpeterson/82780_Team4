@@ -13,17 +13,9 @@ using TeamDevProject;
 namespace UnitTestTeamDev
 {
     [TestClass]
-    class InventoryUnitTests
+    public class InventoryUnitTests
     {
-        [TestMethod]
-        public void InvCreate()
-        {
-            using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Test"].ConnectionString))
-            {
-                cnn.Query<Inventory>("INSERT INTO Inventory (ItemName, Price) VALUES ('Nike Shoes', 25.00)");
-            }
-        }
-
+        // This test selects all records from the Inventory table and asserts that there is only 2 records.
         [TestMethod]
         public void InvSelect()
         {
@@ -35,24 +27,27 @@ namespace UnitTestTeamDev
                 {
                     Console.WriteLine("InvID is {0}, ItemName is {1}, Price is {2}", item.InvID, item.ItemName, item.Price);
                 }
+                Assert.AreEqual(2, output.ToList().Count);
             }
         }
 
+        // This test inserts, updates, and deletes a new record in the Inventory table. It edits the inserted record, asserts the total number
+        // of records and then deletes the record.
         [TestMethod]
-        public void InvUpdate()
+        public void InvInsertUpdateAndDelete()
         {
             using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Test"].ConnectionString))
             {
-                cnn.Query<Orders>("UPDATE Inventory SET ItemName = 'Adidas Shoes' WHERE InvID = 3;");
-            }
-        }
+                var output = cnn.Query<Inventory>("INSERT INTO Inventory (ItemName, Price) VALUES ('Nike Shoes', 25.00)");
+                var Newoutput = cnn.Query<Inventory>("SELECT * FROM Inventory", new DynamicParameters());
+                Assert.AreEqual(3, Newoutput.ToList().Count);
+                var Updateoutput = cnn.Query<Inventory>("Update Inventory Set ItemName = 'UpdateTest' where ItemName = 'Nike Shoes'", new DynamicParameters());
+                var NewUpdateoutput = cnn.Query<Inventory>("SELECT * FROM Inventory  where ItemName = 'UpdateTest'", new DynamicParameters());
+                Assert.AreEqual("UpdateTest", NewUpdateoutput.ToList()[0].ItemName);
+                var outputDelete = cnn.Query<Inventory>("Delete FROM Inventory where ItemName = 'UpdateTest'", new DynamicParameters());
+                var NewoutputDelete = cnn.Query<Inventory>("SELECT * FROM Inventory", new DynamicParameters());
+                Assert.AreEqual(2, NewoutputDelete.ToList().Count);
 
-        [TestMethod]
-        public void InvDelete()
-        {
-            using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Test"].ConnectionString))
-            {
-                cnn.Query<Orders>("DELETE FROM Inventory WHERE InvID = 3");
             }
         }
     }

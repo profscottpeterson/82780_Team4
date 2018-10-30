@@ -137,7 +137,44 @@ namespace TeamDevProject
 
         private void btnInventorySearchGo_Click(object sender, EventArgs e)
         {
+            // Create a string to convert to a double for cost.
+            string cost = "";
 
+            // Create a temporary inventory object.
+            Inventory temp = new Inventory();
+
+            // Assign temp's values based on user input.
+            if (txtIDInventorySearch.Text != "")
+            {
+                temp.InvID = Convert.ToInt32(txtIDInventorySearch.Text);
+            }
+
+            if (txtNameInventorySearch.Text != "")
+            {
+                temp.ItemName = txtNameInventorySearch.Text;
+            }
+            else
+            {
+                temp.ItemName = null;
+            }
+
+            if (txtPriceInventorySearch.Text != "")
+            {
+                cost = txtPriceInventorySearch.Text;
+                temp.Price = Convert.ToDouble(cost);
+            }
+
+            // Create a list of inventory objects.
+            List<Inventory> records = new List<Inventory>();
+
+            // Make records equal to the records returned from the SelectInventory method.
+            records = InventorySQL.SelectInventory(temp);
+
+            // Display all records in the records list in lbxInventorySearch.
+            foreach (Inventory x in records)
+            {
+                lbxInventorySearch.Items.Add(x.InvID + " " + x.ItemName + " " + x.Price);
+            }
         }
     }
 }
