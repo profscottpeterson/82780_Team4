@@ -28,7 +28,7 @@ namespace TeamDevProject
             {
                 if (inventory.ItemName != "" && inventory.Price != 0 && inventory.InvID == 0)
                 {
-                   var output = cnn.Query<Inventory>("Select InvID, ItemName, Price from Inventory where ItemName = '" + inventory.ItemName + "AND where Price = '" + inventory.Price);
+                   var output = cnn.Query<Inventory>("Select InvID, ItemName, Price from Inventory where ItemName = '" + inventory.ItemName + "'"+  "AND where Price = '" + inventory.Price);
                    return output.ToList();
                 }
                 else if (inventory.ItemName == "" && inventory.Price != 0 && inventory.InvID == 0)
@@ -38,7 +38,7 @@ namespace TeamDevProject
                 }
                 else if (inventory.ItemName != "" && inventory.Price == 0 && inventory.InvID == 0)
                 {
-                    var output = cnn.Query<Inventory>("Select InvID, ItemName, Price from Inventory where ItemName = " + inventory.ItemName);
+                    var output = cnn.Query<Inventory>("Select InvID, ItemName, Price from Inventory where ItemName = '" + inventory.ItemName + "'");
                     return output.ToList();
                 }
                 else
@@ -65,7 +65,7 @@ namespace TeamDevProject
             {
                 if (inventory.ItemName != "" && inventory.Price != 0 && inventory.InvID == 0)
                 {
-                    cnn.Execute("Delete from Inventory where ItemName = '" + inventory.ItemName + "AND where Price = '" + inventory.Price);
+                    cnn.Execute("Delete from Inventory where ItemName = '" + inventory.ItemName + "'" + "AND where Price = '" + inventory.Price);
                 }
                 else if (inventory.ItemName == "" && inventory.Price != 0 && inventory.InvID == 0)
                 {
@@ -73,7 +73,7 @@ namespace TeamDevProject
                 }
                 else if (inventory.ItemName != "" && inventory.Price == 0 && inventory.InvID == 0)
                 {
-                    cnn.Execute("Delete from Inventory where ItemName = " + inventory.ItemName);
+                    cnn.Execute("Delete from Inventory where ItemName = '" + inventory.ItemName + "'");
                 }
                 else
                 {
