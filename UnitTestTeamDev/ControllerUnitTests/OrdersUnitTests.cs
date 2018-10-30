@@ -13,17 +13,9 @@ using TeamDevProject;
 namespace UnitTestTeamDev
 {
     [TestClass]
-    class OrdersUnitTests
+   public class OrdersUnitTests
     {
-        [TestMethod]
-        public void createOrder()
-        {
-            using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Test"].ConnectionString))
-            {
-                cnn.Query<Orders>("INSERT INTO Orders (Date) VALUES ('11/11/11')");
-            }
-        }
-
+        // This test selects all records from the Orders table and asserts that there is only 1 record.
         [TestMethod]
         public void selectOrders()
         {
@@ -35,24 +27,27 @@ namespace UnitTestTeamDev
                 {
                     Console.WriteLine("CustID is {0}, OrderID is {1}, Date is {2}", order.CustID, order.OrderID, order.Date);
                 }
+                Assert.AreEqual(1, output.ToList().Count);
             }
         }
 
+        // This test inserts, updates, and deletes a new record in the Orders table. It edits the inserted record, asserts the total number
+        // of records and then deletes the record.
         [TestMethod]
-        public void updateOrder()
+        public void OrdersInsertUpdateAndDelete()
         {
             using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Test"].ConnectionString))
             {
-                cnn.Query<Orders>("UPDATE Orders SET Date = '10/10/10' WHERE OrderID = 3");
-            }
-        }
+                var output = cnn.Query<Orders>("INSERT INTO Orders (Date, CustID) VALUES ('11/11/11', 1)");
+                var Newoutput = cnn.Query<Orders>("SELECT * FROM Orders", new DynamicParameters());
+                Assert.AreEqual(2, Newoutput.ToList().Count);
+                var Updateoutput = cnn.Query<Orders>("Update Orders Set Date = 'mm/dd/yyyy' where Date = '11/11/11'", new DynamicParameters());
+                var NewUpdateoutput = cnn.Query<Orders>("SELECT * FROM Orders where Date = 'mm/dd/yyyy'", new DynamicParameters());
+                Assert.AreEqual("mm/dd/yyyy", NewUpdateoutput.ToList()[0].Date);
+                var outputDelete = cnn.Query<Orders>("Delete FROM Orders where Date = 'mm/dd/yyyy'", new DynamicParameters());
+                var NewoutputDelete = cnn.Query<Orders>("SELECT * FROM Orders", new DynamicParameters());
+                Assert.AreEqual(1, NewoutputDelete.ToList().Count);
 
-        [TestMethod]
-        public void deleteOrder()
-        {
-            using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Test"].ConnectionString))
-            {
-                cnn.Query<Orders>("DELETE FROM Orders WHERE OrderID = 5");
             }
         }
     }
