@@ -12,6 +12,7 @@ namespace TeamDevProject
 {
     public partial class OrdersMain : Form
     {
+        
         public OrdersMain()
         {
             InitializeComponent();
@@ -44,5 +45,7 @@ namespace TeamDevProject
             OrdersDelete OrdDelete = new OrdersDelete();
             OrdDelete.ShowDialog();
         }
+
+        
     }
 }
