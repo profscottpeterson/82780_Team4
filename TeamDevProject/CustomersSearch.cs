@@ -12,6 +12,7 @@ namespace TeamDevProject
 {
     public partial class CustomerSearch : Form
     {
+        public DataView customerView;
         public CustomerSearch()
         {
             InitializeComponent();
@@ -172,6 +173,8 @@ namespace TeamDevProject
 
         private void btnCustomerSearchGo_Click(object sender, EventArgs e)
         {
+
+            /*
             Boolean fNameCheck = false;
             Boolean lNameCheck = false;
             Boolean emailCheck = false;
@@ -276,6 +279,70 @@ namespace TeamDevProject
             {
                 MessageBox.Show("There was an error with your inputs, please double check all inputs.");
             }
+            */
+        }
+
+        private void CustomerSearch_Load(object sender, EventArgs e)
+        {
+            //Creating List to hold all customer objects.
+            List<Customer> allCustomers = new List<Customer>();
+            //Get all customers from the database.
+            allCustomers = CustomerSQL.LoadCustomers();
+
+            //Creating DataTable object to present the Customer Table from the database.
+            DataTable customersTable = new DataTable();
+            //Adding the Rows that we are going to display.
+            customersTable.Columns.Add("ID");
+            customersTable.Columns.Add("FirstName");
+            customersTable.Columns.Add("LastName");
+            customersTable.Columns.Add("Email");
+            //Adding object from the allCustomers list as row in our Data Table.
+            foreach (var customer in allCustomers)
+            {
+                customersTable.Rows.Add(customer.CustID, customer.FirstName, customer.LastName, customer.Email);
+            }
+            //Filling our Data Table in a DataViewe so we can give it to our DataGrid.
+            customerView = new DataView(customersTable);
+            //Dynamicly adjust the width of the DataGrid depending on how many columns we have.
+            dataGridCustomerSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //Adding the DataView with our Customers to the DataGrid
+            dataGridCustomerSearch.DataSource = customerView;
+            //Making the DataGrid read only.
+            dataGridCustomerSearch.ReadOnly = true;
+            //Removing the option for users to add directly into the database.
+            dataGridCustomerSearch.AllowUserToAddRows = false;
+        }
+
+        private void txtFNameCustomerSearch_TextChanged(object sender, EventArgs e)
+        {
+            //Filtering the DataView with the text we have from the Customer TextBox.
+            customerView.RowFilter = string.Format("FirstName like '%{0}%'", txtFNameCustomerSearch.Text);
+            //Adjusting the DataGrid with the filtered data.
+            dataGridCustomerSearch.DataSource = customerView;
+        }
+
+        private void txtLNameCustomerSearch_TextChanged(object sender, EventArgs e)
+        {
+            //Filtering the DataView with the text we have from the Customer TextBox.
+            customerView.RowFilter = string.Format("LastName like '%{0}%'", txtLNameCustomerSearch.Text);
+            //Adjusting the DataGrid with the filtered data.
+            dataGridCustomerSearch.DataSource = customerView;
+        }
+
+        private void txtEMailCustomerSearch_TextChanged(object sender, EventArgs e)
+        {
+            //Filtering the DataView with the text we have from the Customer TextBox.
+            customerView.RowFilter = string.Format("Email like '%{0}%'", txtEMailCustomerSearch.Text);
+            //Adjusting the DataGrid with the filtered data.
+            dataGridCustomerSearch.DataSource = customerView;
+        }
+
+        private void txtIDCustomerSearch_TextChanged(object sender, EventArgs e)
+        {
+            //Filtering the DataView with the text we have from the Customer TextBox.
+            customerView.RowFilter = string.Format("ID like '%{0}%'", txtIDCustomerSearch.Text);
+            //Adjusting the DataGrid with the filtered data.
+            dataGridCustomerSearch.DataSource = customerView;
         }
     }
 }

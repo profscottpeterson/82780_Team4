@@ -173,6 +173,46 @@ namespace TeamDevProject
 
         private void btnCustomerDeleteGo_Click(object sender, EventArgs e)
         {
+            // Create a temporary inventory object.
+            Customer cust = new Customer();
+
+            // Assign temp's values based on input.
+            if (txtIDCustomerDelete.Text != "")
+            {
+                cust.CustID = Convert.ToInt32(txtIDCustomerDelete.Text);
+            }
+
+            if (txtFNameCustomerDelete.Text != "")
+            {
+                cust.FirstName = txtFNameCustomerDelete.Text;
+            }
+            else
+            {
+                cust.FirstName = null;
+            }
+
+            if (txtLNameCustomerDelete.Text != "")
+            {
+                cust.LastName = txtLNameCustomerDelete.Text;
+            }
+            else
+            {
+                cust.LastName = null;
+            }
+
+            if (txtEMailCustomerDelete.Text != "")
+            {
+                cust.Email = txtEMailCustomerDelete.Text;
+            }
+            else
+            {
+                cust.Email = null;
+            }
+
+            //Call delete method on customer
+            CustomerSQL.DeleteCustomer(cust);
+
+            /*
             Boolean fNameCheck = false;
             Boolean lNameCheck = false;
             Boolean emailCheck = false;
@@ -277,6 +317,7 @@ namespace TeamDevProject
             {
                 MessageBox.Show("There was an error with your inputs, please double check all inputs.");
             }
+            */
         }
     }
 }

@@ -143,6 +143,19 @@ namespace TeamDevProject
 
         private void btnCustomerAddGo_Click(object sender, EventArgs e)
         {
+            //temp customer
+            Customer cust = new Customer();
+
+            //users fields for customer
+            cust.FirstName = txtFNameCustomerAdd.Text;
+            cust.LastName = txtLNameCustomerAdd.Text;
+            cust.Email = txtEMailCustomerAdd.Text;
+
+            //save customer
+            CustomerSQL.SaveCustomer(cust);
+
+            /*
+            //test
             Boolean fNameCheck = false;
             Boolean lNameCheck = false;
             Boolean emailCheck = false;
@@ -252,6 +265,7 @@ namespace TeamDevProject
             {
                 MessageBox.Show("There was an error with your inputs, please double check all inputs.");
             }
+            */
         }
     }
 }

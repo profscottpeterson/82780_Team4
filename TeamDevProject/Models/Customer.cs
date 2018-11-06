@@ -8,9 +8,9 @@ namespace TeamDevProject
 {
     public class Customer
     {
-        public int CustID;
-        public string FirstName;
-        public string LastName;
-        public string Email;
+        public int CustID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
     }
 }

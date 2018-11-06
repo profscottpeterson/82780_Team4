@@ -12,9 +12,13 @@ namespace TeamDevProject
 {
     public partial class OrdersMain : Form
     {
+<<<<<<< HEAD
 
         public DataView orderView;
 
+=======
+        
+>>>>>>> master
         public OrdersMain()
         {
             InitializeComponent();
@@ -48,6 +52,7 @@ namespace TeamDevProject
             OrdDelete.ShowDialog();
         }
 
+<<<<<<< HEAD
         private void OrdersMain_Load(object sender, EventArgs e)
         {
             //Creating List to hold all order objects.
@@ -92,5 +97,8 @@ namespace TeamDevProject
             //Adjusting the DataGrid with the filtered data.
             dataGridOrder.DataSource = orderView;
         }
+=======
+        
+>>>>>>> master
     }
 }
