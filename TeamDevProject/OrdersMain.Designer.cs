@@ -31,10 +31,13 @@
             this.btnOrderDelete = new System.Windows.Forms.Button();
             this.btnOrderAdd = new System.Windows.Forms.Button();
             this.btnOrderSearch = new System.Windows.Forms.Button();
-            this.lbxOrderMenu = new System.Windows.Forms.ListBox();
             this.lblOrdersTitle = new System.Windows.Forms.Label();
             this.btnOrdersExit = new System.Windows.Forms.Button();
             this.btnOrdersReturn = new System.Windows.Forms.Button();
+            this.dataGridOrder = new System.Windows.Forms.DataGridView();
+            this.txtBoxSearchOrder = new System.Windows.Forms.TextBox();
+            this.lblOrderSearch = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOrderDelete
@@ -62,22 +65,13 @@
             // btnOrderSearch
             // 
             this.btnOrderSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderSearch.Location = new System.Drawing.Point(24, 108);
+            this.btnOrderSearch.Location = new System.Drawing.Point(150, 188);
             this.btnOrderSearch.Name = "btnOrderSearch";
             this.btnOrderSearch.Size = new System.Drawing.Size(114, 44);
             this.btnOrderSearch.TabIndex = 8;
             this.btnOrderSearch.Text = "Search";
             this.btnOrderSearch.UseVisualStyleBackColor = true;
             this.btnOrderSearch.Click += new System.EventHandler(this.btnOrderSearch_Click);
-            // 
-            // lbxOrderMenu
-            // 
-            this.lbxOrderMenu.FormattingEnabled = true;
-            this.lbxOrderMenu.ItemHeight = 16;
-            this.lbxOrderMenu.Location = new System.Drawing.Point(298, 13);
-            this.lbxOrderMenu.Name = "lbxOrderMenu";
-            this.lbxOrderMenu.Size = new System.Drawing.Size(301, 356);
-            this.lbxOrderMenu.TabIndex = 7;
             // 
             // lblOrdersTitle
             // 
@@ -110,22 +104,54 @@
             this.btnOrdersReturn.UseVisualStyleBackColor = true;
             this.btnOrdersReturn.Click += new System.EventHandler(this.btnOrdersReturn_Click);
             // 
+            // dataGridOrder
+            // 
+            this.dataGridOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridOrder.Location = new System.Drawing.Point(276, 48);
+            this.dataGridOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridOrder.Name = "dataGridOrder";
+            this.dataGridOrder.Size = new System.Drawing.Size(399, 321);
+            this.dataGridOrder.TabIndex = 20;
+            // 
+            // txtBoxSearchOrder
+            // 
+            this.txtBoxSearchOrder.Location = new System.Drawing.Point(24, 136);
+            this.txtBoxSearchOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxSearchOrder.Name = "txtBoxSearchOrder";
+            this.txtBoxSearchOrder.Size = new System.Drawing.Size(132, 22);
+            this.txtBoxSearchOrder.TabIndex = 22;
+            this.txtBoxSearchOrder.TextChanged += new System.EventHandler(this.txtBoxSearchOrder_TextChanged);
+            // 
+            // lblOrderSearch
+            // 
+            this.lblOrderSearch.AutoSize = true;
+            this.lblOrderSearch.Location = new System.Drawing.Point(20, 116);
+            this.lblOrderSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOrderSearch.Name = "lblOrderSearch";
+            this.lblOrderSearch.Size = new System.Drawing.Size(89, 17);
+            this.lblOrderSearch.TabIndex = 21;
+            this.lblOrderSearch.Text = "Search by ID";
+            // 
             // OrdersMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(614, 383);
+            this.ClientSize = new System.Drawing.Size(688, 383);
+            this.Controls.Add(this.txtBoxSearchOrder);
+            this.Controls.Add(this.lblOrderSearch);
+            this.Controls.Add(this.dataGridOrder);
             this.Controls.Add(this.btnOrdersExit);
             this.Controls.Add(this.btnOrdersReturn);
             this.Controls.Add(this.btnOrderDelete);
             this.Controls.Add(this.btnOrderAdd);
             this.Controls.Add(this.btnOrderSearch);
-            this.Controls.Add(this.lbxOrderMenu);
             this.Controls.Add(this.lblOrdersTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "OrdersMain";
             this.Text = "OrdersMain";
+            this.Load += new System.EventHandler(this.OrdersMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,9 +162,11 @@
         private System.Windows.Forms.Button btnOrderDelete;
         private System.Windows.Forms.Button btnOrderAdd;
         private System.Windows.Forms.Button btnOrderSearch;
-        private System.Windows.Forms.ListBox lbxOrderMenu;
         private System.Windows.Forms.Label lblOrdersTitle;
         private System.Windows.Forms.Button btnOrdersExit;
         private System.Windows.Forms.Button btnOrdersReturn;
+        private System.Windows.Forms.DataGridView dataGridOrder;
+        private System.Windows.Forms.TextBox txtBoxSearchOrder;
+        private System.Windows.Forms.Label lblOrderSearch;
     }
 }

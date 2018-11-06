@@ -12,6 +12,9 @@ namespace TeamDevProject
 {
     public partial class OrdersMain : Form
     {
+
+        public DataView orderView;
+
         public OrdersMain()
         {
             InitializeComponent();
@@ -43,6 +46,51 @@ namespace TeamDevProject
         {
             OrdersDelete OrdDelete = new OrdersDelete();
             OrdDelete.ShowDialog();
+        }
+
+        private void OrdersMain_Load(object sender, EventArgs e)
+        {
+            //Creating List to hold all order objects.
+            List<Orders> allOrders = new List<Orders>();
+
+            //Get all orders from the database.
+            allOrders = OrdersSQL.LoadOrders();
+
+            DataTable ordersTable = new DataTable();
+
+            ordersTable.Columns.Add("ID");
+            ordersTable.Columns.Add("Customer ID");
+            ordersTable.Columns.Add("Date");
+
+            foreach (var orders in allOrders)
+            {
+                ordersTable.Rows.Add(orders.OrderID, orders.CustID, orders.Date);
+            }
+
+            orderView = new DataView(ordersTable);
+
+            dataGridOrder.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridOrder.DataSource = orderView;
+
+            dataGridOrder.ReadOnly = true;
+
+            dataGridOrder.AllowUserToAddRows = false;
+        }
+
+        private void txtBoxSearchOrder_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBoxSearchOrder.Text != "")
+            {
+                //Filtering the DataView with the text we have from the Customer TextBox.
+                orderView.RowFilter = string.Format("ID = {0}", txtBoxSearchOrder.Text);
+            } else
+            {
+                orderView.RowFilter = "1 = 1";
+            }
+
+            //Adjusting the DataGrid with the filtered data.
+            dataGridOrder.DataSource = orderView;
         }
     }
 }
