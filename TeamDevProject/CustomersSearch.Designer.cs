@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbxCustomerSearch = new System.Windows.Forms.ListBox();
             this.cbxFNameOnCustomerSearch = new System.Windows.Forms.CheckBox();
             this.lblCustomerSearchTitle = new System.Windows.Forms.Label();
             this.cbxLNameOnCustomerSearch = new System.Windows.Forms.CheckBox();
@@ -46,26 +45,20 @@
             this.btnResetCustomerSearch = new System.Windows.Forms.Button();
             this.btnReturnCustomerSearch = new System.Windows.Forms.Button();
             this.btnExitCustomerSearch = new System.Windows.Forms.Button();
+            this.dataGridCustomerSearch = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomerSearch)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbxCustomerSearch
-            // 
-            this.lbxCustomerSearch.FormattingEnabled = true;
-            this.lbxCustomerSearch.ItemHeight = 16;
-            this.lbxCustomerSearch.Location = new System.Drawing.Point(12, 250);
-            this.lbxCustomerSearch.Name = "lbxCustomerSearch";
-            this.lbxCustomerSearch.Size = new System.Drawing.Size(711, 244);
-            this.lbxCustomerSearch.TabIndex = 0;
             // 
             // cbxFNameOnCustomerSearch
             // 
             this.cbxFNameOnCustomerSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxFNameOnCustomerSearch.AutoSize = true;
             this.cbxFNameOnCustomerSearch.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbxFNameOnCustomerSearch.Location = new System.Drawing.Point(12, 55);
+            this.cbxFNameOnCustomerSearch.Location = new System.Drawing.Point(7, 45);
+            this.cbxFNameOnCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxFNameOnCustomerSearch.Name = "cbxFNameOnCustomerSearch";
             this.cbxFNameOnCustomerSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbxFNameOnCustomerSearch.Size = new System.Drawing.Size(98, 21);
+            this.cbxFNameOnCustomerSearch.Size = new System.Drawing.Size(76, 17);
             this.cbxFNameOnCustomerSearch.TabIndex = 1;
             this.cbxFNameOnCustomerSearch.Text = "First Name";
             this.cbxFNameOnCustomerSearch.UseVisualStyleBackColor = true;
@@ -75,9 +68,10 @@
             // 
             this.lblCustomerSearchTitle.AutoSize = true;
             this.lblCustomerSearchTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerSearchTitle.Location = new System.Drawing.Point(9, 9);
+            this.lblCustomerSearchTitle.Location = new System.Drawing.Point(7, 7);
+            this.lblCustomerSearchTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCustomerSearchTitle.Name = "lblCustomerSearchTitle";
-            this.lblCustomerSearchTitle.Size = new System.Drawing.Size(189, 32);
+            this.lblCustomerSearchTitle.Size = new System.Drawing.Size(145, 26);
             this.lblCustomerSearchTitle.TabIndex = 2;
             this.lblCustomerSearchTitle.Text = "Search Fields";
             // 
@@ -86,10 +80,11 @@
             this.cbxLNameOnCustomerSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxLNameOnCustomerSearch.AutoSize = true;
             this.cbxLNameOnCustomerSearch.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbxLNameOnCustomerSearch.Location = new System.Drawing.Point(12, 93);
+            this.cbxLNameOnCustomerSearch.Location = new System.Drawing.Point(6, 76);
+            this.cbxLNameOnCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxLNameOnCustomerSearch.Name = "cbxLNameOnCustomerSearch";
             this.cbxLNameOnCustomerSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbxLNameOnCustomerSearch.Size = new System.Drawing.Size(98, 21);
+            this.cbxLNameOnCustomerSearch.Size = new System.Drawing.Size(77, 17);
             this.cbxLNameOnCustomerSearch.TabIndex = 1;
             this.cbxLNameOnCustomerSearch.Text = "Last Name";
             this.cbxLNameOnCustomerSearch.UseVisualStyleBackColor = true;
@@ -98,28 +93,33 @@
             // txtFNameCustomerSearch
             // 
             this.txtFNameCustomerSearch.Enabled = false;
-            this.txtFNameCustomerSearch.Location = new System.Drawing.Point(116, 54);
+            this.txtFNameCustomerSearch.Location = new System.Drawing.Point(87, 44);
+            this.txtFNameCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFNameCustomerSearch.Name = "txtFNameCustomerSearch";
-            this.txtFNameCustomerSearch.Size = new System.Drawing.Size(135, 22);
+            this.txtFNameCustomerSearch.Size = new System.Drawing.Size(102, 20);
             this.txtFNameCustomerSearch.TabIndex = 3;
+            this.txtFNameCustomerSearch.TextChanged += new System.EventHandler(this.txtFNameCustomerSearch_TextChanged);
             // 
             // txtLNameCustomerSearch
             // 
             this.txtLNameCustomerSearch.Enabled = false;
-            this.txtLNameCustomerSearch.Location = new System.Drawing.Point(116, 93);
+            this.txtLNameCustomerSearch.Location = new System.Drawing.Point(87, 76);
+            this.txtLNameCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLNameCustomerSearch.Name = "txtLNameCustomerSearch";
-            this.txtLNameCustomerSearch.Size = new System.Drawing.Size(135, 22);
+            this.txtLNameCustomerSearch.Size = new System.Drawing.Size(102, 20);
             this.txtLNameCustomerSearch.TabIndex = 3;
+            this.txtLNameCustomerSearch.TextChanged += new System.EventHandler(this.txtLNameCustomerSearch_TextChanged);
             // 
             // cbxEMailOnCustomerSearch
             // 
             this.cbxEMailOnCustomerSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxEMailOnCustomerSearch.AutoSize = true;
             this.cbxEMailOnCustomerSearch.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbxEMailOnCustomerSearch.Location = new System.Drawing.Point(46, 135);
+            this.cbxEMailOnCustomerSearch.Location = new System.Drawing.Point(30, 110);
+            this.cbxEMailOnCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxEMailOnCustomerSearch.Name = "cbxEMailOnCustomerSearch";
             this.cbxEMailOnCustomerSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbxEMailOnCustomerSearch.Size = new System.Drawing.Size(64, 21);
+            this.cbxEMailOnCustomerSearch.Size = new System.Drawing.Size(52, 17);
             this.cbxEMailOnCustomerSearch.TabIndex = 1;
             this.cbxEMailOnCustomerSearch.Text = "EMail";
             this.cbxEMailOnCustomerSearch.UseVisualStyleBackColor = true;
@@ -128,19 +128,22 @@
             // txtEMailCustomerSearch
             // 
             this.txtEMailCustomerSearch.Enabled = false;
-            this.txtEMailCustomerSearch.Location = new System.Drawing.Point(116, 134);
+            this.txtEMailCustomerSearch.Location = new System.Drawing.Point(87, 109);
+            this.txtEMailCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEMailCustomerSearch.Name = "txtEMailCustomerSearch";
-            this.txtEMailCustomerSearch.Size = new System.Drawing.Size(135, 22);
+            this.txtEMailCustomerSearch.Size = new System.Drawing.Size(102, 20);
             this.txtEMailCustomerSearch.TabIndex = 3;
+            this.txtEMailCustomerSearch.TextChanged += new System.EventHandler(this.txtEMailCustomerSearch_TextChanged);
             // 
             // cbxIDOnCustomerSearch
             // 
             this.cbxIDOnCustomerSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxIDOnCustomerSearch.AutoSize = true;
             this.cbxIDOnCustomerSearch.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbxIDOnCustomerSearch.Location = new System.Drawing.Point(67, 174);
+            this.cbxIDOnCustomerSearch.Location = new System.Drawing.Point(45, 141);
+            this.cbxIDOnCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxIDOnCustomerSearch.Name = "cbxIDOnCustomerSearch";
-            this.cbxIDOnCustomerSearch.Size = new System.Drawing.Size(43, 21);
+            this.cbxIDOnCustomerSearch.Size = new System.Drawing.Size(37, 17);
             this.cbxIDOnCustomerSearch.TabIndex = 1;
             this.cbxIDOnCustomerSearch.Text = "ID";
             this.cbxIDOnCustomerSearch.UseVisualStyleBackColor = true;
@@ -149,17 +152,20 @@
             // txtIDCustomerSearch
             // 
             this.txtIDCustomerSearch.Enabled = false;
-            this.txtIDCustomerSearch.Location = new System.Drawing.Point(116, 174);
+            this.txtIDCustomerSearch.Location = new System.Drawing.Point(87, 141);
+            this.txtIDCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtIDCustomerSearch.Name = "txtIDCustomerSearch";
-            this.txtIDCustomerSearch.Size = new System.Drawing.Size(135, 22);
+            this.txtIDCustomerSearch.Size = new System.Drawing.Size(102, 20);
             this.txtIDCustomerSearch.TabIndex = 3;
+            this.txtIDCustomerSearch.TextChanged += new System.EventHandler(this.txtIDCustomerSearch_TextChanged);
             // 
             // cbxFNameNullCustomerSearch
             // 
             this.cbxFNameNullCustomerSearch.Enabled = false;
-            this.cbxFNameNullCustomerSearch.Location = new System.Drawing.Point(258, 55);
+            this.cbxFNameNullCustomerSearch.Location = new System.Drawing.Point(194, 45);
+            this.cbxFNameNullCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxFNameNullCustomerSearch.Name = "cbxFNameNullCustomerSearch";
-            this.cbxFNameNullCustomerSearch.Size = new System.Drawing.Size(98, 21);
+            this.cbxFNameNullCustomerSearch.Size = new System.Drawing.Size(74, 17);
             this.cbxFNameNullCustomerSearch.TabIndex = 0;
             this.cbxFNameNullCustomerSearch.Text = "Null";
             this.cbxFNameNullCustomerSearch.UseVisualStyleBackColor = true;
@@ -168,9 +174,10 @@
             // cbxLNameNullCustomerSearch
             // 
             this.cbxLNameNullCustomerSearch.Enabled = false;
-            this.cbxLNameNullCustomerSearch.Location = new System.Drawing.Point(258, 94);
+            this.cbxLNameNullCustomerSearch.Location = new System.Drawing.Point(194, 76);
+            this.cbxLNameNullCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxLNameNullCustomerSearch.Name = "cbxLNameNullCustomerSearch";
-            this.cbxLNameNullCustomerSearch.Size = new System.Drawing.Size(98, 21);
+            this.cbxLNameNullCustomerSearch.Size = new System.Drawing.Size(74, 17);
             this.cbxLNameNullCustomerSearch.TabIndex = 0;
             this.cbxLNameNullCustomerSearch.Text = "Null";
             this.cbxLNameNullCustomerSearch.UseVisualStyleBackColor = true;
@@ -179,9 +186,10 @@
             // cbxEMailNullCustomerSearch
             // 
             this.cbxEMailNullCustomerSearch.Enabled = false;
-            this.cbxEMailNullCustomerSearch.Location = new System.Drawing.Point(258, 135);
+            this.cbxEMailNullCustomerSearch.Location = new System.Drawing.Point(194, 110);
+            this.cbxEMailNullCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxEMailNullCustomerSearch.Name = "cbxEMailNullCustomerSearch";
-            this.cbxEMailNullCustomerSearch.Size = new System.Drawing.Size(98, 21);
+            this.cbxEMailNullCustomerSearch.Size = new System.Drawing.Size(74, 17);
             this.cbxEMailNullCustomerSearch.TabIndex = 0;
             this.cbxEMailNullCustomerSearch.Text = "Null";
             this.cbxEMailNullCustomerSearch.UseVisualStyleBackColor = true;
@@ -190,9 +198,10 @@
             // cbxIDNullCustomerSearch
             // 
             this.cbxIDNullCustomerSearch.Enabled = false;
-            this.cbxIDNullCustomerSearch.Location = new System.Drawing.Point(258, 175);
+            this.cbxIDNullCustomerSearch.Location = new System.Drawing.Point(194, 142);
+            this.cbxIDNullCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxIDNullCustomerSearch.Name = "cbxIDNullCustomerSearch";
-            this.cbxIDNullCustomerSearch.Size = new System.Drawing.Size(98, 21);
+            this.cbxIDNullCustomerSearch.Size = new System.Drawing.Size(74, 17);
             this.cbxIDNullCustomerSearch.TabIndex = 0;
             this.cbxIDNullCustomerSearch.Text = "Null";
             this.cbxIDNullCustomerSearch.UseVisualStyleBackColor = true;
@@ -200,9 +209,10 @@
             // 
             // btnCustomerSearchGo
             // 
-            this.btnCustomerSearchGo.Location = new System.Drawing.Point(476, 34);
+            this.btnCustomerSearchGo.Location = new System.Drawing.Point(357, 28);
+            this.btnCustomerSearchGo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCustomerSearchGo.Name = "btnCustomerSearchGo";
-            this.btnCustomerSearchGo.Size = new System.Drawing.Size(154, 62);
+            this.btnCustomerSearchGo.Size = new System.Drawing.Size(116, 50);
             this.btnCustomerSearchGo.TabIndex = 4;
             this.btnCustomerSearchGo.Text = "Search";
             this.btnCustomerSearchGo.UseVisualStyleBackColor = true;
@@ -210,9 +220,10 @@
             // 
             // btnResetCustomerSearch
             // 
-            this.btnResetCustomerSearch.Location = new System.Drawing.Point(476, 102);
+            this.btnResetCustomerSearch.Location = new System.Drawing.Point(357, 83);
+            this.btnResetCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnResetCustomerSearch.Name = "btnResetCustomerSearch";
-            this.btnResetCustomerSearch.Size = new System.Drawing.Size(154, 39);
+            this.btnResetCustomerSearch.Size = new System.Drawing.Size(116, 32);
             this.btnResetCustomerSearch.TabIndex = 4;
             this.btnResetCustomerSearch.Text = "Reset";
             this.btnResetCustomerSearch.UseVisualStyleBackColor = true;
@@ -220,9 +231,10 @@
             // 
             // btnReturnCustomerSearch
             // 
-            this.btnReturnCustomerSearch.Location = new System.Drawing.Point(476, 147);
+            this.btnReturnCustomerSearch.Location = new System.Drawing.Point(357, 119);
+            this.btnReturnCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReturnCustomerSearch.Name = "btnReturnCustomerSearch";
-            this.btnReturnCustomerSearch.Size = new System.Drawing.Size(154, 39);
+            this.btnReturnCustomerSearch.Size = new System.Drawing.Size(116, 32);
             this.btnReturnCustomerSearch.TabIndex = 4;
             this.btnReturnCustomerSearch.Text = "Return";
             this.btnReturnCustomerSearch.UseVisualStyleBackColor = true;
@@ -230,20 +242,30 @@
             // 
             // btnExitCustomerSearch
             // 
-            this.btnExitCustomerSearch.Location = new System.Drawing.Point(476, 192);
+            this.btnExitCustomerSearch.Location = new System.Drawing.Point(357, 156);
+            this.btnExitCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExitCustomerSearch.Name = "btnExitCustomerSearch";
-            this.btnExitCustomerSearch.Size = new System.Drawing.Size(154, 39);
+            this.btnExitCustomerSearch.Size = new System.Drawing.Size(116, 32);
             this.btnExitCustomerSearch.TabIndex = 4;
             this.btnExitCustomerSearch.Text = "Exit";
             this.btnExitCustomerSearch.UseVisualStyleBackColor = true;
             this.btnExitCustomerSearch.Click += new System.EventHandler(this.btnExitCustomerSearch_Click);
             // 
+            // dataGridCustomerSearch
+            // 
+            this.dataGridCustomerSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCustomerSearch.Location = new System.Drawing.Point(30, 212);
+            this.dataGridCustomerSearch.Name = "dataGridCustomerSearch";
+            this.dataGridCustomerSearch.Size = new System.Drawing.Size(488, 186);
+            this.dataGridCustomerSearch.TabIndex = 5;
+            // 
             // CustomerSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(735, 504);
+            this.ClientSize = new System.Drawing.Size(551, 410);
+            this.Controls.Add(this.dataGridCustomerSearch);
             this.Controls.Add(this.btnExitCustomerSearch);
             this.Controls.Add(this.btnReturnCustomerSearch);
             this.Controls.Add(this.btnResetCustomerSearch);
@@ -261,18 +283,18 @@
             this.Controls.Add(this.cbxEMailOnCustomerSearch);
             this.Controls.Add(this.cbxLNameOnCustomerSearch);
             this.Controls.Add(this.cbxFNameOnCustomerSearch);
-            this.Controls.Add(this.lbxCustomerSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CustomerSearch";
             this.Text = "CustomersSearch";
+            this.Load += new System.EventHandler(this.CustomerSearch_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomerSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lbxCustomerSearch;
         private System.Windows.Forms.CheckBox cbxFNameOnCustomerSearch;
         private System.Windows.Forms.Label lblCustomerSearchTitle;
         private System.Windows.Forms.CheckBox cbxLNameOnCustomerSearch;
@@ -290,5 +312,6 @@
         private System.Windows.Forms.Button btnResetCustomerSearch;
         private System.Windows.Forms.Button btnReturnCustomerSearch;
         private System.Windows.Forms.Button btnExitCustomerSearch;
+        private System.Windows.Forms.DataGridView dataGridCustomerSearch;
     }
 }
