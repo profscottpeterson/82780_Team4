@@ -65,9 +65,9 @@ namespace TeamDevProject
             {
                 customersTable.Rows.Add(customer.CustID, customer.FirstName, customer.LastName, customer.Email);
             }
-            //Filling our Data Table in a DataViewe so we can give it to our DataGrid.
+            //Filling our Data Table in a DataView so we can give it to our DataGrid.
             customerView = new DataView(customersTable);
-            //Dynamicly adjust the width of the DataGrid depending on how many columns we have.
+            //Dynamically adjust the width of the DataGrid depending on how many columns we have.
             dataGridCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //Adding the DataView with our Customers to the DataGrid
             dataGridCustomer.DataSource = customerView;

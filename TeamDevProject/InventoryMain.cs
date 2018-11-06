@@ -50,28 +50,28 @@ namespace TeamDevProject
 
         private void InventoryMain_Load(object sender, EventArgs e)
         {
-            //Creating List to hold all customer objects.
+            //Creating List to hold all inventory objects.
             List<Inventory> allInventory = new List<Inventory>();
-            //Get all customers from the database.
+            //Get all items from the inventory table.
             allInventory = InventorySQL.LoadInventory();
 
-            //Creating DataTable object to present the Customer Table from the database.
+            //Creating DataTable object to present the Inventory Table from the database.
             DataTable inventoryTable = new DataTable();
             //Adding the Rows that we are going to display.
             inventoryTable.Columns.Add("InvID");
             inventoryTable.Columns.Add("ItemName");
             inventoryTable.Columns.Add("Price");
-       
-            //Adding object from the allCustomers list as row in our Data Table.
+
+            //Adding object from the allInventory list as row in our Data Table.
             foreach (var item in allInventory)
             {
                 inventoryTable.Rows.Add(item.InvID, item.ItemName, item.Price);
             }
-            //Filling our Data Table in a DataViewe so we can give it to our DataGrid.
+            //Filling our Data Table in a DataView so we can give it to our DataGrid.
             inventoryView = new DataView(inventoryTable);
-            //Dynamicly adjust the width of the DataGrid depending on how many columns we have.
+            //Dynamically adjust the width of the DataGrid depending on how many columns we have.
             dataGridInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            //Adding the DataView with our Customers to the DataGrid
+            //Adding the DataView with our Inventory to the DataGrid
             dataGridInventory.DataSource = inventoryView;
             //Making the DataGrid read only.
             dataGridInventory.ReadOnly = true;
@@ -81,7 +81,7 @@ namespace TeamDevProject
 
         private void txtBoxSearchInventory_TextChanged(object sender, EventArgs e)
         {
-            //Filtering the DataView with the text we have from the Customer TextBox.
+            //Filtering the DataView with the text we have from the Inventory TextBox.
             inventoryView.RowFilter = string.Format("ItemName like '%{0}%'", txtBoxSearchInventory.Text);
             //Adjusting the DataGrid with the filtered data.
             dataGridInventory.DataSource = inventoryView;

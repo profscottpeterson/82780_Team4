@@ -31,18 +31,22 @@
             this.btnOrderDelete = new System.Windows.Forms.Button();
             this.btnOrderAdd = new System.Windows.Forms.Button();
             this.btnOrderSearch = new System.Windows.Forms.Button();
-            this.lbxOrderMenu = new System.Windows.Forms.ListBox();
             this.lblOrdersTitle = new System.Windows.Forms.Label();
             this.btnOrdersExit = new System.Windows.Forms.Button();
             this.btnOrdersReturn = new System.Windows.Forms.Button();
+            this.dataGridOrders = new System.Windows.Forms.DataGridView();
+            this.txtBoxSearchOrders = new System.Windows.Forms.TextBox();
+            this.lblOrdersSearch = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOrderDelete
             // 
             this.btnOrderDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderDelete.Location = new System.Drawing.Point(24, 267);
+            this.btnOrderDelete.Location = new System.Drawing.Point(74, 219);
+            this.btnOrderDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrderDelete.Name = "btnOrderDelete";
-            this.btnOrderDelete.Size = new System.Drawing.Size(114, 44);
+            this.btnOrderDelete.Size = new System.Drawing.Size(86, 36);
             this.btnOrderDelete.TabIndex = 10;
             this.btnOrderDelete.Text = "Delete";
             this.btnOrderDelete.UseVisualStyleBackColor = true;
@@ -51,9 +55,10 @@
             // btnOrderAdd
             // 
             this.btnOrderAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderAdd.Location = new System.Drawing.Point(24, 188);
+            this.btnOrderAdd.Location = new System.Drawing.Point(18, 163);
+            this.btnOrderAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrderAdd.Name = "btnOrderAdd";
-            this.btnOrderAdd.Size = new System.Drawing.Size(114, 44);
+            this.btnOrderAdd.Size = new System.Drawing.Size(86, 36);
             this.btnOrderAdd.TabIndex = 9;
             this.btnOrderAdd.Text = "Add";
             this.btnOrderAdd.UseVisualStyleBackColor = true;
@@ -62,39 +67,32 @@
             // btnOrderSearch
             // 
             this.btnOrderSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderSearch.Location = new System.Drawing.Point(24, 108);
+            this.btnOrderSearch.Location = new System.Drawing.Point(152, 163);
+            this.btnOrderSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrderSearch.Name = "btnOrderSearch";
-            this.btnOrderSearch.Size = new System.Drawing.Size(114, 44);
+            this.btnOrderSearch.Size = new System.Drawing.Size(86, 36);
             this.btnOrderSearch.TabIndex = 8;
             this.btnOrderSearch.Text = "Search";
             this.btnOrderSearch.UseVisualStyleBackColor = true;
             this.btnOrderSearch.Click += new System.EventHandler(this.btnOrderSearch_Click);
             // 
-            // lbxOrderMenu
-            // 
-            this.lbxOrderMenu.FormattingEnabled = true;
-            this.lbxOrderMenu.ItemHeight = 16;
-            this.lbxOrderMenu.Location = new System.Drawing.Point(298, 13);
-            this.lbxOrderMenu.Name = "lbxOrderMenu";
-            this.lbxOrderMenu.Size = new System.Drawing.Size(301, 356);
-            this.lbxOrderMenu.TabIndex = 7;
-            // 
             // lblOrdersTitle
             // 
             this.lblOrdersTitle.AutoSize = true;
             this.lblOrdersTitle.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrdersTitle.Location = new System.Drawing.Point(15, 13);
-            this.lblOrdersTitle.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.lblOrdersTitle.Location = new System.Drawing.Point(11, 11);
+            this.lblOrdersTitle.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblOrdersTitle.Name = "lblOrdersTitle";
-            this.lblOrdersTitle.Size = new System.Drawing.Size(137, 49);
+            this.lblOrdersTitle.Size = new System.Drawing.Size(113, 40);
             this.lblOrdersTitle.TabIndex = 6;
             this.lblOrdersTitle.Text = "Orders";
             // 
             // btnOrdersExit
             // 
-            this.btnOrdersExit.Location = new System.Drawing.Point(150, 336);
+            this.btnOrdersExit.Location = new System.Drawing.Point(112, 273);
+            this.btnOrdersExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrdersExit.Name = "btnOrdersExit";
-            this.btnOrdersExit.Size = new System.Drawing.Size(84, 33);
+            this.btnOrdersExit.Size = new System.Drawing.Size(63, 27);
             this.btnOrdersExit.TabIndex = 18;
             this.btnOrdersExit.Text = "Exit";
             this.btnOrdersExit.UseVisualStyleBackColor = true;
@@ -102,30 +100,62 @@
             // 
             // btnOrdersReturn
             // 
-            this.btnOrdersReturn.Location = new System.Drawing.Point(54, 336);
+            this.btnOrdersReturn.Location = new System.Drawing.Point(40, 273);
+            this.btnOrdersReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrdersReturn.Name = "btnOrdersReturn";
-            this.btnOrdersReturn.Size = new System.Drawing.Size(84, 33);
+            this.btnOrdersReturn.Size = new System.Drawing.Size(63, 27);
             this.btnOrdersReturn.TabIndex = 19;
             this.btnOrdersReturn.Text = "Return";
             this.btnOrdersReturn.UseVisualStyleBackColor = true;
             this.btnOrdersReturn.Click += new System.EventHandler(this.btnOrdersReturn_Click);
             // 
+            // dataGridOrders
+            // 
+            this.dataGridOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridOrders.Location = new System.Drawing.Point(403, 29);
+            this.dataGridOrders.Name = "dataGridOrders";
+            this.dataGridOrders.Size = new System.Drawing.Size(270, 250);
+            this.dataGridOrders.TabIndex = 20;
+            // 
+            // txtBoxSearchOrders
+            // 
+            this.txtBoxSearchOrders.Location = new System.Drawing.Point(83, 99);
+            this.txtBoxSearchOrders.Name = "txtBoxSearchOrders";
+            this.txtBoxSearchOrders.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxSearchOrders.TabIndex = 22;
+            this.txtBoxSearchOrders.TextChanged += new System.EventHandler(this.txtBoxSearchOrders_TextChanged);
+            // 
+            // lblOrdersSearch
+            // 
+            this.lblOrdersSearch.AutoSize = true;
+            this.lblOrdersSearch.Location = new System.Drawing.Point(80, 82);
+            this.lblOrdersSearch.Name = "lblOrdersSearch";
+            this.lblOrdersSearch.Size = new System.Drawing.Size(98, 13);
+            this.lblOrdersSearch.TabIndex = 21;
+            this.lblOrdersSearch.Text = "Search by Order ID";
+            // 
             // OrdersMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(614, 383);
+            this.ClientSize = new System.Drawing.Size(715, 446);
+            this.Controls.Add(this.txtBoxSearchOrders);
+            this.Controls.Add(this.lblOrdersSearch);
+            this.Controls.Add(this.dataGridOrders);
             this.Controls.Add(this.btnOrdersExit);
             this.Controls.Add(this.btnOrdersReturn);
             this.Controls.Add(this.btnOrderDelete);
             this.Controls.Add(this.btnOrderAdd);
             this.Controls.Add(this.btnOrderSearch);
-            this.Controls.Add(this.lbxOrderMenu);
             this.Controls.Add(this.lblOrdersTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OrdersMain";
             this.Text = "OrdersMain";
+            this.Load += new System.EventHandler(this.OrdersMain_Load);
+            this.TextChanged += new System.EventHandler(this.txtBoxSearchOrders_TextChanged);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,9 +166,11 @@
         private System.Windows.Forms.Button btnOrderDelete;
         private System.Windows.Forms.Button btnOrderAdd;
         private System.Windows.Forms.Button btnOrderSearch;
-        private System.Windows.Forms.ListBox lbxOrderMenu;
         private System.Windows.Forms.Label lblOrdersTitle;
         private System.Windows.Forms.Button btnOrdersExit;
         private System.Windows.Forms.Button btnOrdersReturn;
+        private System.Windows.Forms.DataGridView dataGridOrders;
+        private System.Windows.Forms.TextBox txtBoxSearchOrders;
+        private System.Windows.Forms.Label lblOrdersSearch;
     }
 }
