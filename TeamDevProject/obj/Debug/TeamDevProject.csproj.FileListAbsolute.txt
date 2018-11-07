@@ -20,8 +20,6 @@ C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProj
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\TeamDevProject.db
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\TeamDevProject.exe
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\TeamDevProject.pdb
-C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\Dapper.xml
-C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\bin\Debug\System.Data.SQLite.xml
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.csprojResolveAssemblyReference.cache
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.Properties.Resources.resources
 C:\Users\mario\Documents\GitHub\82780_Team4\TeamDevProject\obj\Debug\TeamDevProject.csproj.GenerateResource.Cache
