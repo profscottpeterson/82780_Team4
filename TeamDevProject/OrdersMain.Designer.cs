@@ -67,12 +67,9 @@
             // btnOrderSearch
             // 
             this.btnOrderSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.btnOrderSearch.Location = new System.Drawing.Point(150, 188);
-=======
             this.btnOrderSearch.Location = new System.Drawing.Point(152, 163);
             this.btnOrderSearch.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> master
             this.btnOrderSearch.Name = "btnOrderSearch";
             this.btnOrderSearch.Size = new System.Drawing.Size(86, 36);
             this.btnOrderSearch.TabIndex = 8;
@@ -146,14 +143,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(688, 383);
             this.Controls.Add(this.txtBoxSearchOrder);
             this.Controls.Add(this.lblOrderSearch);
             this.Controls.Add(this.dataGridOrder);
-=======
             this.ClientSize = new System.Drawing.Size(715, 446);
->>>>>>> master
             this.Controls.Add(this.btnOrdersExit);
             this.Controls.Add(this.btnOrdersReturn);
             this.Controls.Add(this.btnOrderDelete);
