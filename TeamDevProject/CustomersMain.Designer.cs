@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblCustomersTitle = new System.Windows.Forms.Label();
-            this.btnCustomerSearch = new System.Windows.Forms.Button();
             this.btnCustomerAdd = new System.Windows.Forms.Button();
             this.btnCustomerDelete = new System.Windows.Forms.Button();
             this.btnCustomerReturn = new System.Windows.Forms.Button();
@@ -37,6 +36,7 @@
             this.dataGridCustomer = new System.Windows.Forms.DataGridView();
             this.lblCustomerSearch = new System.Windows.Forms.Label();
             this.txtBoxSearchCustomer = new System.Windows.Forms.TextBox();
+            this.btnCustomerRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,32 +44,20 @@
             // 
             this.lblCustomersTitle.AutoSize = true;
             this.lblCustomersTitle.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomersTitle.Location = new System.Drawing.Point(14, 10);
-            this.lblCustomersTitle.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.lblCustomersTitle.Location = new System.Drawing.Point(19, 12);
+            this.lblCustomersTitle.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.lblCustomersTitle.Name = "lblCustomersTitle";
-            this.lblCustomersTitle.Size = new System.Drawing.Size(167, 40);
+            this.lblCustomersTitle.Size = new System.Drawing.Size(203, 49);
             this.lblCustomersTitle.TabIndex = 1;
             this.lblCustomersTitle.Text = "Customers";
-            // 
-            // btnCustomerSearch
-            // 
-            this.btnCustomerSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerSearch.Location = new System.Drawing.Point(117, 152);
-            this.btnCustomerSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCustomerSearch.Name = "btnCustomerSearch";
-            this.btnCustomerSearch.Size = new System.Drawing.Size(86, 36);
-            this.btnCustomerSearch.TabIndex = 3;
-            this.btnCustomerSearch.Text = "Search";
-            this.btnCustomerSearch.UseVisualStyleBackColor = true;
-            this.btnCustomerSearch.Click += new System.EventHandler(this.btnCustomerSearch_Click);
             // 
             // btnCustomerAdd
             // 
             this.btnCustomerAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerAdd.Location = new System.Drawing.Point(20, 152);
-            this.btnCustomerAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCustomerAdd.Location = new System.Drawing.Point(27, 187);
+            this.btnCustomerAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustomerAdd.Name = "btnCustomerAdd";
-            this.btnCustomerAdd.Size = new System.Drawing.Size(86, 36);
+            this.btnCustomerAdd.Size = new System.Drawing.Size(115, 44);
             this.btnCustomerAdd.TabIndex = 4;
             this.btnCustomerAdd.Text = "Add";
             this.btnCustomerAdd.UseVisualStyleBackColor = true;
@@ -78,10 +66,10 @@
             // btnCustomerDelete
             // 
             this.btnCustomerDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerDelete.Location = new System.Drawing.Point(20, 216);
-            this.btnCustomerDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCustomerDelete.Location = new System.Drawing.Point(27, 266);
+            this.btnCustomerDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustomerDelete.Name = "btnCustomerDelete";
-            this.btnCustomerDelete.Size = new System.Drawing.Size(86, 36);
+            this.btnCustomerDelete.Size = new System.Drawing.Size(115, 44);
             this.btnCustomerDelete.TabIndex = 5;
             this.btnCustomerDelete.Text = "Delete";
             this.btnCustomerDelete.UseVisualStyleBackColor = true;
@@ -89,10 +77,10 @@
             // 
             // btnCustomerReturn
             // 
-            this.btnCustomerReturn.Location = new System.Drawing.Point(43, 272);
-            this.btnCustomerReturn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCustomerReturn.Location = new System.Drawing.Point(57, 335);
+            this.btnCustomerReturn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustomerReturn.Name = "btnCustomerReturn";
-            this.btnCustomerReturn.Size = new System.Drawing.Size(63, 27);
+            this.btnCustomerReturn.Size = new System.Drawing.Size(84, 33);
             this.btnCustomerReturn.TabIndex = 6;
             this.btnCustomerReturn.Text = "Return";
             this.btnCustomerReturn.UseVisualStyleBackColor = true;
@@ -100,10 +88,10 @@
             // 
             // btnCustomerExit
             // 
-            this.btnCustomerExit.Location = new System.Drawing.Point(115, 272);
-            this.btnCustomerExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCustomerExit.Location = new System.Drawing.Point(153, 335);
+            this.btnCustomerExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustomerExit.Name = "btnCustomerExit";
-            this.btnCustomerExit.Size = new System.Drawing.Size(63, 27);
+            this.btnCustomerExit.Size = new System.Drawing.Size(84, 33);
             this.btnCustomerExit.TabIndex = 6;
             this.btnCustomerExit.Text = "Exit";
             this.btnCustomerExit.UseVisualStyleBackColor = true;
@@ -112,45 +100,60 @@
             // dataGridCustomer
             // 
             this.dataGridCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCustomer.Location = new System.Drawing.Point(208, 38);
+            this.dataGridCustomer.Location = new System.Drawing.Point(277, 47);
+            this.dataGridCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridCustomer.Name = "dataGridCustomer";
-            this.dataGridCustomer.Size = new System.Drawing.Size(299, 261);
+            this.dataGridCustomer.Size = new System.Drawing.Size(399, 321);
             this.dataGridCustomer.TabIndex = 7;
             // 
             // lblCustomerSearch
             // 
             this.lblCustomerSearch.AutoSize = true;
-            this.lblCustomerSearch.Location = new System.Drawing.Point(21, 89);
+            this.lblCustomerSearch.Location = new System.Drawing.Point(28, 110);
+            this.lblCustomerSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomerSearch.Name = "lblCustomerSearch";
-            this.lblCustomerSearch.Size = new System.Drawing.Size(86, 13);
+            this.lblCustomerSearch.Size = new System.Drawing.Size(144, 17);
             this.lblCustomerSearch.TabIndex = 8;
-            this.lblCustomerSearch.Text = "Search by Name";
+            this.lblCustomerSearch.Text = "Search by First Name";
             // 
             // txtBoxSearchCustomer
             // 
-            this.txtBoxSearchCustomer.Location = new System.Drawing.Point(24, 106);
+            this.txtBoxSearchCustomer.Location = new System.Drawing.Point(32, 130);
+            this.txtBoxSearchCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxSearchCustomer.Name = "txtBoxSearchCustomer";
-            this.txtBoxSearchCustomer.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxSearchCustomer.Size = new System.Drawing.Size(132, 22);
             this.txtBoxSearchCustomer.TabIndex = 9;
             this.txtBoxSearchCustomer.TextChanged += new System.EventHandler(this.txtBoxSearchCustomer_TextChanged);
             // 
+            // btnCustomerRefresh
+            // 
+            this.btnCustomerRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerRefresh.Location = new System.Drawing.Point(155, 266);
+            this.btnCustomerRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCustomerRefresh.Name = "btnCustomerRefresh";
+            this.btnCustomerRefresh.Size = new System.Drawing.Size(115, 44);
+            this.btnCustomerRefresh.TabIndex = 4;
+            this.btnCustomerRefresh.Text = "Refresh";
+            this.btnCustomerRefresh.UseVisualStyleBackColor = true;
+            this.btnCustomerRefresh.Click += new System.EventHandler(this.CustomersMain_Load);
+            // 
             // CustomersMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(516, 311);
+            this.ClientSize = new System.Drawing.Size(688, 383);
             this.Controls.Add(this.txtBoxSearchCustomer);
             this.Controls.Add(this.lblCustomerSearch);
             this.Controls.Add(this.dataGridCustomer);
             this.Controls.Add(this.btnCustomerExit);
             this.Controls.Add(this.btnCustomerReturn);
             this.Controls.Add(this.btnCustomerDelete);
+            this.Controls.Add(this.btnCustomerRefresh);
             this.Controls.Add(this.btnCustomerAdd);
-            this.Controls.Add(this.btnCustomerSearch);
             this.Controls.Add(this.lblCustomersTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CustomersMain";
             this.Text = "CustomersMain";
             this.Load += new System.EventHandler(this.CustomersMain_Load);
@@ -163,7 +166,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblCustomersTitle;
-        private System.Windows.Forms.Button btnCustomerSearch;
         private System.Windows.Forms.Button btnCustomerAdd;
         private System.Windows.Forms.Button btnCustomerDelete;
         private System.Windows.Forms.Button btnCustomerReturn;
@@ -171,5 +173,6 @@
         private System.Windows.Forms.DataGridView dataGridCustomer;
         private System.Windows.Forms.Label lblCustomerSearch;
         private System.Windows.Forms.TextBox txtBoxSearchCustomer;
+        private System.Windows.Forms.Button btnCustomerRefresh;
     }
 }

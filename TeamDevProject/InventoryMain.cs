@@ -50,6 +50,9 @@ namespace TeamDevProject
 
         private void InventoryMain_Load(object sender, EventArgs e)
         {
+            //Resetting search box for Refresh button
+            txtBoxSearchInventory.Text = "";
+
             //Creating List to hold all inventory objects.
             List<Inventory> allInventory = new List<Inventory>();
             //Get all items from the inventory table.

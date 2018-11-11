@@ -48,6 +48,9 @@ namespace TeamDevProject
 
         private void CustomersMain_Load(object sender, EventArgs e)
         {
+            //Resetting search box for Refresh button
+            txtBoxSearchCustomer.Text = "";
+
             //Creating List to hold all customer objects.
             List<Customer> allCustomers = new List<Customer>();
             //Get all customers from the database.

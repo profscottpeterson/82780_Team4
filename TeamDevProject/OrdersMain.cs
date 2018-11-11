@@ -55,6 +55,9 @@ namespace TeamDevProject
 
         private void OrdersMain_Load(object sender, EventArgs e)
         {
+            //Resetting search box for Refresh button
+            txtBoxSearchOrder.Text = "";
+
             //Creating List to hold all order objects.
             List<Orders> allOrders = new List<Orders>();
 
