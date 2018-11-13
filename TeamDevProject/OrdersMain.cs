@@ -12,12 +12,7 @@ namespace TeamDevProject
 {
     public partial class OrdersMain : Form
     {
-
-
         public DataView orderView;
-
-
-        
 
         public OrdersMain()
         {
@@ -27,17 +22,6 @@ namespace TeamDevProject
         private void btnOrdersReturn_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnOrdersExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnOrderSearch_Click(object sender, EventArgs e)
-        {
-            OrdersSearch OrdSearch = new OrdersSearch();
-            OrdSearch.ShowDialog();
         }
 
         private void btnOrderAdd_Click(object sender, EventArgs e)
