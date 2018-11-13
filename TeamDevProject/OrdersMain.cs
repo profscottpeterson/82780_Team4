@@ -12,7 +12,12 @@ namespace TeamDevProject
 {
     public partial class OrdersMain : Form
     {
+
+
         public DataView orderView;
+
+
+        
 
         public OrdersMain()
         {
@@ -22,6 +27,17 @@ namespace TeamDevProject
         private void btnOrdersReturn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnOrdersExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnOrderSearch_Click(object sender, EventArgs e)
+        {
+            OrdersSearch OrdSearch = new OrdersSearch();
+            OrdSearch.ShowDialog();
         }
 
         private void btnOrderAdd_Click(object sender, EventArgs e)
@@ -39,6 +55,11 @@ namespace TeamDevProject
 
         private void OrdersMain_Load(object sender, EventArgs e)
         {
+            //Resetting search box for Refresh button
+            txtBoxSearchOrderID.Text = "";
+            txtBoxSearchOrderCustID.Text = "";
+            txtBoxSearchOrderDate.Text = "";
+
             //Creating List to hold all order objects.
             List<Orders> allOrders = new List<Orders>();
 
@@ -69,20 +90,15 @@ namespace TeamDevProject
 
         private void txtBoxSearchOrder_TextChanged(object sender, EventArgs e)
         {
-            if (txtBoxSearchOrder.Text != "")
-            {
-                //Filtering the DataView with the text we have from the Customer TextBox.
-                orderView.RowFilter = string.Format("ID = {0}", txtBoxSearchOrder.Text);
-            } else
-            {
-                orderView.RowFilter = "1 = 1";
-            }
+            dataSearch();
+        }
 
+        private void dataSearch()
+        {
+            //Filtering the DataView with the text we have from the Inventory TextBox.
+            orderView.RowFilter = string.Format("ID like '%{0}%' AND [Customer ID] like '%{1}%' AND Date like '%{2}%'", txtBoxSearchOrderID.Text, txtBoxSearchOrderCustID.Text, txtBoxSearchOrderDate.Text);
             //Adjusting the DataGrid with the filtered data.
             dataGridOrder.DataSource = orderView;
         }
-
-        
-
     }
 }
