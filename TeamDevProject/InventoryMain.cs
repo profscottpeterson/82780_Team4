@@ -50,6 +50,11 @@ namespace TeamDevProject
 
         private void InventoryMain_Load(object sender, EventArgs e)
         {
+            //Resetting search box for Refresh button
+            txtBoxSearchInventoryItemName.Text = "";
+            txtBoxSearchInventoryID.Text = "";
+            txtBoxSearchInventoryPrice.Text = "";
+
             //Creating List to hold all inventory objects.
             List<Inventory> allInventory = new List<Inventory>();
             //Get all items from the inventory table.
@@ -81,12 +86,15 @@ namespace TeamDevProject
 
         private void txtBoxSearchInventory_TextChanged(object sender, EventArgs e)
         {
+            dataSearch();
+        }
+
+        private void dataSearch()
+        {
             //Filtering the DataView with the text we have from the Inventory TextBox.
-            inventoryView.RowFilter = string.Format("ItemName like '%{0}%'", txtBoxSearchInventory.Text);
+            inventoryView.RowFilter = string.Format("InvID like '%{0}%' AND ItemName like '%{1}%' AND Price like '%{2}%'", txtBoxSearchInventoryID.Text, txtBoxSearchInventoryItemName.Text, txtBoxSearchInventoryPrice.Text);
             //Adjusting the DataGrid with the filtered data.
             dataGridInventory.DataSource = inventoryView;
         }
-
-     
     }
 }
