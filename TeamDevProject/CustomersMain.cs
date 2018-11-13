@@ -50,9 +50,12 @@ namespace TeamDevProject
         {
             //Resetting search box for Refresh button
             txtBoxSearchCustomer.Text = "";
+            txtBoxCustomerSearchID.Text = "";
+            txtBoxSearchCustomerLName.Text = "";
+            txtBoxCustomerSearchEmail.Text = "";
 
             //Creating List to hold all customer objects.
-            List<Customer> allCustomers = new List<Customer>();
+            List <Customer> allCustomers = new List<Customer>();
             //Get all customers from the database.
             allCustomers = CustomerSQL.LoadCustomers();
 
@@ -82,8 +85,13 @@ namespace TeamDevProject
 
         private void txtBoxSearchCustomer_TextChanged(object sender, EventArgs e)
         {
+            dataSearch();
+        }
+
+        private void dataSearch()
+        {
             //Filtering the DataView with the text we have from the Customer TextBox.
-            customerView.RowFilter = string.Format("FirstName like '%{0}%'", txtBoxSearchCustomer.Text);
+            customerView.RowFilter = string.Format("FirstName like '%{0}%' AND LastName like '%{1}%' AND ID like '%{2}%' AND Email like '%{3}%'", txtBoxSearchCustomer.Text, txtBoxSearchCustomerLName.Text, txtBoxCustomerSearchID.Text, txtBoxCustomerSearchEmail.Text);
             //Adjusting the DataGrid with the filtered data.
             dataGridCustomer.DataSource = customerView;
         }
