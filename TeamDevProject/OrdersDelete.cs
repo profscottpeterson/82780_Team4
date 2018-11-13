@@ -19,7 +19,21 @@ namespace TeamDevProject
 
         private void btnResetOrdersDelete_Click(object sender, EventArgs e)
         {
+            cbxDateNullOrdersDelete.Checked = false;
+            cbxCustIDNullOrdersDelete.Checked = false;
+            cbxIDNullOrdersDelete.Checked = false;
+            cbxDateNullOrdersDelete.Enabled = false;
+            cbxCustIDNullOrdersDelete.Enabled = false;
+            cbxIDNullOrdersDelete.Enabled = false;
+            txtDateOrdersDelete.Text = "";
+            txtCustIDOrdersDelete.Text = "";
             txtIDOrdersDelete.Text = "";
+            txtDateOrdersDelete.Enabled = false;
+            txtCustIDOrdersDelete.Enabled = false;
+            txtIDOrdersDelete.Enabled = false;
+            cbxDateOnOrdersDelete.Checked = false;
+            cbxCustIDOnOrdersDelete.Checked = false;
+            cbxIDOnOrdersDelete.Checked = false;
         }
 
         private void btnReturnOrdersDelete_Click(object sender, EventArgs e)
@@ -32,38 +46,94 @@ namespace TeamDevProject
             Application.Exit();
         }
 
-        private void btnOrdersDeleteGo_Click(object sender, EventArgs e)
+        private void cbxDateOnOrdersDelete_CheckedChanged(object sender, EventArgs e)
         {
-            // Create a temporary inventory object.
-            Orders temp = new Orders();
-            bool success;
-            int result;
-
-            // Assign temp's values based on input.
-            if (txtIDOrdersDelete.Text != "")
+            if (cbxDateOnOrdersDelete.Checked)
             {
-
-                success = Int32.TryParse(txtIDOrdersDelete.Text, out result);
-                if (success)
-                {
-                    temp.OrderID = int.Parse(txtIDOrdersDelete.Text);
-                    // Use the DeleteInventory method and pass temp as an argument.
-                    OrdersSQL.DeleteOrder(temp.OrderID);
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a valid Order ID.");
-                    txtIDOrdersDelete.Text = "";
-                    txtIDOrdersDelete.Focus();
-                }
+                txtDateOrdersDelete.Enabled = true;
+                cbxDateNullOrdersDelete.Enabled = true;
             }
             else
             {
-                MessageBox.Show("Please enter an Order ID.");
-                txtIDOrdersDelete.Focus();
+                cbxDateNullOrdersDelete.Checked = false;
+                txtDateOrdersDelete.Enabled = false;
+                cbxDateNullOrdersDelete.Enabled = false;
+                txtDateOrdersDelete.Text = "";
             }
+        }
 
-            
+        private void cbxCustIDOnOrdersDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxCustIDOnOrdersDelete.Checked)
+            {
+                txtCustIDOrdersDelete.Enabled = true;
+                cbxCustIDNullOrdersDelete.Enabled = true;
+            }
+            else
+            {
+                cbxCustIDNullOrdersDelete.Checked = false;
+                txtCustIDOrdersDelete.Enabled = false;
+                cbxCustIDNullOrdersDelete.Enabled = false;
+                txtCustIDOrdersDelete.Text = "";
+            }
+        }
+
+        private void cbxIDOnOrdersDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxIDOnOrdersDelete.Checked)
+            {
+                txtIDOrdersDelete.Enabled = true;
+                cbxIDNullOrdersDelete.Enabled = true;
+            }
+            else
+            {
+                cbxIDNullOrdersDelete.Checked = false;
+                txtIDOrdersDelete.Enabled = false;
+                cbxIDNullOrdersDelete.Enabled = false;
+                txtIDOrdersDelete.Text = "";
+            }
+        }
+
+        private void cbxDateNullOrdersDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxDateNullOrdersDelete.Checked)
+            {
+                txtDateOrdersDelete.Text = "<NULL>";
+                txtDateOrdersDelete.Enabled = false;
+            }
+            else
+            {
+                txtDateOrdersDelete.Text = "";
+                txtDateOrdersDelete.Enabled = true;
+            }
+        }
+
+        private void cbxCustIDNullOrdersDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxCustIDNullOrdersDelete.Checked)
+            {
+                txtCustIDOrdersDelete.Text = "<NULL>";
+                txtCustIDOrdersDelete.Enabled = false;
+            }
+            else
+            {
+                txtCustIDOrdersDelete.Text = "";
+                txtCustIDOrdersDelete.Enabled = true;
+            }
+        }
+
+        private void cbxIDNullOrdersDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxIDNullOrdersDelete.Checked)
+            {
+                txtIDOrdersDelete.Text = "<NULL>";
+                txtIDOrdersDelete.Enabled = false;
+            }
+            else
+            {
+                txtIDOrdersDelete.Text = "";
+                txtIDOrdersDelete.Enabled = true;
+            }
         }
     }
 }

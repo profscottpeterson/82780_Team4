@@ -18,7 +18,16 @@ namespace TeamDevProject
         }
         private void btnResetOrdersAdd_Click(object sender, EventArgs e)
         {
+            cbxDateNullOrdersAdd.Checked = false;
+            cbxCustIDNullOrdersAdd.Checked = false;
+            cbxDateNullOrdersAdd.Enabled = false;
+            cbxCustIDNullOrdersAdd.Enabled = false;
+            txtDateOrdersAdd.Text = "";
             txtCustIDOrdersAdd.Text = "";
+            txtDateOrdersAdd.Enabled = false;
+            txtCustIDOrdersAdd.Enabled = false;
+            cbxDateOnOrdersAdd.Checked = false;
+            cbxCustIDOnOrdersAdd.Checked = false;
         }
 
         private void btnReturnOrdersAdd_Click(object sender, EventArgs e)
@@ -31,37 +40,68 @@ namespace TeamDevProject
             Application.Exit();
         }
 
-        private void btnOrdersAddGo_Click(object sender, EventArgs e)
+        private void cbxCustIDOnOrdersAdd_CheckedChanged(object sender, EventArgs e)
         {
-            // Create a temporary inventory object.
-            Orders temp = new Orders();
-            bool success;
-            int result;
-
-            temp.Date = ordersDatePk.Text;
-
-            // Assign temp's values.
-            if (txtCustIDOrdersAdd.Text != "")
+            if (cbxCustIDOnOrdersAdd.Checked)
             {
-                success = Int32.TryParse(txtCustIDOrdersAdd.Text, out result);
-                if (success)
-                {
-                    temp.CustID = Int32.Parse(txtCustIDOrdersAdd.Text);
-
-                    // Call the SaveInventory method and pass temp as an argument.
-                    OrdersSQL.SaveOrder(temp);
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a valid Customer ID.");
-                    txtCustIDOrdersAdd.Text = "";
-                    txtCustIDOrdersAdd.Focus();
-                }
+                txtCustIDOrdersAdd.Enabled = true;
+                cbxCustIDNullOrdersAdd.Enabled = true;
             }
             else
             {
-                MessageBox.Show("Please enter a Customer ID.");
-                txtCustIDOrdersAdd.Focus();
+                cbxCustIDNullOrdersAdd.Checked = false;
+                txtCustIDOrdersAdd.Enabled = false;
+                cbxCustIDNullOrdersAdd.Enabled = false;
+                txtCustIDOrdersAdd.Text = "";
+            }
+        }
+
+        private void cbxIDOnOrdersAdd_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxDateNullOrdersAdd_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxDateNullOrdersAdd.Checked)
+            {
+                txtDateOrdersAdd.Text = "<NULL>";
+                txtDateOrdersAdd.Enabled = false;
+            }
+            else
+            {
+                txtDateOrdersAdd.Text = "";
+                txtDateOrdersAdd.Enabled = true;
+            }
+        }
+
+        private void cbxCustIDNullOrdersAdd_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxCustIDNullOrdersAdd.Checked)
+            {
+                txtCustIDOrdersAdd.Text = "<NULL>";
+                txtCustIDOrdersAdd.Enabled = false;
+            }
+            else
+            {
+                txtCustIDOrdersAdd.Text = "";
+                txtCustIDOrdersAdd.Enabled = true;
+            }
+        }
+
+        private void cbxDateOnOrdersAdd_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxDateOnOrdersAdd.Checked)
+            {
+                txtDateOrdersAdd.Enabled = true;
+                cbxDateNullOrdersAdd.Enabled = true;
+            }
+            else
+            {
+                cbxDateNullOrdersAdd.Checked = false;
+                txtDateOrdersAdd.Enabled = false;
+                cbxDateNullOrdersAdd.Enabled = false;
+                txtDateOrdersAdd.Text = "";
             }
         }
     }
