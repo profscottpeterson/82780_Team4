@@ -44,5 +44,11 @@ namespace TeamDevProject
         {
             Application.Exit();
         }
+
+        private void btnOrderItem_Click(object sender, EventArgs e)
+        {
+            OrderItemMain ordInv = new OrderItemMain();
+            ordInv.ShowDialog();
+        }
     }
 }
