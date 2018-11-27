@@ -83,7 +83,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(197, 236);
+            this.btnExit.Location = new System.Drawing.Point(197, 286);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(114, 44);
             this.btnExit.TabIndex = 4;
@@ -94,7 +94,7 @@
             // btnOrderItem
             // 
             this.btnOrderItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderItem.Location = new System.Drawing.Point(333, 186);
+            this.btnOrderItem.Location = new System.Drawing.Point(197, 236);
             this.btnOrderItem.Name = "btnOrderItem";
             this.btnOrderItem.Size = new System.Drawing.Size(114, 44);
             this.btnOrderItem.TabIndex = 3;
@@ -104,10 +104,10 @@
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(21F, 42F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(500, 306);
+            this.ClientSize = new System.Drawing.Size(500, 342);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnOrderItem);
             this.Controls.Add(this.btnInventory);
