@@ -33,6 +33,7 @@
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnOrderItem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -90,6 +91,17 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnOrderItem
+            // 
+            this.btnOrderItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderItem.Location = new System.Drawing.Point(333, 186);
+            this.btnOrderItem.Name = "btnOrderItem";
+            this.btnOrderItem.Size = new System.Drawing.Size(114, 44);
+            this.btnOrderItem.TabIndex = 3;
+            this.btnOrderItem.Text = "Order Item";
+            this.btnOrderItem.UseVisualStyleBackColor = true;
+            this.btnOrderItem.Click += new System.EventHandler(this.btnOrderItem_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(21F, 42F);
@@ -97,6 +109,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(500, 306);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnOrderItem);
             this.Controls.Add(this.btnInventory);
             this.Controls.Add(this.btnOrders);
             this.Controls.Add(this.btnCustomer);
@@ -118,5 +131,6 @@
         private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnOrderItem;
     }
 }

@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\OrderItemSQL.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="CustomersAdd.cs">
       <SubType>Form</SubType>
@@ -113,10 +114,23 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\OrderItem.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Models\Orders.cs" />
+    <Compile Include="OrderItemMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderItemMain.Designer.cs">
+      <DependentUpon>OrderItemMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderItemSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderItemSearch.Designer.cs">
+      <DependentUpon>OrderItemSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrdersAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +196,12 @@
     <EmbeddedResource Include="obj\Debug\TeamDevProject.MainMenu.resources" />
     <EmbeddedResource Include="obj\Debug\TeamDevProject.OrdersMain.resources" />
     <EmbeddedResource Include="obj\Debug\TeamDevProject.Properties.Resources.resources" />
+    <EmbeddedResource Include="OrderItemMain.resx">
+      <DependentUpon>OrderItemMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderItemSearch.resx">
+      <DependentUpon>OrderItemSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrdersAdd.resx">
       <DependentUpon>OrdersAdd.cs</DependentUpon>
     </EmbeddedResource>
