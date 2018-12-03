@@ -43,7 +43,7 @@
             this.dataGridOrderItemSearch.Location = new System.Drawing.Point(141, 11);
             this.dataGridOrderItemSearch.Name = "dataGridOrderItemSearch";
             this.dataGridOrderItemSearch.Size = new System.Drawing.Size(299, 261);
-            this.dataGridOrderItemSearch.TabIndex = 9;
+            this.dataGridOrderItemSearch.TabIndex = 3;
             // 
             // lblOrderItemTitle
             // 
@@ -59,10 +59,10 @@
             // btnOrderItemReturn
             // 
             this.btnOrderItemReturn.Location = new System.Drawing.Point(20, 245);
-            this.btnOrderItemReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrderItemReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderItemReturn.Name = "btnOrderItemReturn";
             this.btnOrderItemReturn.Size = new System.Drawing.Size(63, 27);
-            this.btnOrderItemReturn.TabIndex = 13;
+            this.btnOrderItemReturn.TabIndex = 2;
             this.btnOrderItemReturn.Text = "Return";
             this.btnOrderItemReturn.UseVisualStyleBackColor = true;
             this.btnOrderItemReturn.Click += new System.EventHandler(this.btnOrderItemReturn_Click);
@@ -72,7 +72,7 @@
             this.txtBoxSearchOrderItemID.Location = new System.Drawing.Point(20, 85);
             this.txtBoxSearchOrderItemID.Name = "txtBoxSearchOrderItemID";
             this.txtBoxSearchOrderItemID.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxSearchOrderItemID.TabIndex = 23;
+            this.txtBoxSearchOrderItemID.TabIndex = 0;
             // 
             // lblOrderItemSearchID
             // 
@@ -87,10 +87,10 @@
             // 
             this.btnOrderItemGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderItemGo.Location = new System.Drawing.Point(20, 119);
-            this.btnOrderItemGo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrderItemGo.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderItemGo.Name = "btnOrderItemGo";
             this.btnOrderItemGo.Size = new System.Drawing.Size(86, 36);
-            this.btnOrderItemGo.TabIndex = 25;
+            this.btnOrderItemGo.TabIndex = 1;
             this.btnOrderItemGo.Text = "Go";
             this.btnOrderItemGo.UseVisualStyleBackColor = true;
             this.btnOrderItemGo.Click += new System.EventHandler(this.btnOrderItemGo_Click);
@@ -108,7 +108,7 @@
             this.Controls.Add(this.lblOrderItemTitle);
             this.Controls.Add(this.dataGridOrderItemSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OrderItemSearch";
             this.Text = "Search Order Contents";
             this.Load += new System.EventHandler(this.OrderItemSearch_Load);

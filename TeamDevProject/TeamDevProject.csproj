@@ -107,6 +107,18 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Models\Orders.cs" />
+    <Compile Include="OrderItemAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderItemAdd.Designer.cs">
+      <DependentUpon>OrderItemAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderItemDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderItemDelete.Designer.cs">
+      <DependentUpon>OrderItemDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderItemMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +183,12 @@
     <EmbeddedResource Include="obj\Debug\TeamDevProject.MainMenu.resources" />
     <EmbeddedResource Include="obj\Debug\TeamDevProject.OrdersMain.resources" />
     <EmbeddedResource Include="obj\Debug\TeamDevProject.Properties.Resources.resources" />
+    <EmbeddedResource Include="OrderItemAdd.resx">
+      <DependentUpon>OrderItemAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderItemDelete.resx">
+      <DependentUpon>OrderItemDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderItemMain.resx">
       <DependentUpon>OrderItemMain.cs</DependentUpon>
     </EmbeddedResource>

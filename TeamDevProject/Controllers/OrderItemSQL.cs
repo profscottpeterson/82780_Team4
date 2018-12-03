@@ -22,21 +22,21 @@ namespace TeamDevProject
             }
         }
 
-        public static void DeleteOrder(int ordId, int invId)
+        public static void SaveOrderItem(OrderItem ordItem)
+        {
+            // Opens a connection to access the database and closes after the insert is performed. 
+            using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Default"].ConnectionString))
+            {
+                cnn.Execute("Insert into Inv_Ord (InvID, OrderID) values ('" + ordItem.invId + "','" + ordItem.orderId + "')");
+            }
+        }
+
+        public static void DeleteOrderItem(OrderItem ordItem)
         {
             using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Default"].ConnectionString))
             {
-                var validate = cnn.Query<OrderItem>("SELECT InvID, OrderID FROM Inv_Ord where OrderID = " + ordId + " AND InvID = " + invId, new DynamicParameters());
-
-                if (validate.ToList().Count == 1)
-                {
-                    cnn.Execute("Delete from Inv_Ord where OrderID = " + ordId + " AND InvID = " + invId);
-                    MessageBox.Show("The record has been deleted.");
-                }
-                else
-                {
-                    MessageBox.Show("Please enter an existing record.");
-                }
+                // Delete based on ID.
+                cnn.Execute("Delete from Inv_Ord where InvID = " + ordItem.invId + " AND OrderID = " + ordItem.orderId);
             }
         }
     }
