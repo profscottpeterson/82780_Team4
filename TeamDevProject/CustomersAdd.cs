@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TeamDevProject
@@ -17,255 +10,74 @@ namespace TeamDevProject
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Clears all text input
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnResetCustomerAdd_Click(object sender, EventArgs e)
         {
-            cbxFNameNullCustomerAdd.Checked = false;
-            cbxLNameNullCustomerAdd.Checked = false;
-            cbxEMailNullCustomerAdd.Checked = false;
-            cbxFNameNullCustomerAdd.Enabled = false;
-            cbxLNameNullCustomerAdd.Enabled = false;
-            cbxEMailNullCustomerAdd.Enabled = false;
             txtFNameCustomerAdd.Text = "";
             txtLNameCustomerAdd.Text = "";
             txtEMailCustomerAdd.Text = "";
-            txtFNameCustomerAdd.Enabled = false;
-            txtLNameCustomerAdd.Enabled = false;
-            txtEMailCustomerAdd.Enabled = false;
-            cbxFNameOnCustomerAdd.Checked = false;
-            cbxLNameOnCustomerAdd.Checked = false;
-            cbxEMailOnCustomerAdd.Checked = false;
         }
 
+        /// <summary>
+        /// Returns user to previous form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReturnCustomerAdd_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnExitCustomerAdd_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void cbxFNameOnCustomerAdd_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxFNameOnCustomerAdd.Checked)
-            {
-                txtFNameCustomerAdd.Enabled = true;
-                cbxFNameNullCustomerAdd.Enabled = true;
-            }
-            else
-            {
-                cbxFNameNullCustomerAdd.Checked = false;
-                txtFNameCustomerAdd.Enabled = false;
-                cbxFNameNullCustomerAdd.Enabled = false;
-                txtFNameCustomerAdd.Text = "";
-            }
-        }
-
-        private void cbxLNameOnCustomerAdd_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxLNameOnCustomerAdd.Checked)
-            {
-                txtLNameCustomerAdd.Enabled = true;
-                cbxLNameNullCustomerAdd.Enabled = true;
-            }
-            else
-            {
-                cbxLNameNullCustomerAdd.Checked = false;
-                txtLNameCustomerAdd.Enabled = false;
-                cbxLNameNullCustomerAdd.Enabled = false;
-                txtLNameCustomerAdd.Text = "";
-            }
-        }
-
-        private void cbxEMailOnCustomerAdd_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxEMailOnCustomerAdd.Checked)
-            {
-                txtEMailCustomerAdd.Enabled = true;
-                cbxEMailNullCustomerAdd.Enabled = true;
-            }
-            else
-            {
-                cbxEMailNullCustomerAdd.Checked = false;
-                txtEMailCustomerAdd.Enabled = false;
-                cbxEMailNullCustomerAdd.Enabled = false;
-                txtEMailCustomerAdd.Text = "";
-            }
-        }
-
-        private void cbxIDOnCustomerAdd_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxFNameNullCustomerAdd_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxFNameNullCustomerAdd.Checked)
-            {
-                txtFNameCustomerAdd.Text = "<NULL>";
-                txtFNameCustomerAdd.Enabled = false;
-            }
-            else
-            {
-                txtFNameCustomerAdd.Text = "";
-                txtFNameCustomerAdd.Enabled = true;
-            }
-        }
-
-        private void cbxLNameNullCustomerAdd_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxLNameNullCustomerAdd.Checked)
-            {
-                txtLNameCustomerAdd.Text = "<NULL>";
-                txtLNameCustomerAdd.Enabled = false;
-            }
-            else
-            {
-                txtLNameCustomerAdd.Text = "";
-                txtLNameCustomerAdd.Enabled = true;
-            }
-        }
-
-        private void cbxEMailNullCustomerAdd_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxEMailNullCustomerAdd.Checked)
-            {
-                txtEMailCustomerAdd.Text = "<NULL>";
-                txtEMailCustomerAdd.Enabled = false;
-            }
-            else
-            {
-                txtEMailCustomerAdd.Text = "";
-                txtEMailCustomerAdd.Enabled = true;
-            }
-        }
-
+        /// <summary>
+        /// Validates all user inputs, then saves new customer to customer table
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCustomerAddGo_Click(object sender, EventArgs e)
         {
-            //temp customer
+            //Creating needed classes
             Customer cust = new Customer();
-
-            //users fields for customer
-            cust.FirstName = txtFNameCustomerAdd.Text;
-            cust.LastName = txtLNameCustomerAdd.Text;
-            cust.Email = txtEMailCustomerAdd.Text;
-
-            //save customer
-            CustomerSQL.SaveCustomer(cust);
-
-            /*
-            //test
-            Boolean fNameCheck = false;
-            Boolean lNameCheck = false;
-            Boolean emailCheck = false;
-            string fName = "";
-            string lName = "";
-            string email = "";
-            string query = "insert into Customer (";
             Validation val = new Validation();
 
-            if (cbxFNameOnCustomerAdd.Checked == true)
+            //Running validation and saving validated input to object class
+            cust.FirstName = txtFNameCustomerAdd.Text;
+            cust.LastName = txtLNameCustomerAdd.Text;
+            cust.Email = val.emailValidate(txtEMailCustomerAdd.Text);
+
+            //If all input is valid (returns something other than "") saves results and displays conformation message
+            if (cust.FirstName != "" && cust.LastName != "" && cust.Email != "")
             {
-                fName = val.stringValidate(txtFNameCustomerAdd.Text);
-                fNameCheck = true;
+                CustomerSQL.SaveCustomer(cust);
+                MessageBox.Show("Successfully added " + cust.FirstName + " " + cust.LastName + "\nwith EMail address " + cust.Email);
             }
-
-            if (cbxLNameOnCustomerAdd.Checked == true)
-            {
-                lName = val.stringValidate(txtLNameCustomerAdd.Text);
-                lNameCheck = true;
-            }
-
-            if (cbxEMailOnCustomerAdd.Checked == true)
-            {
-                email = val.emailValidate(txtEMailCustomerAdd.Text);
-                emailCheck = true;
-            }
-
-            if (fName != "[Error]" && lName != "[Error]" && email != "[Error]")
-            {
-                if (fNameCheck == true)
-                {
-                    query += "FirstName";
-                }
-
-                if (lNameCheck == true)
-                {
-                    if (fNameCheck == true)
-                    {
-                        query += ", ";
-                    }
-
-                    query += "LastName";
-                }
-
-                if (emailCheck == true)
-                {
-                    if (lNameCheck == true || fNameCheck == true)
-                    {
-                        query += ", ";
-                    }
-
-                    query += "Email";
-                }
-
-                query += ") Values (";
-
-                if (fNameCheck == true)
-                {
-                    if (fName == "NULL")
-                    {
-                        query += fName;
-                    }
-                    else
-                    {
-                        query += "'" + fName + "'";
-                    }
-                }
-
-                if (lNameCheck == true)
-                {
-                    if (fNameCheck == true)
-                    {
-                        query += ", ";
-                    }
-
-                    if (lName == "NULL")
-                    {
-                        query += lName;
-                    }
-                    else
-                    {
-                        query += "'" + lName + "'";
-                    }
-                }
-
-                if (emailCheck == true)
-                {
-                    if (fNameCheck == true || lNameCheck == true)
-                    {
-                        query += ", ";
-                    }
-
-                    if (email == "NULL")
-                    {
-                        query += email;
-                    }
-                    else
-                    {
-                        query += "'" + email + "'";
-                    }
-                }
-
-                query += ");";
-                MessageBox.Show(query);
-            }
+            //Else program will cancel the save, and display text fields that caused the error
             else
             {
-                MessageBox.Show("There was an error with your inputs, please double check all inputs.");
+                string error = "Add canceled due to error in the following fields:";
+
+                if (cust.FirstName == "")
+                {
+                    error += " \n   First Name";
+                }
+
+                if (cust.LastName == "")
+                {
+                    error += " \n   Last Name";
+                }
+
+                if (cust.Email == "")
+                {
+                    error += " \n   EMail";
+                }
+
+                error += " \n \nPlease ensure all fields are not empty and have proper input.";
+
+                MessageBox.Show(error);
             }
-            */
         }
     }
 }

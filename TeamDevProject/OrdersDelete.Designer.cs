@@ -40,7 +40,7 @@
             // btnExitOrdersDelete
             // 
             this.btnExitOrdersDelete.Location = new System.Drawing.Point(220, 140);
-            this.btnExitOrdersDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExitOrdersDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnExitOrdersDelete.Name = "btnExitOrdersDelete";
             this.btnExitOrdersDelete.Size = new System.Drawing.Size(116, 32);
             this.btnExitOrdersDelete.TabIndex = 59;
@@ -51,7 +51,7 @@
             // btnReturnOrdersDelete
             // 
             this.btnReturnOrdersDelete.Location = new System.Drawing.Point(220, 103);
-            this.btnReturnOrdersDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturnOrdersDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturnOrdersDelete.Name = "btnReturnOrdersDelete";
             this.btnReturnOrdersDelete.Size = new System.Drawing.Size(116, 32);
             this.btnReturnOrdersDelete.TabIndex = 60;
@@ -62,7 +62,7 @@
             // btnResetOrdersDelete
             // 
             this.btnResetOrdersDelete.Location = new System.Drawing.Point(220, 66);
-            this.btnResetOrdersDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnResetOrdersDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetOrdersDelete.Name = "btnResetOrdersDelete";
             this.btnResetOrdersDelete.Size = new System.Drawing.Size(116, 32);
             this.btnResetOrdersDelete.TabIndex = 61;
@@ -73,7 +73,7 @@
             // btnOrdersDeleteGo
             // 
             this.btnOrdersDeleteGo.Location = new System.Drawing.Point(220, 11);
-            this.btnOrdersDeleteGo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdersDeleteGo.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdersDeleteGo.Name = "btnOrdersDeleteGo";
             this.btnOrdersDeleteGo.Size = new System.Drawing.Size(116, 50);
             this.btnOrdersDeleteGo.TabIndex = 62;
@@ -84,7 +84,7 @@
             // txtIDOrdersDelete
             // 
             this.txtIDOrdersDelete.Location = new System.Drawing.Point(64, 46);
-            this.txtIDOrdersDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIDOrdersDelete.Margin = new System.Windows.Forms.Padding(2);
             this.txtIDOrdersDelete.Name = "txtIDOrdersDelete";
             this.txtIDOrdersDelete.Size = new System.Drawing.Size(102, 20);
             this.txtIDOrdersDelete.TabIndex = 53;
@@ -123,9 +123,9 @@
             this.Controls.Add(this.txtIDOrdersDelete);
             this.Controls.Add(this.lblOrdersDeleteTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OrdersDelete";
-            this.Text = "OrdersDelete";
+            this.Text = "Delete Orders";
             this.ResumeLayout(false);
             this.PerformLayout();
 

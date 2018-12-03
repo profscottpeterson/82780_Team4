@@ -53,7 +53,7 @@
             this.btnCustomer.Location = new System.Drawing.Point(197, 86);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(114, 44);
-            this.btnCustomer.TabIndex = 1;
+            this.btnCustomer.TabIndex = 0;
             this.btnCustomer.Text = "Customers";
             this.btnCustomer.UseVisualStyleBackColor = true;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
@@ -64,7 +64,7 @@
             this.btnOrders.Location = new System.Drawing.Point(197, 136);
             this.btnOrders.Name = "btnOrders";
             this.btnOrders.Size = new System.Drawing.Size(114, 44);
-            this.btnOrders.TabIndex = 2;
+            this.btnOrders.TabIndex = 1;
             this.btnOrders.Text = "Orders";
             this.btnOrders.UseVisualStyleBackColor = true;
             this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
@@ -75,7 +75,7 @@
             this.btnInventory.Location = new System.Drawing.Point(197, 186);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(114, 44);
-            this.btnInventory.TabIndex = 3;
+            this.btnInventory.TabIndex = 2;
             this.btnInventory.Text = "Inventory";
             this.btnInventory.UseVisualStyleBackColor = true;
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
@@ -98,7 +98,7 @@
             this.btnOrderItem.Name = "btnOrderItem";
             this.btnOrderItem.Size = new System.Drawing.Size(114, 44);
             this.btnOrderItem.TabIndex = 3;
-            this.btnOrderItem.Text = "Order Item";
+            this.btnOrderItem.Text = "Order Contents";
             this.btnOrderItem.UseVisualStyleBackColor = true;
             this.btnOrderItem.Click += new System.EventHandler(this.btnOrderItem_Click);
             // 
@@ -118,7 +118,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.Name = "MainMenu";
-            this.Text = "MainMenu";
+            this.Text = "Customer Orders Database";
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
 

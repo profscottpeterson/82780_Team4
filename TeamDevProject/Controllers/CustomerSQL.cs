@@ -34,45 +34,7 @@ namespace TeamDevProject
         {
             using (IDbConnection cnn = new SQLiteConnection(ConfigurationManager.ConnectionStrings["Default"].ConnectionString))
             {
-                // User supplied firstname lastname and email
-                if (cust.FirstName != "" && cust.LastName != "" && cust.Email != "" && cust.CustID == 0)
-                {
-                    cnn.Execute("Delete from Customer where FirstName = '" + cust.FirstName + "'" + "AND where LastName = '" + cust.LastName + "AND where Email = '" + cust.Email);
-                }
-                // User supplied firstname lastname
-                else if (cust.FirstName != "" && cust.LastName != "" && cust.CustID == 0)
-                {
-                    cnn.Execute("Delete from Customer where FirstName = '" + cust.FirstName + "'" + "AND where LastName = '" + cust.LastName);
-                }
-                // user supplied firstname email
-                else if (cust.FirstName != "" && cust.Email != "" && cust.CustID == 0)
-                {
-                    cnn.Execute("Delete from Customer where FirstName = '" + cust.FirstName + "'" + "AND where Email = '" + cust.Email);
-                }
-                // user supplied lastname email
-                else if (cust.LastName != "" && cust.Email != "" && cust.CustID == 0)
-                {
-                    cnn.Execute("Delete from Customer where LastName = '" + cust.LastName + "'" + "AND where Email = '" + cust.Email);
-                }
-                // user supplied firstname
-                else if (cust.FirstName != "" && cust.CustID == 0)
-                {
-                    cnn.Execute("Delete from Customer where FirstName = " + cust.FirstName);
-                }
-                // user supplied lastname
-                else if (cust.LastName != "" && cust.CustID == 0)
-                {
-                    cnn.Execute("Delete from Customer where FirstName = " + cust.LastName);
-                }
-                // user supplied email
-                else if (cust.Email != "" && cust.CustID == 0)
-                {
-                    cnn.Execute("Delete from Customer where Email = " + cust.Email);
-                }
-                else
-                {
-                    cnn.Execute("Delete from Customer where CustID = " + cust.CustID);
-                }
+                cnn.Execute("Delete from Customer where CustID = " + cust.CustID);
             }
         }
 

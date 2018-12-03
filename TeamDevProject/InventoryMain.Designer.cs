@@ -46,10 +46,10 @@
             // btnInventoryDelete
             // 
             this.btnInventoryDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventoryDelete.Location = new System.Drawing.Point(147, 266);
-            this.btnInventoryDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInventoryDelete.Location = new System.Drawing.Point(110, 216);
+            this.btnInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInventoryDelete.Name = "btnInventoryDelete";
-            this.btnInventoryDelete.Size = new System.Drawing.Size(115, 44);
+            this.btnInventoryDelete.Size = new System.Drawing.Size(86, 36);
             this.btnInventoryDelete.TabIndex = 5;
             this.btnInventoryDelete.Text = "Delete";
             this.btnInventoryDelete.UseVisualStyleBackColor = true;
@@ -58,10 +58,10 @@
             // btnInventoryAdd
             // 
             this.btnInventoryAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventoryAdd.Location = new System.Drawing.Point(26, 266);
-            this.btnInventoryAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInventoryAdd.Location = new System.Drawing.Point(20, 216);
+            this.btnInventoryAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInventoryAdd.Name = "btnInventoryAdd";
-            this.btnInventoryAdd.Size = new System.Drawing.Size(115, 44);
+            this.btnInventoryAdd.Size = new System.Drawing.Size(86, 36);
             this.btnInventoryAdd.TabIndex = 4;
             this.btnInventoryAdd.Text = "Add";
             this.btnInventoryAdd.UseVisualStyleBackColor = true;
@@ -71,19 +71,19 @@
             // 
             this.lblInventoryTitle.AutoSize = true;
             this.lblInventoryTitle.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventoryTitle.Location = new System.Drawing.Point(19, 12);
-            this.lblInventoryTitle.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.lblInventoryTitle.Location = new System.Drawing.Point(14, 10);
+            this.lblInventoryTitle.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblInventoryTitle.Name = "lblInventoryTitle";
-            this.lblInventoryTitle.Size = new System.Drawing.Size(183, 49);
+            this.lblInventoryTitle.Size = new System.Drawing.Size(151, 40);
             this.lblInventoryTitle.TabIndex = 11;
             this.lblInventoryTitle.Text = "Inventory";
             // 
             // btnInventoryReturn
             // 
-            this.btnInventoryReturn.Location = new System.Drawing.Point(57, 335);
-            this.btnInventoryReturn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInventoryReturn.Location = new System.Drawing.Point(43, 272);
+            this.btnInventoryReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInventoryReturn.Name = "btnInventoryReturn";
-            this.btnInventoryReturn.Size = new System.Drawing.Size(84, 33);
+            this.btnInventoryReturn.Size = new System.Drawing.Size(63, 27);
             this.btnInventoryReturn.TabIndex = 6;
             this.btnInventoryReturn.Text = "Return";
             this.btnInventoryReturn.UseVisualStyleBackColor = true;
@@ -92,38 +92,35 @@
             // dataGridInventory
             // 
             this.dataGridInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridInventory.Location = new System.Drawing.Point(276, 49);
-            this.dataGridInventory.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridInventory.Location = new System.Drawing.Point(207, 40);
             this.dataGridInventory.Name = "dataGridInventory";
-            this.dataGridInventory.Size = new System.Drawing.Size(399, 321);
+            this.dataGridInventory.Size = new System.Drawing.Size(299, 261);
             this.dataGridInventory.TabIndex = 8;
             // 
             // txtBoxSearchInventoryItemName
             // 
-            this.txtBoxSearchInventoryItemName.Location = new System.Drawing.Point(26, 153);
-            this.txtBoxSearchInventoryItemName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxSearchInventoryItemName.Location = new System.Drawing.Point(20, 124);
             this.txtBoxSearchInventoryItemName.Name = "txtBoxSearchInventoryItemName";
-            this.txtBoxSearchInventoryItemName.Size = new System.Drawing.Size(132, 22);
+            this.txtBoxSearchInventoryItemName.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSearchInventoryItemName.TabIndex = 2;
             this.txtBoxSearchInventoryItemName.TextChanged += new System.EventHandler(this.txtBoxSearchInventory_TextChanged);
             // 
             // lblInventorySearch
             // 
             this.lblInventorySearch.AutoSize = true;
-            this.lblInventorySearch.Location = new System.Drawing.Point(22, 133);
-            this.lblInventorySearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInventorySearch.Location = new System.Drawing.Point(16, 108);
             this.lblInventorySearch.Name = "lblInventorySearch";
-            this.lblInventorySearch.Size = new System.Drawing.Size(143, 17);
+            this.lblInventorySearch.Size = new System.Drawing.Size(109, 13);
             this.lblInventorySearch.TabIndex = 19;
             this.lblInventorySearch.Text = "Search by Item Name";
             // 
             // btnInventoryRefresh
             // 
             this.btnInventoryRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventoryRefresh.Location = new System.Drawing.Point(147, 335);
-            this.btnInventoryRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInventoryRefresh.Location = new System.Drawing.Point(110, 272);
+            this.btnInventoryRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInventoryRefresh.Name = "btnInventoryRefresh";
-            this.btnInventoryRefresh.Size = new System.Drawing.Size(84, 33);
+            this.btnInventoryRefresh.Size = new System.Drawing.Size(63, 27);
             this.btnInventoryRefresh.TabIndex = 7;
             this.btnInventoryRefresh.Text = "Refresh";
             this.btnInventoryRefresh.UseVisualStyleBackColor = true;
@@ -131,48 +128,44 @@
             // 
             // txtBoxSearchInventoryID
             // 
-            this.txtBoxSearchInventoryID.Location = new System.Drawing.Point(25, 93);
-            this.txtBoxSearchInventoryID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxSearchInventoryID.Location = new System.Drawing.Point(19, 76);
             this.txtBoxSearchInventoryID.Name = "txtBoxSearchInventoryID";
-            this.txtBoxSearchInventoryID.Size = new System.Drawing.Size(132, 22);
+            this.txtBoxSearchInventoryID.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSearchInventoryID.TabIndex = 1;
             this.txtBoxSearchInventoryID.TextChanged += new System.EventHandler(this.txtBoxSearchInventory_TextChanged);
             // 
             // txtBoxSearchInventoryPrice
             // 
-            this.txtBoxSearchInventoryPrice.Location = new System.Drawing.Point(26, 214);
-            this.txtBoxSearchInventoryPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxSearchInventoryPrice.Location = new System.Drawing.Point(20, 174);
             this.txtBoxSearchInventoryPrice.Name = "txtBoxSearchInventoryPrice";
-            this.txtBoxSearchInventoryPrice.Size = new System.Drawing.Size(132, 22);
+            this.txtBoxSearchInventoryPrice.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSearchInventoryPrice.TabIndex = 3;
             this.txtBoxSearchInventoryPrice.TextChanged += new System.EventHandler(this.txtBoxSearchInventory_TextChanged);
             // 
             // lblInventorySearchID
             // 
             this.lblInventorySearchID.AutoSize = true;
-            this.lblInventorySearchID.Location = new System.Drawing.Point(23, 72);
-            this.lblInventorySearchID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInventorySearchID.Location = new System.Drawing.Point(17, 58);
             this.lblInventorySearchID.Name = "lblInventorySearchID";
-            this.lblInventorySearchID.Size = new System.Drawing.Size(89, 17);
+            this.lblInventorySearchID.Size = new System.Drawing.Size(69, 13);
             this.lblInventorySearchID.TabIndex = 22;
             this.lblInventorySearchID.Text = "Search by ID";
             // 
             // lblInventorySearchPrice
             // 
             this.lblInventorySearchPrice.AutoSize = true;
-            this.lblInventorySearchPrice.Location = new System.Drawing.Point(25, 193);
-            this.lblInventorySearchPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInventorySearchPrice.Location = new System.Drawing.Point(19, 157);
             this.lblInventorySearchPrice.Name = "lblInventorySearchPrice";
-            this.lblInventorySearchPrice.Size = new System.Drawing.Size(108, 17);
+            this.lblInventorySearchPrice.Size = new System.Drawing.Size(82, 13);
             this.lblInventorySearchPrice.TabIndex = 23;
             this.lblInventorySearchPrice.Text = "Search by Price";
             // 
             // InventoryMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(688, 383);
+            this.ClientSize = new System.Drawing.Size(516, 311);
             this.Controls.Add(this.txtBoxSearchInventoryID);
             this.Controls.Add(this.txtBoxSearchInventoryPrice);
             this.Controls.Add(this.lblInventorySearchID);
@@ -186,9 +179,9 @@
             this.Controls.Add(this.btnInventoryAdd);
             this.Controls.Add(this.lblInventoryTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InventoryMain";
-            this.Text = "InventoryMain";
+            this.Text = "Inventory";
             this.Load += new System.EventHandler(this.InventoryMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).EndInit();
             this.ResumeLayout(false);

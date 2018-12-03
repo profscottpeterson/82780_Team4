@@ -146,7 +146,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OrdersAdd";
-            this.Text = "OrdersAdd";
+            this.Text = "Add Orders";
             this.ResumeLayout(false);
             this.PerformLayout();
 

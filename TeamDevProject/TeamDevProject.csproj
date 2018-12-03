@@ -76,12 +76,6 @@
       <DependentUpon>CustomersMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\CustomerSQL.cs" />
-    <Compile Include="CustomersSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomersSearch.Designer.cs">
-      <DependentUpon>CustomersSearch.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="InventoryAdd.cs">
       <SubType>Form</SubType>
@@ -100,12 +94,6 @@
     </Compile>
     <Compile Include="InventoryMain.Designer.cs">
       <DependentUpon>InventoryMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InventorySearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InventorySearch.Designer.cs">
-      <DependentUpon>InventorySearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\InventorySQL.cs" />
     <Compile Include="MainMenu.cs">
@@ -149,12 +137,6 @@
     <Compile Include="OrdersMain.Designer.cs">
       <DependentUpon>OrdersMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrdersSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrdersSearch.Designer.cs">
-      <DependentUpon>OrdersSearch.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\OrdersSQL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -169,9 +151,6 @@
     <EmbeddedResource Include="CustomersMain.resx">
       <DependentUpon>CustomersMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomersSearch.resx">
-      <DependentUpon>CustomersSearch.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InventoryAdd.resx">
       <DependentUpon>InventoryAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,15 +160,11 @@
     <EmbeddedResource Include="InventoryMain.resx">
       <DependentUpon>InventoryMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InventorySearch.resx">
-      <DependentUpon>InventorySearch.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\TeamDevProject.CustomersAdd.resources" />
     <EmbeddedResource Include="obj\Debug\TeamDevProject.CustomersDelete.resources" />
-    <EmbeddedResource Include="obj\Debug\TeamDevProject.CustomerSearch.resources" />
     <EmbeddedResource Include="obj\Debug\TeamDevProject.CustomersMain.resources" />
     <EmbeddedResource Include="obj\Debug\TeamDevProject.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\TeamDevProject.InventoryMain.resources" />
@@ -210,9 +185,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrdersMain.resx">
       <DependentUpon>OrdersMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OrdersSearch.resx">
-      <DependentUpon>OrdersSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

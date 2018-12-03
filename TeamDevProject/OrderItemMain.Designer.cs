@@ -42,19 +42,19 @@
             // 
             this.lblOrderItemTitle.AutoSize = true;
             this.lblOrderItemTitle.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderItemTitle.Location = new System.Drawing.Point(-2, 16);
-            this.lblOrderItemTitle.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.lblOrderItemTitle.Location = new System.Drawing.Point(-2, 13);
+            this.lblOrderItemTitle.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblOrderItemTitle.Name = "lblOrderItemTitle";
-            this.lblOrderItemTitle.Size = new System.Drawing.Size(285, 49);
+            this.lblOrderItemTitle.Size = new System.Drawing.Size(235, 40);
             this.lblOrderItemTitle.TabIndex = 2;
             this.lblOrderItemTitle.Text = "Items in Orders";
             // 
             // btnOrderItemReturn
             // 
-            this.btnOrderItemReturn.Location = new System.Drawing.Point(59, 284);
-            this.btnOrderItemReturn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrderItemReturn.Location = new System.Drawing.Point(44, 231);
+            this.btnOrderItemReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrderItemReturn.Name = "btnOrderItemReturn";
-            this.btnOrderItemReturn.Size = new System.Drawing.Size(84, 33);
+            this.btnOrderItemReturn.Size = new System.Drawing.Size(63, 27);
             this.btnOrderItemReturn.TabIndex = 11;
             this.btnOrderItemReturn.Text = "Return";
             this.btnOrderItemReturn.UseVisualStyleBackColor = true;
@@ -63,10 +63,10 @@
             // btnOrderItemDelete
             // 
             this.btnOrderItemDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderItemDelete.Location = new System.Drawing.Point(28, 213);
-            this.btnOrderItemDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrderItemDelete.Location = new System.Drawing.Point(21, 173);
+            this.btnOrderItemDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrderItemDelete.Name = "btnOrderItemDelete";
-            this.btnOrderItemDelete.Size = new System.Drawing.Size(115, 44);
+            this.btnOrderItemDelete.Size = new System.Drawing.Size(86, 36);
             this.btnOrderItemDelete.TabIndex = 10;
             this.btnOrderItemDelete.Text = "Delete";
             this.btnOrderItemDelete.UseVisualStyleBackColor = true;
@@ -74,10 +74,10 @@
             // btnOrderItemRefresh
             // 
             this.btnOrderItemRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderItemRefresh.Location = new System.Drawing.Point(149, 284);
-            this.btnOrderItemRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrderItemRefresh.Location = new System.Drawing.Point(112, 231);
+            this.btnOrderItemRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrderItemRefresh.Name = "btnOrderItemRefresh";
-            this.btnOrderItemRefresh.Size = new System.Drawing.Size(84, 33);
+            this.btnOrderItemRefresh.Size = new System.Drawing.Size(63, 27);
             this.btnOrderItemRefresh.TabIndex = 12;
             this.btnOrderItemRefresh.Text = "Refresh";
             this.btnOrderItemRefresh.UseVisualStyleBackColor = true;
@@ -86,10 +86,10 @@
             // btnOrderItemAdd
             // 
             this.btnOrderItemAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderItemAdd.Location = new System.Drawing.Point(28, 149);
-            this.btnOrderItemAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrderItemAdd.Location = new System.Drawing.Point(21, 121);
+            this.btnOrderItemAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrderItemAdd.Name = "btnOrderItemAdd";
-            this.btnOrderItemAdd.Size = new System.Drawing.Size(115, 44);
+            this.btnOrderItemAdd.Size = new System.Drawing.Size(86, 36);
             this.btnOrderItemAdd.TabIndex = 9;
             this.btnOrderItemAdd.Text = "Add";
             this.btnOrderItemAdd.UseVisualStyleBackColor = true;
@@ -97,10 +97,10 @@
             // btnOrderItemSearch
             // 
             this.btnOrderItemSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderItemSearch.Location = new System.Drawing.Point(28, 85);
-            this.btnOrderItemSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrderItemSearch.Location = new System.Drawing.Point(21, 69);
+            this.btnOrderItemSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrderItemSearch.Name = "btnOrderItemSearch";
-            this.btnOrderItemSearch.Size = new System.Drawing.Size(115, 44);
+            this.btnOrderItemSearch.Size = new System.Drawing.Size(86, 36);
             this.btnOrderItemSearch.TabIndex = 9;
             this.btnOrderItemSearch.Text = "Search";
             this.btnOrderItemSearch.UseVisualStyleBackColor = true;
@@ -109,18 +109,17 @@
             // dataGridOrderItem
             // 
             this.dataGridOrderItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridOrderItem.Location = new System.Drawing.Point(323, 16);
-            this.dataGridOrderItem.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridOrderItem.Location = new System.Drawing.Point(242, 13);
             this.dataGridOrderItem.Name = "dataGridOrderItem";
-            this.dataGridOrderItem.Size = new System.Drawing.Size(372, 321);
+            this.dataGridOrderItem.Size = new System.Drawing.Size(279, 261);
             this.dataGridOrderItem.TabIndex = 13;
             // 
             // OrderItemMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(704, 348);
+            this.ClientSize = new System.Drawing.Size(528, 283);
             this.Controls.Add(this.dataGridOrderItem);
             this.Controls.Add(this.btnOrderItemReturn);
             this.Controls.Add(this.btnOrderItemDelete);
@@ -129,8 +128,9 @@
             this.Controls.Add(this.btnOrderItemAdd);
             this.Controls.Add(this.lblOrderItemTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OrderItemMain";
-            this.Text = "OrderItemMain";
+            this.Text = "Order Contents";
             this.Load += new System.EventHandler(this.OrderItemMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrderItem)).EndInit();
             this.ResumeLayout(false);
