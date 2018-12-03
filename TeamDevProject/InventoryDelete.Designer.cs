@@ -34,6 +34,7 @@
             this.txtIDInventoryDelete = new System.Windows.Forms.TextBox();
             this.lblInventoryDeleteTitle = new System.Windows.Forms.Label();
             this.lblInventoryDeleteID = new System.Windows.Forms.Label();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnReturnInventoryDelete
@@ -76,6 +77,7 @@
             this.txtIDInventoryDelete.Name = "txtIDInventoryDelete";
             this.txtIDInventoryDelete.Size = new System.Drawing.Size(49, 20);
             this.txtIDInventoryDelete.TabIndex = 0;
+            this.txtIDInventoryDelete.Click += new System.EventHandler(this.txtIDInventoryDelete_Click);
             // 
             // lblInventoryDeleteTitle
             // 
@@ -97,12 +99,26 @@
             this.lblInventoryDeleteID.TabIndex = 49;
             this.lblInventoryDeleteID.Text = "Inventory ID";
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Location = new System.Drawing.Point(5, 113);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(25, 25);
+            this.btnHelp.TabIndex = 50;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // InventoryDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(339, 140);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.lblInventoryDeleteID);
             this.Controls.Add(this.btnReturnInventoryDelete);
             this.Controls.Add(this.btnResetInventoryDelete);
@@ -125,5 +141,6 @@
         private System.Windows.Forms.TextBox txtIDInventoryDelete;
         private System.Windows.Forms.Label lblInventoryDeleteTitle;
         private System.Windows.Forms.Label lblInventoryDeleteID;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

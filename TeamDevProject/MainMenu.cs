@@ -12,6 +12,8 @@ namespace TeamDevProject
 {
     public partial class MainMenu : Form
     {
+        private bool help = false;
+
         public MainMenu()
         {
             InitializeComponent();

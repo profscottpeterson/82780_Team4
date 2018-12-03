@@ -34,6 +34,7 @@
             this.txtBoxSearchOrderItemID = new System.Windows.Forms.TextBox();
             this.lblOrderItemSearchID = new System.Windows.Forms.Label();
             this.btnOrderItemGo = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrderItemSearch)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             // 
             // btnOrderItemReturn
             // 
-            this.btnOrderItemReturn.Location = new System.Drawing.Point(20, 245);
+            this.btnOrderItemReturn.Location = new System.Drawing.Point(43, 245);
             this.btnOrderItemReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderItemReturn.Name = "btnOrderItemReturn";
             this.btnOrderItemReturn.Size = new System.Drawing.Size(63, 27);
@@ -73,6 +74,7 @@
             this.txtBoxSearchOrderItemID.Name = "txtBoxSearchOrderItemID";
             this.txtBoxSearchOrderItemID.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSearchOrderItemID.TabIndex = 0;
+            this.txtBoxSearchOrderItemID.Click += new System.EventHandler(this.txtBoxSearchOrderItemID_Click);
             // 
             // lblOrderItemSearchID
             // 
@@ -95,12 +97,26 @@
             this.btnOrderItemGo.UseVisualStyleBackColor = true;
             this.btnOrderItemGo.Click += new System.EventHandler(this.btnOrderItemGo_Click);
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Location = new System.Drawing.Point(5, 246);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(25, 25);
+            this.btnHelp.TabIndex = 35;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // OrderItemSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(447, 280);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnOrderItemGo);
             this.Controls.Add(this.txtBoxSearchOrderItemID);
             this.Controls.Add(this.lblOrderItemSearchID);
@@ -126,5 +142,6 @@
         private System.Windows.Forms.TextBox txtBoxSearchOrderItemID;
         private System.Windows.Forms.Label lblOrderItemSearchID;
         private System.Windows.Forms.Button btnOrderItemGo;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

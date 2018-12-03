@@ -42,6 +42,7 @@
             this.lblCustomerSearchID = new System.Windows.Forms.Label();
             this.lblCustomerSearchEmail = new System.Windows.Forms.Label();
             this.lblCustomerSearchLName = new System.Windows.Forms.Label();
+            this.btnHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +115,7 @@
             this.txtBoxSearchCustomer.Name = "txtBoxSearchCustomer";
             this.txtBoxSearchCustomer.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSearchCustomer.TabIndex = 1;
+            this.txtBoxSearchCustomer.Click += new System.EventHandler(this.txtBoxSearchCustomer_Click);
             this.txtBoxSearchCustomer.TextChanged += new System.EventHandler(this.txtBoxSearchCustomer_TextChanged);
             // 
             // btnCustomerRefresh
@@ -134,6 +136,7 @@
             this.txtBoxSearchCustomerLName.Name = "txtBoxSearchCustomerLName";
             this.txtBoxSearchCustomerLName.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSearchCustomerLName.TabIndex = 2;
+            this.txtBoxSearchCustomerLName.Click += new System.EventHandler(this.txtBoxSearchCustomerLName_Click);
             this.txtBoxSearchCustomerLName.TextChanged += new System.EventHandler(this.txtBoxSearchCustomer_TextChanged);
             // 
             // txtBoxCustomerSearchEmail
@@ -142,6 +145,7 @@
             this.txtBoxCustomerSearchEmail.Name = "txtBoxCustomerSearchEmail";
             this.txtBoxCustomerSearchEmail.Size = new System.Drawing.Size(100, 20);
             this.txtBoxCustomerSearchEmail.TabIndex = 3;
+            this.txtBoxCustomerSearchEmail.Click += new System.EventHandler(this.txtBoxCustomerSearchEmail_Click);
             this.txtBoxCustomerSearchEmail.TextChanged += new System.EventHandler(this.txtBoxSearchCustomer_TextChanged);
             // 
             // txtBoxCustomerSearchID
@@ -150,6 +154,7 @@
             this.txtBoxCustomerSearchID.Name = "txtBoxCustomerSearchID";
             this.txtBoxCustomerSearchID.Size = new System.Drawing.Size(100, 20);
             this.txtBoxCustomerSearchID.TabIndex = 0;
+            this.txtBoxCustomerSearchID.Click += new System.EventHandler(this.txtBoxCustomerSearchID_Click);
             this.txtBoxCustomerSearchID.TextChanged += new System.EventHandler(this.txtBoxSearchCustomer_TextChanged);
             // 
             // lblCustomerSearchID
@@ -179,12 +184,26 @@
             this.lblCustomerSearchLName.TabIndex = 8;
             this.lblCustomerSearchLName.Text = "Search by Last Name";
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Location = new System.Drawing.Point(3, 282);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(25, 25);
+            this.btnHelp.TabIndex = 34;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // CustomersMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(516, 311);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.txtBoxCustomerSearchID);
             this.Controls.Add(this.txtBoxCustomerSearchEmail);
             this.Controls.Add(this.txtBoxSearchCustomerLName);
@@ -226,5 +245,6 @@
         private System.Windows.Forms.Label lblCustomerSearchID;
         private System.Windows.Forms.Label lblCustomerSearchEmail;
         private System.Windows.Forms.Label lblCustomerSearchLName;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

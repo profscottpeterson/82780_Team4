@@ -12,6 +12,7 @@ namespace TeamDevProject
 {
     public partial class OrderItemDelete : Form
     {
+        private bool help = false;
         public OrderItemDelete()
         {
             InitializeComponent();
@@ -88,6 +89,34 @@ namespace TeamDevProject
                 error += " \n \nPlease ensure all fields are not empty and have proper input.";
 
                 MessageBox.Show(error);
+            }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtOrderIDOrderItemDelete_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the Order ID of the record you wish to delete." +
+                                "\nThe ID must be positive and a whole number.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
+
+        private void txtInvIDOrderItemDelete_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the Inventory ID of the record you wish to delete." +
+                                "\nThe ID must be positive and a whole number.");
+                btnHelp.Enabled = true;
+                help = false;
             }
         }
     }

@@ -5,6 +5,8 @@ namespace TeamDevProject
 {
     public partial class CustomersAdd : Form
     {
+        private bool help = false;
+
         public CustomersAdd()
         {
             InitializeComponent();
@@ -52,7 +54,8 @@ namespace TeamDevProject
             if (cust.FirstName != "" && cust.LastName != "" && cust.Email != "")
             {
                 CustomerSQL.SaveCustomer(cust);
-                MessageBox.Show("Successfully added " + cust.FirstName + " " + cust.LastName + "\nwith EMail address " + cust.Email);
+                MessageBox.Show("Successfully added " + cust.FirstName + " " + cust.LastName +
+                                "\nwith EMail address " + cust.Email);
             }
             //Else program will cancel the save, and display text fields that caused the error
             else
@@ -77,6 +80,45 @@ namespace TeamDevProject
                 error += " \n \nPlease ensure all fields are not empty and have proper input.";
 
                 MessageBox.Show(error);
+            }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtFNameCustomerAdd_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter your new customer's first name." +
+                                "\nThere are no limitations on the name, but it cannot be empty.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
+
+        private void txtLNameCustomerAdd_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter your new customer's last name." +
+                                "\nThere are no limitations on the name, but it cannot be empty.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
+
+        private void txtEMailCustomerAdd_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter your new customer's Email." +
+                                "\nIt must be formatted as text@text.text");
+                btnHelp.Enabled = true;
+                help = false;
             }
         }
     }

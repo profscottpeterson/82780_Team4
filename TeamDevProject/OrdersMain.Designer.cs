@@ -36,10 +36,11 @@
             this.txtBoxSearchOrderID = new System.Windows.Forms.TextBox();
             this.lblOrderSearch = new System.Windows.Forms.Label();
             this.btnInventoryRefresh = new System.Windows.Forms.Button();
-            this.txtBoxSearchOrderDate = new System.Windows.Forms.TextBox();
             this.lblOrderSearchDate = new System.Windows.Forms.Label();
             this.txtBoxSearchOrderCustID = new System.Windows.Forms.TextBox();
             this.lblOrderSearchCustID = new System.Windows.Forms.Label();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.dpkSearchOrderDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             // 
             this.btnOrderDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderDelete.Location = new System.Drawing.Point(110, 216);
-            this.btnOrderDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrderDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderDelete.Name = "btnOrderDelete";
             this.btnOrderDelete.Size = new System.Drawing.Size(86, 36);
             this.btnOrderDelete.TabIndex = 5;
@@ -59,7 +60,7 @@
             // 
             this.btnOrderAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderAdd.Location = new System.Drawing.Point(20, 216);
-            this.btnOrderAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrderAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderAdd.Name = "btnOrderAdd";
             this.btnOrderAdd.Size = new System.Drawing.Size(86, 36);
             this.btnOrderAdd.TabIndex = 4;
@@ -81,7 +82,7 @@
             // btnOrdersReturn
             // 
             this.btnOrdersReturn.Location = new System.Drawing.Point(43, 272);
-            this.btnOrdersReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdersReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdersReturn.Name = "btnOrdersReturn";
             this.btnOrdersReturn.Size = new System.Drawing.Size(63, 27);
             this.btnOrdersReturn.TabIndex = 6;
@@ -93,7 +94,7 @@
             // 
             this.dataGridOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridOrder.Location = new System.Drawing.Point(207, 40);
-            this.dataGridOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridOrder.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridOrder.Name = "dataGridOrder";
             this.dataGridOrder.Size = new System.Drawing.Size(299, 261);
             this.dataGridOrder.TabIndex = 8;
@@ -101,10 +102,11 @@
             // txtBoxSearchOrderID
             // 
             this.txtBoxSearchOrderID.Location = new System.Drawing.Point(19, 76);
-            this.txtBoxSearchOrderID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxSearchOrderID.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxSearchOrderID.Name = "txtBoxSearchOrderID";
             this.txtBoxSearchOrderID.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSearchOrderID.TabIndex = 1;
+            this.txtBoxSearchOrderID.Click += new System.EventHandler(this.txtBoxSearchOrderID_Click);
             this.txtBoxSearchOrderID.TextChanged += new System.EventHandler(this.txtBoxSearchOrder_TextChanged);
             // 
             // lblOrderSearch
@@ -121,21 +123,13 @@
             // 
             this.btnInventoryRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventoryRefresh.Location = new System.Drawing.Point(110, 272);
-            this.btnInventoryRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventoryRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventoryRefresh.Name = "btnInventoryRefresh";
             this.btnInventoryRefresh.Size = new System.Drawing.Size(63, 27);
             this.btnInventoryRefresh.TabIndex = 7;
             this.btnInventoryRefresh.Text = "Refresh";
             this.btnInventoryRefresh.UseVisualStyleBackColor = true;
             this.btnInventoryRefresh.Click += new System.EventHandler(this.OrdersMain_Load);
-            // 
-            // txtBoxSearchOrderDate
-            // 
-            this.txtBoxSearchOrderDate.Location = new System.Drawing.Point(20, 174);
-            this.txtBoxSearchOrderDate.Name = "txtBoxSearchOrderDate";
-            this.txtBoxSearchOrderDate.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxSearchOrderDate.TabIndex = 3;
-            this.txtBoxSearchOrderDate.TextChanged += new System.EventHandler(this.txtBoxSearchOrder_TextChanged);
             // 
             // lblOrderSearchDate
             // 
@@ -152,6 +146,7 @@
             this.txtBoxSearchOrderCustID.Name = "txtBoxSearchOrderCustID";
             this.txtBoxSearchOrderCustID.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSearchOrderCustID.TabIndex = 2;
+            this.txtBoxSearchOrderCustID.Click += new System.EventHandler(this.txtBoxSearchOrderCustID_Click);
             this.txtBoxSearchOrderCustID.TextChanged += new System.EventHandler(this.txtBoxSearchOrder_TextChanged);
             // 
             // lblOrderSearchCustID
@@ -163,13 +158,36 @@
             this.lblOrderSearchCustID.TabIndex = 26;
             this.lblOrderSearchCustID.Text = "Search by Customer ID";
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Location = new System.Drawing.Point(4, 282);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(25, 25);
+            this.btnHelp.TabIndex = 35;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
+            // dpkSearchOrderDate
+            // 
+            this.dpkSearchOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpkSearchOrderDate.Location = new System.Drawing.Point(20, 175);
+            this.dpkSearchOrderDate.Name = "dpkSearchOrderDate";
+            this.dpkSearchOrderDate.Size = new System.Drawing.Size(102, 20);
+            this.dpkSearchOrderDate.TabIndex = 36;
+            this.dpkSearchOrderDate.ValueChanged += new System.EventHandler(this.txtBoxSearchOrder_TextChanged);
+            // 
             // OrdersMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(516, 311);
-            this.Controls.Add(this.txtBoxSearchOrderDate);
+            this.Controls.Add(this.dpkSearchOrderDate);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.lblOrderSearchDate);
             this.Controls.Add(this.txtBoxSearchOrderCustID);
             this.Controls.Add(this.lblOrderSearchCustID);
@@ -182,7 +200,7 @@
             this.Controls.Add(this.btnOrderAdd);
             this.Controls.Add(this.lblOrdersTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OrdersMain";
             this.Text = "Orders";
             this.Load += new System.EventHandler(this.OrdersMain_Load);
@@ -202,9 +220,10 @@
         private System.Windows.Forms.TextBox txtBoxSearchOrderID;
         private System.Windows.Forms.Label lblOrderSearch;
         private System.Windows.Forms.Button btnInventoryRefresh;
-        private System.Windows.Forms.TextBox txtBoxSearchOrderDate;
         private System.Windows.Forms.Label lblOrderSearchDate;
         private System.Windows.Forms.TextBox txtBoxSearchOrderCustID;
         private System.Windows.Forms.Label lblOrderSearchCustID;
+        private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.DateTimePicker dpkSearchOrderDate;
     }
 }

@@ -40,6 +40,7 @@
             this.txtBoxSearchInventoryPrice = new System.Windows.Forms.TextBox();
             this.lblInventorySearchID = new System.Windows.Forms.Label();
             this.lblInventorySearchPrice = new System.Windows.Forms.Label();
+            this.btnHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             // 
             this.btnInventoryDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventoryDelete.Location = new System.Drawing.Point(110, 216);
-            this.btnInventoryDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventoryDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventoryDelete.Name = "btnInventoryDelete";
             this.btnInventoryDelete.Size = new System.Drawing.Size(86, 36);
             this.btnInventoryDelete.TabIndex = 5;
@@ -59,7 +60,7 @@
             // 
             this.btnInventoryAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventoryAdd.Location = new System.Drawing.Point(20, 216);
-            this.btnInventoryAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventoryAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventoryAdd.Name = "btnInventoryAdd";
             this.btnInventoryAdd.Size = new System.Drawing.Size(86, 36);
             this.btnInventoryAdd.TabIndex = 4;
@@ -81,7 +82,7 @@
             // btnInventoryReturn
             // 
             this.btnInventoryReturn.Location = new System.Drawing.Point(43, 272);
-            this.btnInventoryReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventoryReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventoryReturn.Name = "btnInventoryReturn";
             this.btnInventoryReturn.Size = new System.Drawing.Size(63, 27);
             this.btnInventoryReturn.TabIndex = 6;
@@ -103,6 +104,7 @@
             this.txtBoxSearchInventoryItemName.Name = "txtBoxSearchInventoryItemName";
             this.txtBoxSearchInventoryItemName.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSearchInventoryItemName.TabIndex = 2;
+            this.txtBoxSearchInventoryItemName.Click += new System.EventHandler(this.txtBoxSearchInventoryItemName_Click);
             this.txtBoxSearchInventoryItemName.TextChanged += new System.EventHandler(this.txtBoxSearchInventory_TextChanged);
             // 
             // lblInventorySearch
@@ -118,7 +120,7 @@
             // 
             this.btnInventoryRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventoryRefresh.Location = new System.Drawing.Point(110, 272);
-            this.btnInventoryRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventoryRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventoryRefresh.Name = "btnInventoryRefresh";
             this.btnInventoryRefresh.Size = new System.Drawing.Size(63, 27);
             this.btnInventoryRefresh.TabIndex = 7;
@@ -132,6 +134,7 @@
             this.txtBoxSearchInventoryID.Name = "txtBoxSearchInventoryID";
             this.txtBoxSearchInventoryID.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSearchInventoryID.TabIndex = 1;
+            this.txtBoxSearchInventoryID.Click += new System.EventHandler(this.txtBoxSearchInventoryID_Click);
             this.txtBoxSearchInventoryID.TextChanged += new System.EventHandler(this.txtBoxSearchInventory_TextChanged);
             // 
             // txtBoxSearchInventoryPrice
@@ -140,6 +143,7 @@
             this.txtBoxSearchInventoryPrice.Name = "txtBoxSearchInventoryPrice";
             this.txtBoxSearchInventoryPrice.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSearchInventoryPrice.TabIndex = 3;
+            this.txtBoxSearchInventoryPrice.Click += new System.EventHandler(this.txtBoxSearchInventoryPrice_Click);
             this.txtBoxSearchInventoryPrice.TextChanged += new System.EventHandler(this.txtBoxSearchInventory_TextChanged);
             // 
             // lblInventorySearchID
@@ -160,12 +164,26 @@
             this.lblInventorySearchPrice.TabIndex = 23;
             this.lblInventorySearchPrice.Text = "Search by Price";
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Location = new System.Drawing.Point(4, 283);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(25, 25);
+            this.btnHelp.TabIndex = 51;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // InventoryMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(516, 311);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.txtBoxSearchInventoryID);
             this.Controls.Add(this.txtBoxSearchInventoryPrice);
             this.Controls.Add(this.lblInventorySearchID);
@@ -179,7 +197,7 @@
             this.Controls.Add(this.btnInventoryAdd);
             this.Controls.Add(this.lblInventoryTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InventoryMain";
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.InventoryMain_Load);
@@ -203,5 +221,6 @@
         private System.Windows.Forms.TextBox txtBoxSearchInventoryPrice;
         private System.Windows.Forms.Label lblInventorySearchID;
         private System.Windows.Forms.Label lblInventorySearchPrice;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

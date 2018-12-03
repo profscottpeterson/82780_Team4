@@ -13,6 +13,7 @@ namespace TeamDevProject
 {
     public partial class InventoryMain : Form
     {
+        private bool help = false;
         private DataView inventoryView;
 
         public InventoryMain()
@@ -119,6 +120,45 @@ namespace TeamDevProject
 
             //Adjusting the DataGrid with the filtered data.
             dataGridInventory.DataSource = inventoryView;
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtBoxSearchInventoryPrice_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box that filters the adjacent data using your input." +
+                                "\nThis box searches for the item's price.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
+
+        private void txtBoxSearchInventoryItemName_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box that filters the adjacent data using your input." +
+                                "\nThis box searches for the item's name.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
+
+        private void txtBoxSearchInventoryID_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box that filters the adjacent data using your input." +
+                                "\nThis box searches for the item's ID, which is a unique number, with one given to every item.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
         }
     }
 }

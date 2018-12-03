@@ -13,6 +13,7 @@ namespace TeamDevProject
     public partial class CustomersMain : Form
     {
         public DataView customerView;
+        private bool help = false;
 
         public CustomersMain()
         {
@@ -121,6 +122,56 @@ namespace TeamDevProject
             
             //Adjusting the DataGrid with the filtered data.
             dataGridCustomer.DataSource = customerView;
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtBoxCustomerSearchID_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box that filters the adjacent data using your input." +
+                                "\nThis box searches for the customer's ID, which is a unique number, with one given to every customer.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
+
+        private void txtBoxSearchCustomer_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box that filters the adjacent data using your input." +
+                                "\nThis box searches for the customer's first name.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
+
+        private void txtBoxSearchCustomerLName_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box that filters the adjacent data using your input." +
+                                "\nThis box searches for the customer's last name.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
+
+        private void txtBoxCustomerSearchEmail_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box that filters the adjacent data using your input." +
+                                "\nThis box searches for the customer's Email address.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
         }
     }
 }

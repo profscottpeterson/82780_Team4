@@ -34,6 +34,7 @@
             this.lblCustomerDeleteTitle = new System.Windows.Forms.Label();
             this.txtIDCustomerDelete = new System.Windows.Forms.TextBox();
             this.lblCustomerDeleteID = new System.Windows.Forms.Label();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnReturnCustomerDelete
@@ -87,6 +88,7 @@
             this.txtIDCustomerDelete.Name = "txtIDCustomerDelete";
             this.txtIDCustomerDelete.Size = new System.Drawing.Size(49, 20);
             this.txtIDCustomerDelete.TabIndex = 0;
+            this.txtIDCustomerDelete.Click += new System.EventHandler(this.txtIDCustomerDelete_Click);
             // 
             // lblCustomerDeleteID
             // 
@@ -97,12 +99,26 @@
             this.lblCustomerDeleteID.TabIndex = 32;
             this.lblCustomerDeleteID.Text = "Customer ID";
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Location = new System.Drawing.Point(1, 114);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(25, 25);
+            this.btnHelp.TabIndex = 33;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // CustomersDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(339, 140);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.lblCustomerDeleteID);
             this.Controls.Add(this.btnReturnCustomerDelete);
             this.Controls.Add(this.btnResetCustomerDelete);
@@ -125,5 +141,6 @@
         private System.Windows.Forms.Label lblCustomerDeleteTitle;
         private System.Windows.Forms.TextBox txtIDCustomerDelete;
         private System.Windows.Forms.Label lblCustomerDeleteID;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

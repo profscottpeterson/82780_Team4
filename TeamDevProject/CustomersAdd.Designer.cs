@@ -38,6 +38,7 @@
             this.lblCustomerAddFName = new System.Windows.Forms.Label();
             this.lblCustomerAddLName = new System.Windows.Forms.Label();
             this.lblCustomerAddEMail = new System.Windows.Forms.Label();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCustomerAddTitle
@@ -58,6 +59,7 @@
             this.txtLNameCustomerAdd.Name = "txtLNameCustomerAdd";
             this.txtLNameCustomerAdd.Size = new System.Drawing.Size(102, 20);
             this.txtLNameCustomerAdd.TabIndex = 1;
+            this.txtLNameCustomerAdd.Click += new System.EventHandler(this.txtLNameCustomerAdd_Click);
             // 
             // txtFNameCustomerAdd
             // 
@@ -66,6 +68,7 @@
             this.txtFNameCustomerAdd.Name = "txtFNameCustomerAdd";
             this.txtFNameCustomerAdd.Size = new System.Drawing.Size(102, 20);
             this.txtFNameCustomerAdd.TabIndex = 0;
+            this.txtFNameCustomerAdd.Click += new System.EventHandler(this.txtFNameCustomerAdd_Click);
             // 
             // btnReturnCustomerAdd
             // 
@@ -107,6 +110,7 @@
             this.txtEMailCustomerAdd.Name = "txtEMailCustomerAdd";
             this.txtEMailCustomerAdd.Size = new System.Drawing.Size(102, 20);
             this.txtEMailCustomerAdd.TabIndex = 2;
+            this.txtEMailCustomerAdd.Click += new System.EventHandler(this.txtEMailCustomerAdd_Click);
             // 
             // lblCustomerAddFName
             // 
@@ -135,12 +139,26 @@
             this.lblCustomerAddEMail.TabIndex = 18;
             this.lblCustomerAddEMail.Text = "EMail";
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Location = new System.Drawing.Point(2, 124);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(25, 25);
+            this.btnHelp.TabIndex = 19;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // CustomersAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(468, 150);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.lblCustomerAddEMail);
             this.Controls.Add(this.lblCustomerAddLName);
             this.Controls.Add(this.lblCustomerAddFName);
@@ -172,5 +190,6 @@
         private System.Windows.Forms.Label lblCustomerAddFName;
         private System.Windows.Forms.Label lblCustomerAddLName;
         private System.Windows.Forms.Label lblCustomerAddEMail;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

@@ -16,6 +16,8 @@ namespace TeamDevProject
 {
     public partial class InventoryAdd : Form
     {
+        private bool help = false;
+
         public InventoryAdd()
         {
             InitializeComponent();
@@ -83,6 +85,34 @@ namespace TeamDevProject
 
                 MessageBox.Show(error);
             }
-        }   
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtNameInventoryAdd_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the new item's name." +
+                                "\nThere are no limitations on the name, but it cannot be empty.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
+
+        private void txtPriceInventoryAdd_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the new item's price." +
+                                "\nThe price must be a positive number, and will be rounded to two decimals.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
     }
 }

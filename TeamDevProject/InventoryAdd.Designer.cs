@@ -36,6 +36,7 @@
             this.lblInventoryAddTitle = new System.Windows.Forms.Label();
             this.lblInventoryAddPrice = new System.Windows.Forms.Label();
             this.lblInventoryAddItemName = new System.Windows.Forms.Label();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnReturnInventoryAdd
@@ -78,6 +79,7 @@
             this.txtPriceInventoryAdd.Name = "txtPriceInventoryAdd";
             this.txtPriceInventoryAdd.Size = new System.Drawing.Size(102, 20);
             this.txtPriceInventoryAdd.TabIndex = 1;
+            this.txtPriceInventoryAdd.Click += new System.EventHandler(this.txtPriceInventoryAdd_Click);
             // 
             // txtNameInventoryAdd
             // 
@@ -86,6 +88,7 @@
             this.txtNameInventoryAdd.Name = "txtNameInventoryAdd";
             this.txtNameInventoryAdd.Size = new System.Drawing.Size(102, 20);
             this.txtNameInventoryAdd.TabIndex = 0;
+            this.txtNameInventoryAdd.Click += new System.EventHandler(this.txtNameInventoryAdd_Click);
             // 
             // lblInventoryAddTitle
             // 
@@ -116,12 +119,26 @@
             this.lblInventoryAddItemName.TabIndex = 33;
             this.lblInventoryAddItemName.Text = "Item Name";
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Location = new System.Drawing.Point(4, 123);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(25, 25);
+            this.btnHelp.TabIndex = 34;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // InventoryAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(468, 150);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.lblInventoryAddPrice);
             this.Controls.Add(this.lblInventoryAddItemName);
             this.Controls.Add(this.btnReturnInventoryAdd);
@@ -148,5 +165,6 @@
         private System.Windows.Forms.Label lblInventoryAddTitle;
         private System.Windows.Forms.Label lblInventoryAddPrice;
         private System.Windows.Forms.Label lblInventoryAddItemName;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

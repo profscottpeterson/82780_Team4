@@ -12,6 +12,7 @@ namespace TeamDevProject
 {
     public partial class OrderItemSearch : Form
     {
+        private bool help = false;
         private DataView orderItemView;
 
         //Creating List to hold all inventory objects.
@@ -130,6 +131,23 @@ namespace TeamDevProject
         private void btnOrderItemGo_Click(object sender, EventArgs e)
         {
             dataSearch();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtBoxSearchOrderItemID_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the ID or an order." +
+                                "Pressing Go will show you every item that is contained within the order.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
         }
     }
 }

@@ -39,10 +39,10 @@
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(18, 9);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.lblTitle.Location = new System.Drawing.Point(17, 9);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(480, 49);
+            this.lblTitle.Size = new System.Drawing.Size(481, 50);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Customer Orders Database";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -51,8 +51,9 @@
             // 
             this.btnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomer.Location = new System.Drawing.Point(197, 86);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(114, 44);
+            this.btnCustomer.Size = new System.Drawing.Size(114, 43);
             this.btnCustomer.TabIndex = 0;
             this.btnCustomer.Text = "Customers";
             this.btnCustomer.UseVisualStyleBackColor = true;
@@ -62,8 +63,9 @@
             // 
             this.btnOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrders.Location = new System.Drawing.Point(197, 136);
+            this.btnOrders.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(114, 44);
+            this.btnOrders.Size = new System.Drawing.Size(114, 43);
             this.btnOrders.TabIndex = 1;
             this.btnOrders.Text = "Orders";
             this.btnOrders.UseVisualStyleBackColor = true;
@@ -73,8 +75,9 @@
             // 
             this.btnInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.Location = new System.Drawing.Point(197, 186);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(114, 44);
+            this.btnInventory.Size = new System.Drawing.Size(114, 43);
             this.btnInventory.TabIndex = 2;
             this.btnInventory.Text = "Inventory";
             this.btnInventory.UseVisualStyleBackColor = true;
@@ -84,8 +87,9 @@
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(197, 286);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(114, 44);
+            this.btnExit.Size = new System.Drawing.Size(114, 43);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -93,10 +97,11 @@
             // 
             // btnOrderItem
             // 
-            this.btnOrderItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderItem.Location = new System.Drawing.Point(197, 236);
+            this.btnOrderItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderItem.Name = "btnOrderItem";
-            this.btnOrderItem.Size = new System.Drawing.Size(114, 44);
+            this.btnOrderItem.Size = new System.Drawing.Size(114, 43);
             this.btnOrderItem.TabIndex = 3;
             this.btnOrderItem.Text = "Order Contents";
             this.btnOrderItem.UseVisualStyleBackColor = true;
@@ -116,7 +121,7 @@
             this.Controls.Add(this.lblTitle);
             this.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "MainMenu";
             this.Text = "Customer Orders Database";
             this.Load += new System.EventHandler(this.MainMenu_Load);

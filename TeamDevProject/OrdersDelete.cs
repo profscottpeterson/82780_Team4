@@ -12,6 +12,7 @@ namespace TeamDevProject
 {
     public partial class OrdersDelete : Form
     {
+        private bool help = false;
         public OrdersDelete()
         {
             InitializeComponent();
@@ -55,6 +56,23 @@ namespace TeamDevProject
             if (ord.OrderID != -1)
             {
                 OrdersSQL.DeleteOrder(ord.OrderID);
+            }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtIDOrdersDelete_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the ID of the order you wish to delete." +
+                                "\nThe ID must be positive and a whole number.");
+                btnHelp.Enabled = true;
+                help = false;
             }
         }
     }

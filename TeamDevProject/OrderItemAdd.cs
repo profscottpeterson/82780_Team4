@@ -12,6 +12,7 @@ namespace TeamDevProject
 {
     public partial class OrderItemAdd : Form
     {
+        private bool help = false;
         public OrderItemAdd()
         {
             InitializeComponent();
@@ -133,6 +134,34 @@ namespace TeamDevProject
                 error += "\n\nPlease ensure that all fields have existing IDs.";
 
                 MessageBox.Show(error);
+            }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtOrderIDOrderItemAdd_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the ID of the order that the item is part of." +
+                                "\nThe ID must be positive and a whole number.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
+
+        private void txtInvIDOrderItemAdd_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the ID of the item that is being added to an order." +
+                                "\nThe ID must be positive and a whole number.");
+                btnHelp.Enabled = true;
+                help = false;
             }
         }
     }

@@ -36,6 +36,7 @@
             this.btnReturnOrderItemAdd = new System.Windows.Forms.Button();
             this.btnResetOrderItemAdd = new System.Windows.Forms.Button();
             this.btnOrderItemAddGo = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblOrderItemAddTitle
@@ -74,6 +75,7 @@
             this.txtOrderIDOrderItemAdd.Name = "txtOrderIDOrderItemAdd";
             this.txtOrderIDOrderItemAdd.Size = new System.Drawing.Size(102, 20);
             this.txtOrderIDOrderItemAdd.TabIndex = 20;
+            this.txtOrderIDOrderItemAdd.Click += new System.EventHandler(this.txtOrderIDOrderItemAdd_Click);
             // 
             // txtInvIDOrderItemAdd
             // 
@@ -82,6 +84,7 @@
             this.txtInvIDOrderItemAdd.Name = "txtInvIDOrderItemAdd";
             this.txtInvIDOrderItemAdd.Size = new System.Drawing.Size(102, 20);
             this.txtInvIDOrderItemAdd.TabIndex = 19;
+            this.txtInvIDOrderItemAdd.Click += new System.EventHandler(this.txtInvIDOrderItemAdd_Click);
             // 
             // btnReturnOrderItemAdd
             // 
@@ -116,12 +119,26 @@
             this.btnOrderItemAddGo.UseVisualStyleBackColor = true;
             this.btnOrderItemAddGo.Click += new System.EventHandler(this.btnOrderItemAddGo_Click);
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Location = new System.Drawing.Point(4, 124);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(25, 25);
+            this.btnHelp.TabIndex = 26;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // OrderItemAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(468, 150);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnReturnOrderItemAdd);
             this.Controls.Add(this.btnResetOrderItemAdd);
             this.Controls.Add(this.btnOrderItemAddGo);
@@ -148,5 +165,6 @@
         private System.Windows.Forms.Button btnReturnOrderItemAdd;
         private System.Windows.Forms.Button btnResetOrderItemAdd;
         private System.Windows.Forms.Button btnOrderItemAddGo;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

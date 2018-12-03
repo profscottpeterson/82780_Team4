@@ -12,6 +12,8 @@ namespace TeamDevProject
 {
     public partial class InventoryDelete : Form
     {
+        private bool help = false;
+
         public InventoryDelete()
         {
             InitializeComponent();
@@ -92,6 +94,23 @@ namespace TeamDevProject
             {
                 MessageBox.Show("Delete cancelled due to error in Inventory ID field." +
                                 "\n\nPlease ensure field is not empty and has proper input.");
+            }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtIDInventoryDelete_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the ID of the item you wish to delete." +
+                                "\nThe ID must be positive and a whole number.");
+                btnHelp.Enabled = true;
+                help = false;
             }
         }
     }

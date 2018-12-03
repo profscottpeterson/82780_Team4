@@ -12,6 +12,7 @@ namespace TeamDevProject
 {
     public partial class OrdersMain : Form
     {
+        private bool help = false;
         public DataView orderView;
 
         public OrdersMain()
@@ -61,7 +62,6 @@ namespace TeamDevProject
             //Resetting search box for Refresh button
             txtBoxSearchOrderID.Text = "";
             txtBoxSearchOrderCustID.Text = "";
-            txtBoxSearchOrderDate.Text = "";
 
             //Creating List to hold all order objects.
             List<Orders> allOrders = new List<Orders>();
@@ -115,9 +115,37 @@ namespace TeamDevProject
         private void dataSearch()
         {
             //Filtering the DataView with the text we have from the Inventory TextBox.
-            orderView.RowFilter = string.Format("ID like '%{0}%' AND [Customer ID] like '%{1}%' AND Date like '%{2}%'", txtBoxSearchOrderID.Text, txtBoxSearchOrderCustID.Text, txtBoxSearchOrderDate.Text);
+            orderView.RowFilter = string.Format("ID like '%{0}%' AND [Customer ID] like '%{1}%' AND Date like '%{2}%'", txtBoxSearchOrderID.Text, txtBoxSearchOrderCustID.Text, dpkSearchOrderDate.Text);
             //Adjusting the DataGrid with the filtered data.
             dataGridOrder.DataSource = orderView;
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtBoxSearchOrderID_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box that filters the adjacent data using your input." +
+                                "\nThis box searches for the order's ID, which is a unique number, with one given to every customer.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
+        }
+
+        private void txtBoxSearchOrderCustID_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box that filters the adjacent data using your input." +
+                                "\nThis box searches for the ID of the customer making the order (find it in the Customer window),\n which is a unique number, with one given to every customer.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
         }
     }
 }

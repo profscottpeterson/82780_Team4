@@ -12,6 +12,7 @@ namespace TeamDevProject
 {
     public partial class OrdersAdd : Form
     {
+        private bool help = false;
         public OrdersAdd()
         {
             InitializeComponent();
@@ -99,6 +100,23 @@ namespace TeamDevProject
                 string error = "Add canceled; the provided Customer ID was not found.";
 
                 MessageBox.Show(error);
+            }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtCustIDOrdersAdd_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the ID of the customer making this order (find it in the Customer window)." +
+                                "\nThe ID must be positive and a whole number.");
+                btnHelp.Enabled = true;
+                help = false;
             }
         }
     }
