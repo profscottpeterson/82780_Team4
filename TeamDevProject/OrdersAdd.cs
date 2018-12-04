@@ -12,56 +12,111 @@ namespace TeamDevProject
 {
     public partial class OrdersAdd : Form
     {
+        private bool help = false;
         public OrdersAdd()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Clears all text input
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnResetOrdersAdd_Click(object sender, EventArgs e)
         {
             txtCustIDOrdersAdd.Text = "";
         }
 
+        /// <summary>
+        /// Returns user to previous form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReturnOrdersAdd_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnExitOrdersAdd_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        /// <summary>
+        /// Validates all user inputs, then saves new order to order table
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOrdersAddGo_Click(object sender, EventArgs e)
         {
-            // Create a temporary inventory object.
-            Orders temp = new Orders();
-            bool success;
-            int result;
+            bool custCheck = false;
 
-            temp.Date = ordersDatePk.Text;
+            //Creating needed classes
+            Orders ord = new Orders();
+            Validation val = new Validation();
 
-            // Assign temp's values.
-            if (txtCustIDOrdersAdd.Text != "")
+            //Running validation and saving validated input to object class
+            ord.Date = ordersDatePk.Text;
+            ord.CustID = val.numValidate(txtCustIDOrdersAdd.Text);
+
+            //Creating List to hold all customer objects.
+            List<Customer> allCustomers = new List<Customer>();
+
+            //Get all customers from the database.
+            allCustomers = CustomerSQL.LoadCustomers();
+
+            foreach (Customer c in allCustomers)
             {
-                success = Int32.TryParse(txtCustIDOrdersAdd.Text, out result);
-                if (success)
+                if (c.CustID == ord.CustID)
                 {
-                    temp.CustID = Int32.Parse(txtCustIDOrdersAdd.Text);
+                    custCheck = true;
+                }
+            }
 
-                    // Call the SaveInventory method and pass temp as an argument.
-                    OrdersSQL.SaveOrder(temp);
-                }
-                else
+            //If all input is valid (returns something other than "" -1) saves results and displays conformation message
+            if (ord.CustID != -1 && ord.Date != "" && custCheck == true)
+            {
+                OrdersSQL.SaveOrder(ord);
+                MessageBox.Show("Successfully added order with Customer ID " + ord.CustID +
+                                "\nand date " + ord.Date);
+            }
+            //Else program will cancel the save, and display text fields that caused the error
+            else if (ord.CustID == -1 || ord.Date == "")
+            {
+                string error = "Add canceled due to error in the following fields:";
+
+                if (ord.Date == "")
                 {
-                    MessageBox.Show("Please enter a valid Customer ID.");
-                    txtCustIDOrdersAdd.Text = "";
-                    txtCustIDOrdersAdd.Focus();
+                    error += " \n   Date";
                 }
+
+                if (ord.CustID == -1)
+                {
+                    error += " \n   Customer ID";
+                }
+
+                error += " \n \nPlease ensure all fields are not empty and have proper input.";
+
+                MessageBox.Show(error);
             }
             else
             {
-                MessageBox.Show("Please enter a Customer ID.");
-                txtCustIDOrdersAdd.Focus();
+                string error = "Add canceled; the provided Customer ID was not found.";
+
+                MessageBox.Show(error);
+            }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtCustIDOrdersAdd_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the ID of the customer making this order (find it in the Customer window)." +
+                                "\nThe ID must be positive and a whole number.");
+                btnHelp.Enabled = true;
+                help = false;
             }
         }
     }

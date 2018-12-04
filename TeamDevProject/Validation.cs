@@ -8,23 +8,24 @@ namespace TeamDevProject
 {
     class Validation
     {
-        public string numValidate(string input)
+        public int numValidate(string input)
         {
-            //Returns NULL when null checkbox is checked.
-            if (input == "<NULL>" || input == "")
-            {
-                return "NULL";
-            }
-
             try
             {
                 int numInput = Convert.ToInt32(input);
-                return numInput.ToString();
+                if (numInput > 0)
+                {
+                    return numInput;
+                }
+                else
+                {
+                    return -1;
+                }
             }
-            //Returns value of [Error] to indicate non-integer input.
+            //Returns value of -1 to indicate non-integer input.
             catch
             {
-                return "[Error]";
+                return -1;
             }
         }
 
@@ -34,15 +35,10 @@ namespace TeamDevProject
             Boolean dotCheck = false;
             char[] inputArray = input.ToCharArray();
 
-            if (input == "<NULL>" || input == "")
-            {
-                return "NULL";
-            }
-
             //Checks input string to ensure input is in format of X@Y.Z
             for (int i = 0; i < input.Length; i++)
             {
-                if (inputArray[i] == '.' && atCheck == true)
+                if (inputArray[i] == '.' && atCheck == true && i < input.Length - 1)
                 {
                     dotCheck = true;
                 }
@@ -60,32 +56,33 @@ namespace TeamDevProject
             }
             else
             {
-                return "[Error]";
+                return "";
             }
         }
 
-        public string moneyValidate(string input)
+        public double moneyValidate(string input)
         {
-            // Returns the value of NULL to indicate null.
-            if (input == "<NULL>" || input == "")
-            {
-                return "NULL";
-            }
-
             try
             {
                 double numInput = Convert.ToDouble(input);
                 numInput = Math.Round(numInput, 2);
-                return numInput.ToString();
+                if (numInput >= 0)
+                {
+                    return numInput;
+                }
+                else
+                {
+                    return -1;
+                }
             }
             // Returns the value of -1 to indicate the input of a non-number.
             catch
             {
-                return "[Error]";
+                return -1;
             }
         }
 
-        public string dateValidate(string input)
+      /*public string dateValidate(string input)
         {
             //Turns input into a char array and checks each char to ensure date is in MM/DD/YYYY format.
             Boolean errorCheck = false;
@@ -147,9 +144,9 @@ namespace TeamDevProject
                 }
 
             }
-        }
+        }*/
 
-        public string stringValidate(string input)
+      /*public string stringValidate(string input)
         {
             if (input == "<NULL>" || input == "")
             {
@@ -157,6 +154,6 @@ namespace TeamDevProject
             }
 
             return input;
-        }
+        }*/
     }
 }

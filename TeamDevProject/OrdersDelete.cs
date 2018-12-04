@@ -12,58 +12,68 @@ namespace TeamDevProject
 {
     public partial class OrdersDelete : Form
     {
+        private bool help = false;
         public OrdersDelete()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Clears all text input
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnResetOrdersDelete_Click(object sender, EventArgs e)
         {
             txtIDOrdersDelete.Text = "";
         }
 
+        /// <summary>
+        /// Returns user to previous form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReturnOrdersDelete_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnExitOrdersDelete_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        /// <summary>
+        /// Validates all user inputs, then deletes given record
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOrdersDeleteGo_Click(object sender, EventArgs e)
         {
-            // Create a temporary inventory object.
-            Orders temp = new Orders();
-            bool success;
-            int result;
+            //Creating needed classes
+            Orders ord = new Orders();
+            Validation val = new Validation();
 
-            // Assign temp's values based on input.
-            if (txtIDOrdersDelete.Text != "")
+            //Running validation and saving validated input to object class
+            ord.OrderID = val.numValidate(txtIDOrdersDelete.Text);
+
+            //If input is valid...
+            if (ord.OrderID != -1)
             {
-
-                success = Int32.TryParse(txtIDOrdersDelete.Text, out result);
-                if (success)
-                {
-                    temp.OrderID = int.Parse(txtIDOrdersDelete.Text);
-                    // Use the DeleteInventory method and pass temp as an argument.
-                    OrdersSQL.DeleteOrder(temp.OrderID);
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a valid Order ID.");
-                    txtIDOrdersDelete.Text = "";
-                    txtIDOrdersDelete.Focus();
-                }
+                OrdersSQL.DeleteOrder(ord.OrderID);
             }
-            else
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtIDOrdersDelete_Click(object sender, EventArgs e)
+        {
+            if (help == true)
             {
-                MessageBox.Show("Please enter an Order ID.");
-                txtIDOrdersDelete.Focus();
+                MessageBox.Show("Text box to enter the ID of the order you wish to delete." +
+                                "\nThe ID must be positive and a whole number.");
+                btnHelp.Enabled = true;
+                help = false;
             }
-
-            
         }
     }
 }

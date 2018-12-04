@@ -12,9 +12,12 @@ namespace TeamDevProject
 {
     public partial class OrderItemSearch : Form
     {
+        private bool help = false;
         private DataView orderItemView;
+
         //Creating List to hold all inventory objects.
         List<Inventory> allInventory = new List<Inventory>();
+
         //Creating List to hold all customer objects.
         List<OrderItem> allOrderItems = new List<OrderItem>();
 
@@ -27,11 +30,13 @@ namespace TeamDevProject
         {
             //Get all items from the inventory table.
             allInventory = InventorySQL.LoadInventory();
+
             //Get all customers from the database.
             allOrderItems = OrderItemSQL.LoadOrderItems();
 
             //Creating DataTable object to present the OrderItem Table from the database.
             DataTable orderItemTable = new DataTable();
+
             //Adding the Rows that we are going to display.
             orderItemTable.Columns.Add("InvID");
             orderItemTable.Columns.Add("ItemName");
@@ -45,12 +50,16 @@ namespace TeamDevProject
 
             //Filling our Data Table in a DataView so we can give it to our DataGrid.
             orderItemView = new DataView(orderItemTable);
+
             //Dynamically adjust the width of the DataGrid depending on how many columns we have.
             dataGridOrderItemSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             //Adding the DataView with our Inventory to the DataGrid
             dataGridOrderItemSearch.DataSource = orderItemView;
+
             //Making the DataGrid read only.
             dataGridOrderItemSearch.ReadOnly = true;
+
             //Removing the option for users to add directly into the database.
             dataGridOrderItemSearch.AllowUserToAddRows = false;
         }
@@ -87,6 +96,7 @@ namespace TeamDevProject
 
                 //Creating DataTable object to present the OrderItem Table from the database.
                 DataTable orderItemTable = new DataTable();
+
                 //Adding the Rows that we are going to display.
                 orderItemTable.Columns.Add("InvID");
                 orderItemTable.Columns.Add("ItemName");
@@ -100,12 +110,16 @@ namespace TeamDevProject
 
                 //Filling our Data Table in a DataView so we can give it to our DataGrid.
                 orderItemView = new DataView(orderItemTable);
+
                 //Dynamically adjust the width of the DataGrid depending on how many columns we have.
                 dataGridOrderItemSearch.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
                 //Adding the DataView with our Inventory to the DataGrid
                 dataGridOrderItemSearch.DataSource = orderItemView;
+
                 //Making the DataGrid read only.
                 dataGridOrderItemSearch.ReadOnly = true;
+
                 //Removing the option for users to add directly into the database.
                 dataGridOrderItemSearch.AllowUserToAddRows = false;
             } catch
@@ -117,6 +131,23 @@ namespace TeamDevProject
         private void btnOrderItemGo_Click(object sender, EventArgs e)
         {
             dataSearch();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtBoxSearchOrderItemID_Click(object sender, EventArgs e)
+        {
+            if (help == true)
+            {
+                MessageBox.Show("Text box to enter the ID or an order." +
+                                "Pressing Go will show you every item that is contained within the order.");
+                btnHelp.Enabled = true;
+                help = false;
+            }
         }
     }
 }

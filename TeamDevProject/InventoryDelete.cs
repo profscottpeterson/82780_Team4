@@ -12,161 +12,106 @@ namespace TeamDevProject
 {
     public partial class InventoryDelete : Form
     {
+        private bool help = false;
+
         public InventoryDelete()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Clears all text input
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnResetInventoryDelete_Click(object sender, EventArgs e)
         {
-            cbxNameNullInventoryDelete.Checked = false;
-            cbxPriceNullInventoryDelete.Checked = false;
-            cbxIDNullInventoryDelete.Checked = false;
-            cbxNameNullInventoryDelete.Enabled = false;
-            cbxPriceNullInventoryDelete.Enabled = false;
-            cbxIDNullInventoryDelete.Enabled = false;
-            txtNameInventoryDelete.Text = "";
-            txtPriceInventoryDelete.Text = "";
             txtIDInventoryDelete.Text = "";
-            txtNameInventoryDelete.Enabled = false;
-            txtPriceInventoryDelete.Enabled = false;
-            txtIDInventoryDelete.Enabled = false;
-            cbxNameOnInventoryDelete.Checked = false;
-            cbxPriceOnInventoryDelete.Checked = false;
-            cbxIDOnInventoryDelete.Checked = false;
         }
 
+        /// <summary>
+        /// Returns user to previous form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReturnInventoryDelete_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnExitInventoryDelete_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void cbxNameOnInventoryDelete_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxNameOnInventoryDelete.Checked)
-            {
-                txtNameInventoryDelete.Enabled = true;
-                cbxNameNullInventoryDelete.Enabled = true;
-            }
-            else
-            {
-                cbxNameNullInventoryDelete.Checked = false;
-                txtNameInventoryDelete.Enabled = false;
-                cbxNameNullInventoryDelete.Enabled = false;
-                txtNameInventoryDelete.Text = "";
-            }
-        }
-
-        private void cbxPriceOnInventoryDelete_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxPriceOnInventoryDelete.Checked)
-            {
-                txtPriceInventoryDelete.Enabled = true;
-                cbxPriceNullInventoryDelete.Enabled = true;
-            }
-            else
-            {
-                cbxPriceNullInventoryDelete.Checked = false;
-                txtPriceInventoryDelete.Enabled = false;
-                cbxPriceNullInventoryDelete.Enabled = false;
-                txtPriceInventoryDelete.Text = "";
-            }
-        }
-
-        private void cbxIDOnInventoryDelete_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxIDOnInventoryDelete.Checked)
-            {
-                txtIDInventoryDelete.Enabled = true;
-                cbxIDNullInventoryDelete.Enabled = true;
-            }
-            else
-            {
-                cbxIDNullInventoryDelete.Checked = false;
-                txtIDInventoryDelete.Enabled = false;
-                cbxIDNullInventoryDelete.Enabled = false;
-                txtIDInventoryDelete.Text = "";
-            }
-        }
-
-        private void cbxNameNullInventoryDelete_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxNameNullInventoryDelete.Checked)
-            {
-                txtNameInventoryDelete.Text = "<NULL>";
-                txtNameInventoryDelete.Enabled = false;
-            }
-            else
-            {
-                txtNameInventoryDelete.Text = "";
-                txtNameInventoryDelete.Enabled = true;
-            }
-        }
-
-        private void cbxPriceNullInventoryDelete_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxPriceNullInventoryDelete.Checked)
-            {
-                txtPriceInventoryDelete.Text = "<NULL>";
-                txtPriceInventoryDelete.Enabled = false;
-            }
-            else
-            {
-                txtPriceInventoryDelete.Text = "";
-                txtPriceInventoryDelete.Enabled = true;
-            }
-        }
-
-        private void cbxIDNullInventoryDelete_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxIDNullInventoryDelete.Checked)
-            {
-                txtIDInventoryDelete.Text = "<NULL>";
-                txtIDInventoryDelete.Enabled = false;
-            }
-            else
-            {
-                txtIDInventoryDelete.Text = "";
-                txtIDInventoryDelete.Enabled = true;
-            }
-        }
-
+        /// <summary>
+        /// Validates all user inputs, then deletes given record
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnInventoryDeleteGo_Click(object sender, EventArgs e)
         {
-            // Create a cost variable to convert to a double
-            string cost = "";
-
             // Create a temporary inventory object.
-            Inventory temp = new Inventory();
+            Inventory inv = new Inventory();
+            Validation val = new Validation();
 
-            // Assign temp's values based on input.
-            if (txtIDInventoryDelete.Text != "")
-            {
-                temp.InvID = Convert.ToInt32(txtIDInventoryDelete.Text);
-            }
+            //Running validation and saving validated input to object class
+            inv.InvID = val.numValidate(txtIDInventoryDelete.Text);
 
-            if (txtNameInventoryDelete.Text != "")
+            //If input is valid...
+            if (inv.InvID != -1)
             {
-                temp.ItemName = txtNameInventoryDelete.Text;
+                //Bool to check whether given ID exists in database
+                bool idExist = false;
+
+                //Creating List to hold all inventory objects.
+                List<Inventory> allInventory = new List<Inventory>();
+
+                //Get all items from the inventory table.
+                allInventory = InventorySQL.LoadInventory();
+
+                //Loops through database and checks to see if given ID exists
+                foreach (Inventory i in allInventory)
+                {
+                    if (i.InvID == inv.InvID)
+                    {
+                        idExist = true;
+
+                        //Fills out item name of inventory if ID is found
+                        inv.ItemName = i.ItemName;
+                    }
+                }
+
+                //If ID is found, deletes record and displays conformation message
+                if (idExist == true)
+                {
+                    InventorySQL.DeleteInventory(inv);
+                    MessageBox.Show("Successfully deleted " + inv.ItemName);
+                }
+                //Else program will cancel the delete, and display error message
+                else
+                {
+                    MessageBox.Show("Delete cancelled; provided ID could not be found in database.");
+                }
             }
+            //Else program will cancel the delete, and display error message
             else
             {
-                temp.ItemName = null;
+                MessageBox.Show("Delete cancelled due to error in Inventory ID field." +
+                                "\n\nPlease ensure field is not empty and has proper input.");
             }
+        }
 
-            if (txtPriceInventoryDelete.Text != "")
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            help = true;
+            btnHelp.Enabled = false;
+        }
+
+        private void txtIDInventoryDelete_Click(object sender, EventArgs e)
+        {
+            if (help == true)
             {
-                cost = txtPriceInventoryDelete.Text;
-                temp.Price = Convert.ToDouble(cost);
+                MessageBox.Show("Text box to enter the ID of the item you wish to delete." +
+                                "\nThe ID must be positive and a whole number.");
+                btnHelp.Enabled = true;
+                help = false;
             }
-
-            // Use the DeleteInventory method and pass temp as an argument.
-            InventorySQL.DeleteInventory(temp);
         }
     }
 }
