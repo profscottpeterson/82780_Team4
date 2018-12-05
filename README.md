@@ -1,7 +1,4 @@
 # 82780_Team4
 
-WHAT HAVE YOU DONE ? O.O
-
-IDK
-
-What?
+This is a project that was devloped by a class from NWTC.
+The goal of this project was develop a small database management system using C# and SQLite.
